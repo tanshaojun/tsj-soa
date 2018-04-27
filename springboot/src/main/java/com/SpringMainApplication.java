@@ -10,5 +10,6 @@ public class SpringMainApplication {
     public static void main(String[] args) {
         SpringApplication run = new SpringApplication(SpringMainApplication.class);
         run.run(args);
+        System.out.println("测试git是否成功");
     }
 }
