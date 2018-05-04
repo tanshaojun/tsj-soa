@@ -1,0 +1,16 @@
+# idea ignore
+.idea/
+springboot/.idea/
+
+*.iml
+*.ipr
+*.iws
+
+# out/
+
+springboot/springboot.iml
+
+# target
+springboot/target/
+
+
