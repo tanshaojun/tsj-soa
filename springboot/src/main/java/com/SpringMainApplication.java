@@ -11,5 +11,6 @@ public class SpringMainApplication {
         SpringApplication run = new SpringApplication(SpringMainApplication.class);
         run.run(args);
         System.out.println("测试git是否成功");
+        System.out.println("测试git是否成功");
     }
 }
