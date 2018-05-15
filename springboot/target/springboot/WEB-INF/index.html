@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/javascript-state-machine/2.0.0/state-machine.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+</head>
+<title>我的首页</title>
+</head>
+<body>
+欢迎来到这里
+<a href="/login">登录</a>
+<a href="/regist">注册</a>
+<button id="btn">点我</button>
+</body>
+<script type="text/javascript">
+    $("document").ready(function () {
+        $("#btn").on("click", function () {
+                $.ajax({
+                    type: "get",
+                    url: "/ajax",
+                    data: {id: "123465"},
+                    success: function (data) {
+                        alert(data);
+                    },
+                    error: function (e) {
+                        alert("失败");
+                    }
+                })
+            }
+        )
+    })
+</script>
+</html>
