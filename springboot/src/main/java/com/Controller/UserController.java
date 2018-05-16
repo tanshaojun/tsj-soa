@@ -10,26 +10,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class UserController {
-    @Autowired
-    private UserService userService;
-
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
-
-    @ResponseBody
-    @RequestMapping("/login")
-    public String login() {
-        System.out.println(userService);
-        User user = userService.getUser(1);
-        System.out.println(user);
-        return "success";
-    }
-
-    @ResponseBody
-    @RequestMapping("/ajax")
-    public String ajax(@Param("id") String id) {
-        return id;
-    }
+//    @Autowired
+//    private UserService userService;
+//
+//    @ResponseBody
+//    @RequestMapping("/index")
+//    public String login() {
+//        System.out.println(userService);
+//        User user = userService.getUser(1);
+//        System.out.println(user);
+//        return "index";
+//    }
+//
+//    @ResponseBody
+//    @RequestMapping("/ajax")
+//    public String ajax(@Param("id") String id) {
+//        return id;
+//    }
 }
