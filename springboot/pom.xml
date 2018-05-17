@@ -160,7 +160,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <maimClass>com.SpringMainApplication</maimClass>
+                    <mainClass>com.SpringMainApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
