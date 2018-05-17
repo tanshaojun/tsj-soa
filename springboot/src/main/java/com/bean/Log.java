@@ -37,6 +37,12 @@ public class Log implements Serializable {
     private String content;
 
     /**
+     * 头部文字
+     */
+    @Column(name = "head")
+    private String head;
+
+    /**
      * 创建时间
      */
     @Column(name = "createTime")
