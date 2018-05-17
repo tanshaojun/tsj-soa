@@ -13,18 +13,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
-
     @ResponseBody
-    @RequestMapping("/login")
+    @RequestMapping("/index")
     public String login() {
-        System.out.println(userService);
         User user = userService.getUser(1);
         System.out.println(user);
-        return "success";
+        return "index";
     }
 
     @ResponseBody

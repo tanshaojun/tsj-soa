@@ -1,12 +1,14 @@
 package com.JUC;
 
+import com.utils.HttpUtils;
+
 import javax.sound.midi.Soundbank;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CyclicBarrier;
 
 public class CyclicBarrierDemo {
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
+    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5000);
 
     public static void main(String[] args) {
         for (int i = 0; i < cyclicBarrier.getParties(); i++) {
@@ -20,6 +22,8 @@ public class CyclicBarrierDemo {
             try {
                 System.out.println(Thread.currentThread().getName() + "来了.......");
                 cyclicBarrier.await();
+                String s = HttpUtils.doGetStr("http://localhost:8070/manage/login");
+                System.out.println(s);
                 //并发请求的业务逻辑
             } catch (InterruptedException e) {
                 e.printStackTrace();
