@@ -2,3 +2,5 @@ pip install requests
 pip install BeautifulSoup
 
 https://www.telerik.com/fiddler 抓包工具下载
+
+pip install selenium
