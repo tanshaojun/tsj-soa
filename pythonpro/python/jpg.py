@@ -4,17 +4,8 @@
 import urllib.request
 import requests
 import re
-import os
 
 targetDir = "C:\图片"  # 文件保存路径
-
-
-def destFile(path):
-    if not os.path.isdir(targetDir):
-        os.mkdir(targetDir)
-    pos = path.rindex('/')
-    t = os.path.join(targetDir, path[pos + 1:])
-    return t
 
 def download(url):
     response = requests.get(url)
@@ -35,7 +26,6 @@ if __name__ == "__main__":  # 程序运行入口
         for link, t in set(re.findall(r'(http:[^\s]*?(jpg|png|gif))', str(contentBytes))):  # 正则表达式查找所有的图片
             print(link)
             try:
-                # urllib.request.urlretrieve(link, destFile(link))  # 下载图片
                 download(link)
             except:
                 print('失败')  # 异常抛出
