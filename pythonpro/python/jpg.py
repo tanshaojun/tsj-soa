@@ -23,6 +23,7 @@ if __name__ == "__main__":  # 程序运行入口
         req = urllib.request.Request(url=weburl, headers=webheaders)  # 构造请求报头
         webpage = urllib.request.urlopen(req)  # 发送请求报头
         contentBytes = webpage.read()
+        print(str(contentBytes))
         for link, t in set(re.findall(r'(http:[^\s]*?(jpg|png|gif))', str(contentBytes))):  # 正则表达式查找所有的图片
             print(link)
             try:
