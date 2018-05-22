@@ -38,7 +38,7 @@ def web_login_cookie():
     """
     driver = webdriver.Chrome()
     qq_account = '767650993'
-    qq_password = 'love000000'
+    qq_password = '#######'
     login(driver,qq_account,qq_password)
     time.sleep(10)
     driver.get('https://user.qzone.qq.com/{}'.format(qq_account))
