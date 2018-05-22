@@ -7,7 +7,8 @@ import time
 # import pymssql
 import datetime
 
-def get_key_values(body,key,end =';'):
+
+def get_key_values(body, key, end=';'):
     """提取body中不包括的key，分片操作
 
     :param body: 父字符串
@@ -17,6 +18,7 @@ def get_key_values(body,key,end =';'):
     """
     return body[body.find(key) + len(key): body.find(';', body.find(key))]
 
+
 def get_key(cookies):
     """获取cookie中的相关键的值
     解密
@@ -24,11 +26,12 @@ def get_key(cookies):
     :param cookies: 缓存
     :return: 相关键的值
     """
-    key = get_key_values(cookies,'p_skey=')
+    key = get_key_values(cookies, 'p_skey=')
     h = 5381
     for i in key:
         h += (h << 5) + ord(i)
     return h & 2147483647
+
 
 def web_login_cookie():
     """url = 'https://user.qzone.qq.com/QQ号相关的缓存
@@ -36,20 +39,21 @@ def web_login_cookie():
 
     :return: 浏览器的缓存
     """
-    driver = webdriver.Chrome()
-    qq_account = '767650993'
-    qq_password = '#######'
-    login(driver,qq_account,qq_password)
+    driver = webdriver.Chrome(r"C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
+    qq_account = '1518945900'
+    qq_password = 'Lhwolf961208'
+    login(driver, qq_account, qq_password)
     time.sleep(10)
     driver.get('https://user.qzone.qq.com/{}'.format(qq_account))
     cookie = ''
-    for elem in driver.get_cookies(): # 记录相关的Cookie
+    for elem in driver.get_cookies():  # 记录相关的Cookie
         # elem 为 dict类型
         cookie += elem["name"] + "=" + elem["value"] + ";"
     # cookies = cookie
     return cookie
 
-def login(driver,qq_account,qq_password):
+
+def login(driver, qq_account, qq_password):
     """登录
 
     :param driver: 浏览器对象
@@ -68,7 +72,8 @@ def login(driver,qq_account,qq_password):
     time.sleep(2)
     driver.find_element_by_id("login_button").click()
 
-def send_requests(req,headers,url,params=None):
+
+def send_requests(req, headers, url, params=None):
     """url_friend = 'https://user.qzone.qq.com/proxy/domain/r.qzone.qq.com/cgi-bin/tfriend/friend_ship_manager.cgi?'
     url_friend携带以下参数：uin（QQ号）、do（没有它，返回空，默认值为：1）
     rd，g_t，qzonetoken（每次登录都发生变化，从Cookiezz中获取）
@@ -85,9 +90,11 @@ def send_requests(req,headers,url,params=None):
     page = req.get(url=url, headers=headers)
     return page.text
 
-def get_each_str(req,uin,headers):
+
+def get_each_str(req, uin, headers):
     each_url = 'https://user.qzone.qq.com/{}'.format(uin)
     page = req.get(url=each_url, headers=headers)
+
 
 # def friend_db(dicts,name=''):
 #     """操作DB
@@ -137,28 +144,28 @@ def main():
     :return: void
     """
     req = requests.session()
-    headers={'host': 'h5.qzone.qq.com',
-             'accept-encoding':'gzip, deflate, br',
-             'accept-language':'zh-CN,zh;q=0.8',
-             'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-             'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-                          '59.0.3071.115 Safari/537.36',
-             'connection': 'keep-alive'}
+    headers = {'host': 'h5.qzone.qq.com',
+               'accept-encoding': 'gzip, deflate, br',
+               'accept-language': 'zh-CN,zh;q=0.8',
+               'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+               'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+                             '59.0.3071.115 Safari/537.36',
+               'connection': 'keep-alive'}
     cookie = web_login_cookie()
-    print('cookie',cookie)
+    print('cookie', cookie)
     g_tk = get_key(cookie)
-    qzonetoken_friend = get_key_values(cookie,'ptcz=')
-    uin_friend = get_key_values(cookie,'ptui_loginuin=')
-    rd_friend = get_key_values(cookie,'_qpsvr_localtk=')
-    print('friend_data','qzontoken:%s;uin:%s;rd:%s' %(qzonetoken_friend,uin_friend,rd_friend))
-    headers['Cookie']=cookie
-    params_friend = {"uin": uin_friend,"fupdate": 1,"action": 1,"do":1,"g_tk":g_tk,"rd":rd_friend,
-                     'qzonetoken':qzonetoken_friend}
+    qzonetoken_friend = get_key_values(cookie, 'ptcz=')
+    uin_friend = get_key_values(cookie, 'ptui_loginuin=')
+    rd_friend = get_key_values(cookie, '_qpsvr_localtk=')
+    print('friend_data', 'qzontoken:%s;uin:%s;rd:%s' % (qzonetoken_friend, uin_friend, rd_friend))
+    headers['Cookie'] = cookie
+    params_friend = {"uin": uin_friend, "fupdate": 1, "action": 1, "do": 1, "g_tk": g_tk, "rd": rd_friend,
+                     'qzonetoken': qzonetoken_friend}
     url_friend = 'https://user.qzone.qq.com/proxy/domain/r.qzone.qq.com/cgi-bin/tfriend/friend_ship_manager.cgi?'
-    data_friend_str = send_requests(req,headers,url_friend,params=params_friend)
-    data_friend_dict = loads(data_friend_str[0+len('_Callback('):data_friend_str.find(');')])
-    print('data_friend_dict: ',data_friend_dict)
-    if data_friend_dict['code'] != 0: # code = -3000 message = '请先登录'
+    data_friend_str = send_requests(req, headers, url_friend, params=params_friend)
+    data_friend_dict = loads(data_friend_str[0 + len('_Callback('):data_friend_str.find(');')])
+    print('data_friend_dict: ', data_friend_dict)
+    if data_friend_dict['code'] != 0:  # code = -3000 message = '请先登录'
         time.sleep(10)
         main()
     else:
@@ -169,18 +176,19 @@ def main():
             params_each = {"uin": each_uin, "fupdate": 1, "vuin": uin_friend, "g_tk": g_tk, "rd": rd_friend,
                            'qzonetoken': qzonetoken_friend}
             time.sleep(1)
-            data_each_str = send_requests(req,headers,each_url,params_each)
+            data_each_str = send_requests(req, headers, each_url, params_each)
             try:
-                data_each_dict = loads(data_each_str[0+len("_Callback("):data_each_str.find(");")])
+                data_each_dict = loads(data_each_str[0 + len("_Callback("):data_each_str.find(");")])
             except json.decoder.JSONDecodeError as e:
-                with open('leak.txt','a',encoding='utf8') as file: # 数据持久化，统计错误信息
+                with open('1518945900eak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
                     file.write('except: ' + str(each_uin) + " " + data_friend_list[i]['name'] + " " + e.msg + "\n")
                     continue
-            print('data_each_dict: ',data_each_dict)
-            if data_each_dict['code'] == 0: # code = -4009 message = '没有访问权限'
-                # friend_db(data_each_dict['data'],name=data_friend_list[i]['name'])
-                print("没有访问权限")
+            print('data_each_dict: ', data_each_dict)
+            if data_each_dict['code'] == 0:  # code = -4009 message = '没有访问权限'
+                with open('1518945900eak1.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
+                    file.write(('访问成功: ' + str(each_uin) + " " + data_friend_list[i]['name'] + "\n"))
+                print("访问成功")
             else:
-                with open('leak.txt','a',encoding='utf8') as file: # 数据持久化，统计错误信息
+                with open('1518945900leak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
                     file.write(('没有访问权限: ' + str(each_uin) + " " + data_friend_list[i]['name'] + "\n"))
 main()

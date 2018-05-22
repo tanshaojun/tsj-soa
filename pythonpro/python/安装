@@ -4,3 +4,8 @@ pip install BeautifulSoup
 https://www.telerik.com/fiddler 抓包工具下载
 
 pip install selenium
+
+pip install lxml
+
+谷歌驱动
+http://npm.taobao.org/mirrors/chromedriver/2.38/
