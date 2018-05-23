@@ -40,8 +40,8 @@ def web_login_cookie():
     :return: 浏览器的缓存
     """
     driver = webdriver.Chrome(r"C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
-    qq_account = '1518945900'
-    qq_password = 'Lhwolf961208'
+    qq_account = '877513390'
+    qq_password = '12346'
     login(driver, qq_account, qq_password)
     time.sleep(10)
     driver.get('https://user.qzone.qq.com/{}'.format(qq_account))
@@ -180,15 +180,15 @@ def main():
             try:
                 data_each_dict = loads(data_each_str[0 + len("_Callback("):data_each_str.find(");")])
             except json.decoder.JSONDecodeError as e:
-                with open('1518945900eak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
+                with open('877513390eak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
                     file.write('except: ' + str(each_uin) + " " + data_friend_list[i]['name'] + " " + e.msg + "\n")
                     continue
             print('data_each_dict: ', data_each_dict)
             if data_each_dict['code'] == 0:  # code = -4009 message = '没有访问权限'
-                with open('1518945900eak1.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
+                with open('877513390eak1.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
                     file.write(('访问成功: ' + str(each_uin) + " " + data_friend_list[i]['name'] + "\n"))
                 print("访问成功")
             else:
-                with open('1518945900leak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
+                with open('877513390leak.txt', 'a', encoding='utf8') as file:  # 数据持久化，统计错误信息
                     file.write(('没有访问权限: ' + str(each_uin) + " " + data_friend_list[i]['name'] + "\n"))
 main()
