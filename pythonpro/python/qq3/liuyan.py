@@ -18,7 +18,7 @@ def logToFile(content, filename):
 
 # 登录QQ空间
 def get_shuoshuo(qq):
-    filename = qq + ".txt";
+    filename = qq + ".txt"
     print(filename)
     chromedriver = r"C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe"
     driver = webdriver.Chrome(chromedriver)
@@ -59,7 +59,6 @@ def get_shuoshuo(qq):
         num = 1
         while (num < 641):
             num += 1
-            time.sleep(2)
             pages = driver.page_source
             soup = BeautifulSoup(pages, 'lxml')
             aa = soup.find_all('span', attrs={'class': 'username'})
