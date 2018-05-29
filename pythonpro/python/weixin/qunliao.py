@@ -70,7 +70,7 @@ def text_reply(msg):
     print("发送的：" + msg['Text'])
     url = "http://openapi.tuling123.com/openapi/api"
     data = {
-        "key": "506af1a41eaa4248b5615662ab84e0cc",
+        "key": "506af1a41eaa4248b5615*******",
         "info": msg['Text']
     }
     response = requests.post(url, data)
