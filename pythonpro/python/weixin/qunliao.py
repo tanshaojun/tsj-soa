@@ -16,7 +16,7 @@ def text_reply(msg):
     print("发送的：" + msg['Text'])
     url = "http://openapi.tuling123.com/openapi/api"
     data = {
-        "key": "506af1a41eaa4248b5615662ab84e0cc",
+        "key": "506af1a41eaa4248b56156cc",
         "info": msg['Text']
     }
     response = requests.post(url, data)
@@ -68,15 +68,15 @@ def download_files(msg):
 def text_reply(msg):
     print(msg)
     print("发送的：" + msg['Text'])
-    url = "http://openapi.tuling123.com/openapi/api"
-    data = {
-        "key": "506af1a41eaa4248b5615*******",
-        "info": msg['Text']
-    }
-    response = requests.post(url, data)
-    api = response.json()
-    print("我回复的：" + api['text'])
-    itchat.send(api['text'], toUserName=msg['FromUserName'])
+    # url = "http://openapi.tuling123.com/openapi/api"
+    # data = {
+    #     "key": "506af1a41eae0cc",
+    #     "info": msg['Text']
+    # }
+    # response = requests.post(url, data)
+    # api = response.json()
+    # print("我回复的：" + api['text'])
+    # itchat.send(api['text'], toUserName=msg['FromUserName'])
     # if msg['Text'] == '1':
     #     itchat.send("猜成语", toUserName=msg['FromUserName'])
     # elif msg['Text'] == '2':
