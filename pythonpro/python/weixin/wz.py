@@ -10,7 +10,7 @@ def urliter():
                 yield "http://www.%02d%c%c%c%c.com" % (i, j, k, j, k)
 
 
-logfile = open('1.txt', 'wb')
+logfile = open('C:\\tansj\\1.txt','a', encoding='utf8')
 for u in urliter():
     try:
         wp = urllib.request.urlopen(u)

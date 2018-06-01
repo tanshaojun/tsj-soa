@@ -1,5 +1,4 @@
 import itchat
-# import全部消息类型
 from itchat.content import *
 import requests
 import json
@@ -16,7 +15,7 @@ def text_reply(msg):
     print("发送的：" + msg['Text'])
     url = "http://openapi.tuling123.com/openapi/api"
     data = {
-        "key": "506af1a41eaa4248b56156cc",
+        "key": "506af1a41eaa84e0cc",
         "info": msg['Text']
     }
     response = requests.post(url, data)
@@ -55,6 +54,7 @@ def download_files(msg):
     # itchat.send("我不认识图片，发文字吧", toUserName=msg['FromUserName'])
     # return '@%s@%s' % ({'Picture': 'img', 'Video': 'vid'}.get(msg['Type'], 'fil'), msg['FileName'])
 
+
 # 处理好友添加请求
 # @itchat.msg_register(FRIENDS)
 # def add_friend(msg):
@@ -67,10 +67,10 @@ def download_files(msg):
 @itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
     print(msg)
-    print("发送的：" + msg['Text'])
+    # print("发送的：" + msg['Text'])
     # url = "http://openapi.tuling123.com/openapi/api"
     # data = {
-    #     "key": "506af1a41eae0cc",
+    #     "key": "506af1a41ab84e0cc",
     #     "info": msg['Text']
     # }
     # response = requests.post(url, data)
