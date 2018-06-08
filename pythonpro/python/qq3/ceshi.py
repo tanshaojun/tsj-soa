@@ -1,2 +1,2 @@
-import random
-print(random.randint(1000000000, 999999999999))
+for num in range(0,13):
+    print(num*20)
