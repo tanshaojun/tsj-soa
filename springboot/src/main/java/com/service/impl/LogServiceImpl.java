@@ -18,4 +18,9 @@ public class LogServiceImpl implements LogService {
     public List<Log> getAlls() {
         return logMapper.selectAlls();
     }
+
+    @Override
+    public Log findLogById(Integer id) {
+        return logMapper.findLogById(id);
+    }
 }

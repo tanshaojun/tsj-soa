@@ -49,7 +49,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doGet(String host, String path, String method, 
+	public static HttpResponse doGet(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys)
             throws Exception {    	
@@ -75,7 +75,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method, 
+	public static HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			Map<String, String> bodys)
@@ -113,7 +113,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method, 
+	public static HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			String body)
@@ -144,7 +144,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method, 
+	public static HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			byte[] body)
@@ -174,7 +174,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPut(String host, String path, String method, 
+	public static HttpResponse doPut(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			String body)
@@ -204,7 +204,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPut(String host, String path, String method, 
+	public static HttpResponse doPut(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			byte[] body)
@@ -234,7 +234,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doDelete(String host, String path, String method, 
+	public static HttpResponse doDelete(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys)
             throws Exception {    	

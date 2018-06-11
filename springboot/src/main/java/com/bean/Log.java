@@ -25,10 +25,10 @@ public class Log implements Serializable {
     private String title;
 
     /**
-     * 图片
+     * 阅读量
      */
-    @Column(name = "picture")
-    private String picture;
+    @Column(name = "readingvolume")
+    private Integer readingvolume;
 
     /**
      * 内容
@@ -37,10 +37,22 @@ public class Log implements Serializable {
     private String content;
 
     /**
-     * 头部文字
+     * 文章分类
      */
-    @Column(name = "head")
-    private String head;
+    @Column(name = "type")
+    private Integer type;
+
+    /**
+     * 关键字
+     */
+    @Column(name = "crux")
+    private String crux;
+
+    /**
+     * 图片url
+     */
+    @Column(name = "imgurl")
+    private String imgurl;
 
     /**
      * 创建时间

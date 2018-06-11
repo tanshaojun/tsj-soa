@@ -5,4 +5,8 @@
     SELECT *
     FROM  t_log
 </select>
+    <select id="findLogById" resultType="com.bean.Log">
+        SELECT * FROM t_log
+        WHERE id=#{id}
+    </select>
 </mapper>
