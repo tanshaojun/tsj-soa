@@ -24,15 +24,16 @@
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span><a href="" class="blog-color">文章 &nbsp;</a></span>
                     <span>${(l.createTime?string("yyyy-MM-dd HH:mm:ss"))!} </span>
-                    <h1><a href="/toInfo">${l.title}</a></h1>
+                    <!--<span>${l.readingvolume}</span>-->
+                    <h1><a href="/toInfo?id=${l.id}">${l.title}</a></h1>
                     <p>${l.crux}</p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
                 </div>
             </article>
          </#list>
         <ul class="am-pagination">
-          <li class="am-pagination-prev"><a href="">&laquo; 上一页</a></li>
-          <li class="am-pagination-next"><a href="">下一页 &raquo;</a></li>
+          <li class="am-pagination-prev"><a href="javaScript:alert('这个还不能点哦')">&laquo; 一切的回顾</a></li>
+          <li class="am-pagination-next"><a href="javaScript:alert('这个还不能点哦')">不远的未来 &raquo;</a></li>
         </ul>
     </div>
 
