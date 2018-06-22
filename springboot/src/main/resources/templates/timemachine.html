@@ -12,19 +12,18 @@
     <div class="am-u-sm-12">
         <h1 class="blog-text-center">-- 存档 --</h1>
         <div class="timeline-year">
-        <ul>
-            <li>
-                <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="#">标题</a></span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">文章</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
-            </li>
-        </ul>
-
+            <ul>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">标题</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">文章</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>
+                </li>
+            </ul>
         </div>
         <#list timemachines?keys as k>
             <div class="timeline-year">
-            <h1>>${k}</h1>
+            <h1>${k}</h1>
             <hr>
                 <#assign maps = timemachines[k]>
                 <#list maps?keys as ks>

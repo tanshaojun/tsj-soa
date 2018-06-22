@@ -16,15 +16,16 @@
 <!-- content srart -->
     <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
-        <#list logs as l>
+        <#list logs.list as l>
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
                     <img src="${l.imgurl}" alt="" class="am-u-sm-12">
                 </div>
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                    <span><a href="" class="blog-color">文章 &nbsp;</a></span>
+                    <span><a href="" class="blog-color">${l.value} &nbsp;</a></span>
                     <span>${(l.createTime?string("yyyy-MM-dd HH:mm:ss"))!} </span>
                     <!--<span>${l.readingvolume}</span>-->
+                    <!--<span>100000000</span>-->
                     <h1><a href="/toInfo?id=${l.id}">${l.title}</a></h1>
                     <p>${l.crux}</p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
@@ -32,8 +33,16 @@
             </article>
          </#list>
         <ul class="am-pagination">
-          <li class="am-pagination-prev"><a href="javaScript:alert('这个还不能点哦')">&laquo; 一切的回顾</a></li>
-          <li class="am-pagination-next"><a href="javaScript:alert('这个还不能点哦')">不远的未来 &raquo;</a></li>
+            <#if logs.pageNum-1==0>
+            <li class="am-pagination-prev" ><a disabled="true">一切的回顾</a></li>
+            <#else>
+            <li class="am-pagination-prev" ><a href="/?pageNum= ${logs.pageNum-1}">一切的回顾</a></li>
+            </#if>
+         <#if logs.pageNum==logs.pages>
+            <li class="am-pagination-next"><a disabled="true">不远的未来</a></li>
+        <#else>
+            <li class="am-pagination-next"><a href="/?pageNum= ${logs.pageNum+1}">不远的未来</a></li>
+        </#if>
         </ul>
     </div>
 

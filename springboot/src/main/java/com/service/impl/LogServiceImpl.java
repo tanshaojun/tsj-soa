@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import com.bean.Log;
+import com.bean.LogVO;
 import com.mapper.LogMapper;
 import com.service.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,10 @@ public class LogServiceImpl implements LogService {
     @Override
     public Log findLogById(Integer id) {
         return logMapper.findLogById(id);
+    }
+
+    @Override
+    public List<LogVO> selectAll() {
+        return logMapper.selectAll();
     }
 }
