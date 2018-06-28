@@ -4,6 +4,7 @@ import com.bean.AdvertManage;
 import com.bean.Log;
 import com.bean.LogVO;
 import com.bean.Share;
+import com.config.DynamicDataSourceContextHolder;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.service.AdvertManageService;
@@ -45,6 +46,7 @@ public class IndexController {
     public ModelAndView index(@RequestParam(value = "pageNum", defaultValue = "1") Integer
                                       pageNum, @RequestParam(value = "pageSize",
             defaultValue = "5") Integer pageSize) {
+        DynamicDataSourceContextHolder.setDataSourceType("manage");
         ModelAndView mv = new ModelAndView("index");
         PageHelper.startPage(pageNum, pageSize);
         List<LogVO> list = logService.selectAll();
