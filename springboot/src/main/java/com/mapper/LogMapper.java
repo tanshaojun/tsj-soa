@@ -11,5 +11,5 @@ public interface LogMapper {
 
     Log findLogById(@Param("id") Integer id);
 
-    List<LogVO> selectAll();
+    List<LogVO> selectAll(@Param("type") Integer type);
 }

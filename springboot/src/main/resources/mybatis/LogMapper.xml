@@ -10,8 +10,14 @@
     WHERE id=#{id}
 </select>
     <select id="selectAll" resultType="com.bean.LogVO">
-    SELECT tl.id,tl.title,tl.createTime,tl.modified,tl.readingvolume,tl.content,tl.type,tl.crux,tl.imgurl,tl.author,d.value from t_log tl
-    LEFT JOIN dir d
-    on d.`key`=tl.type
+        SELECT
+        tl.id,tl.title,tl.createTime,tl.modified,tl.readingvolume,tl.content,tl.type,tl.crux,tl.imgurl,tl.author,d.value
+        from t_log tl
+        LEFT JOIN dir d
+        on d.`key`=tl.type
+        WHERE 1=1
+        <if test="type != null ">
+            AND tl.type=#{type}
+        </if>
     </select>
 </mapper>

@@ -64,3 +64,22 @@ CREATE TABLE `t_share` (
 INSERT INTO `t_share` VALUES ('1', 'linux', '链接：https://pan.baidu.com/s/1N_SQpAftOUa0MQxNaqyRaw 密码：1vye');
 INSERT INTO `t_share` VALUES ('2', 'spring5', '链接：https://pan.baidu.com/s/1iB-8C5iZS-RPH1-uvvieEQ 密码：bfyo');
 INSERT INTO `t_share` VALUES ('3', 'nginx', '链接：https://pan.baidu.com/s/1F1yd0GTByhUzTq7EU37Prg 密码：h8oh');
+
+-- ----------------------------
+-- Table structure for t_comment
+-- ----------------------------
+DROP TABLE IF EXISTS `t_comment`;
+CREATE TABLE `t_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment` text,
+  `createTime` datetime DEFAULT NULL,
+  `logid` int(11) DEFAULT NULL,
+  `modified` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_comment
+-- ----------------------------
+ALTER TABLE `t_comment` ADD COLUMN `pid` int(11) DEFAULT 0;
+

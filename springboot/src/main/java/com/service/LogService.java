@@ -10,5 +10,5 @@ public interface LogService {
 
     Log findLogById(Integer id);
 
-    List<LogVO> selectAll();
+    List<LogVO> selectAll(Integer type);
 }

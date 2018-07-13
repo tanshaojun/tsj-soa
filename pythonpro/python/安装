@@ -1,18 +1,13 @@
 pip install requests
 pip install BeautifulSoup
 pip install selenium
-
- pip install pillow
- pip install itchat
-
- http://itchat.readthedocs.io/zh/latest/#itchat
-
+pip install pillow
+pip install itchat
+http://itchat.readthedocs.io/zh/latest/#itchat
 https://www.telerik.com/fiddler 抓包工具下载
-
-
 谷歌驱动
 http://npm.taobao.org/mirrors/chromedriver/2.38/
-
 win10 p3.7安装lxml
 pip install wheel
+pip install xmltodict
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml

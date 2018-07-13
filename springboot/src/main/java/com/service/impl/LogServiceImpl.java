@@ -26,7 +26,7 @@ public class LogServiceImpl implements LogService {
     }
 
     @Override
-    public List<LogVO> selectAll() {
-        return logMapper.selectAll();
+    public List<LogVO> selectAll(Integer type) {
+        return logMapper.selectAll(type);
     }
 }
