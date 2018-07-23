@@ -11,3 +11,5 @@ win10 p3.7安装lxml
 pip install wheel
 pip install xmltodict
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+
+pip install pymysql
