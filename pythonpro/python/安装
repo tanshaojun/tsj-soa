@@ -1,5 +1,5 @@
 pip install requests
-pip install BeautifulSoup
+pip install BeautifulSoup4
 pip install selenium
 pip install pillow
 pip install itchat
@@ -13,3 +13,6 @@ pip install xmltodict
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 
 pip install pymysql
+
+
+python -m pip install --upgrade pip 升级pip
