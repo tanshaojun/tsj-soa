@@ -20,5 +20,6 @@ public class SpringMainApplication {
         System.out.println("测试git是否成功");
         System.out.println("测试git是否成功");
         System.out.println("测试git是否成功");
+        System.out.println("测试git是否成功");
     }
 }
