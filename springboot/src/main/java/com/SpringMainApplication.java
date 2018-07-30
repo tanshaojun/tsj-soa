@@ -3,11 +3,9 @@ package com;
 
 import com.config.DynamicDataSourceRegister;
 import com.config.StartupListener;
-import com.utils.HttpUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Import;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -19,6 +17,7 @@ public class SpringMainApplication {
         SpringApplication run = new SpringApplication(SpringMainApplication.class);
         run.addListeners(new StartupListener());
         run.run(args);
+        System.out.println("测试git是否成功");
         System.out.println("测试git是否成功");
         System.out.println("测试git是否成功");
     }
