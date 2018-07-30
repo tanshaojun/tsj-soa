@@ -1,6 +1,4 @@
-# python3.4 爬虫教程
-# 爬取网站上的图片
-# 林炳文Evankaka(博客：http://blog.csdn.net/evankaka/)
+
 import urllib.request
 import requests
 import re
