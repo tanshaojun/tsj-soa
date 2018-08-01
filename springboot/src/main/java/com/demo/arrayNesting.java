@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class arrayNesting {
-    public static int arrayNesting(int[] nums) {
+    public static   int arrayNesting(int[] nums) {
         int max = 0;
         for (int i = 0; i < nums.length; i++) {
             int c = 1;
@@ -23,7 +23,7 @@ public class arrayNesting {
     }
 
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(arrayNesting(new int[]{0, 2, 1}));
     }
 }

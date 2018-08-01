@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 public class AdvertManage implements Serializable {
 
-    private static final long serialVersionUID = 18454512128451L;
+    private static   final long serialVersionUID = 18454512128451L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)

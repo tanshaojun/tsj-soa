@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
     //如配置文件中未指定数据源类型，使用该默认值
-    private static final Object DATASOURCE_TYPE_DEFAULT = "log";
+    private static   final Object DATASOURCE_TYPE_DEFAULT = "log";
     private ConversionService conversionService = new DefaultConversionService();
     private PropertyValues dataSourcePropertyValues;
     // 默认数据源

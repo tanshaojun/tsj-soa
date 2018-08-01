@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 public class Log implements Serializable {
 
-    private static final long serialVersionUID = 1845128451L;
+    private static   final long serialVersionUID = 1845128451L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

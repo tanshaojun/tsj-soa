@@ -1,7 +1,7 @@
 package com.demo;
 
 public class mergeKLists {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         ListNode start = new ListNode(1);
         start.next = new ListNode(4);
         start.next.next = new ListNode(5);
@@ -24,7 +24,7 @@ public class mergeKLists {
 
     }
 
-    public static ListNode mergeKLists(ListNode[] lists) {
+    public static   ListNode mergeKLists(ListNode[] lists) {
         ListNode listNode = null;
         for (int i = 0; i < lists.length; i++) {
             listNode = merge(listNode, lists[i]);
@@ -32,7 +32,7 @@ public class mergeKLists {
         return listNode;
     }
 
-    public static ListNode merge(ListNode start, ListNode end) {
+    public static   ListNode merge(ListNode start, ListNode end) {
         if (start == null) return end;
         if (end == null) return start;
         ListNode listNode = null;
@@ -58,7 +58,7 @@ public class mergeKLists {
         return listNode;
     }
 
-    private static ListNode addListNode(ListNode listNode, int b) {
+    private static   ListNode addListNode(ListNode listNode, int b) {
         if (listNode == null) listNode = new ListNode(b);
         else {
             ListNode listNodeb = new ListNode(b);

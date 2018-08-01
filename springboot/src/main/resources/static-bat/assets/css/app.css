@@ -47,11 +47,11 @@
 @media only screen and (min-width: 641px) {
   .lw-sidebar {
     display: block;
-    position: static;
+    position: static-bat;
     background: none;
   }
   .lw-offcanvas-bar {
-    position: static;
+    position: static-bat;
     width: auto;
     background: none;
     -webkit-transform: translate3d(0, 0, 0);

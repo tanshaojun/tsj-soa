@@ -1,12 +1,12 @@
 package com.demo;
 
 public class twoSum {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(twoSum(new int[]{0,0,25,75}, 100));
 
     }
 
-    public static int[] twoSum(int[] numbers, int target) {
+    public static   int[] twoSum(int[] numbers, int target) {
         int[] ints = new int[2];
         for (int i = 0; i < numbers.length - 1; i++) {
             int c = target - numbers[i];

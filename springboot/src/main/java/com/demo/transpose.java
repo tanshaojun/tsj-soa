@@ -8,7 +8,7 @@ public class transpose {
      * @param A
      * @return
      */
-    public static int[][] transpose(int[][] A) {
+    public static   int[][] transpose(int[][] A) {
         int[][] ints = new int[A[0].length][A.length];
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
@@ -18,7 +18,7 @@ public class transpose {
         return ints;
     }
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         int[][] ints = {
                 {1, 2, 3},
                 {4, 5, 6}

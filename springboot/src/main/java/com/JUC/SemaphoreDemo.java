@@ -3,15 +3,15 @@ package com.JUC;
 import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
-    private static Semaphore semaphore = new Semaphore(5);
+    private static   Semaphore semaphore = new Semaphore(5);
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             new Thread(new A()).start();
         }
     }
 
-    private static class A implements Runnable {
+    private static   class A implements Runnable {
         @Override
         public void run() {
             try {

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.Exchanger;
 
 public class ExchangerDemo {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         List<String> buffera = new ArrayList<>();
         List<String> bufferb = new ArrayList<>();
         Exchanger<List<String>> exchanger = new Exchanger<>();
@@ -13,7 +13,7 @@ public class ExchangerDemo {
         new Thread(new B(bufferb, exchanger)).start();
     }
 
-    private static class A implements Runnable {
+    private static   class A implements Runnable {
         private List<String> buffer;
         private Exchanger<List<String>> exchanger;
         private Integer i = 0;
@@ -37,7 +37,7 @@ public class ExchangerDemo {
         }
     }
 
-    private static class B implements Runnable {
+    private static   class B implements Runnable {
         private List<String> buffer;
         private Exchanger<List<String>> exchanger;
         private Integer i = 0;

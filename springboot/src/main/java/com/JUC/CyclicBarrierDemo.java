@@ -8,15 +8,15 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CyclicBarrier;
 
 public class CyclicBarrierDemo {
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5000);
+    private static   CyclicBarrier cyclicBarrier = new CyclicBarrier(5000);
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         for (int i = 0; i < cyclicBarrier.getParties(); i++) {
             new Thread(new A()).start();
         }
     }
 
-    private static class A implements Runnable {
+    private static   class A implements Runnable {
         @Override
         public void run() {
             try {

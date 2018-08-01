@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Data
 public class Dir implements Serializable {
 
-    private static final long serialVersionUID = 1845128451L;
+    private static   final long serialVersionUID = 1845128451L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)

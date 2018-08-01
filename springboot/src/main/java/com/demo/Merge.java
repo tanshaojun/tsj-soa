@@ -1,19 +1,19 @@
 package com.demo;
 
 public class Merge {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         int[] ints = new int[]{2, 5, 8, 3, 4, 7, 6, 12, 8, 0, 99, 55, 44, 66, 22, 33};
         mergeSort(ints);
         System.out.println(ints);
     }
 
-    public static void mergeSort(int[] ints) {
+    public static   void mergeSort(int[] ints) {
         //在排序前，先建好一个长度等于原数组长度的临时数组，避免递归中频繁开辟空间
         int[] temp = new int[ints.length];
         sort(ints, 0, ints.length - 1, temp);
     }
 
-    private static void sort(int[] ints, int l, int r, int[] temp) {
+    private static   void sort(int[] ints, int l, int r, int[] temp) {
         if (l < r) {
             int mid = l + ((r - l) >> 1);
             //分
@@ -34,7 +34,7 @@ public class Merge {
      * @param r
      * @param temp 临时数组
      */
-    private static void merge(int[] ints, int l, int mid, int r, int[] temp) {
+    private static   void merge(int[] ints, int l, int mid, int r, int[] temp) {
         //第一个数组的开头
         int i = l;
         //第二个数组的开头

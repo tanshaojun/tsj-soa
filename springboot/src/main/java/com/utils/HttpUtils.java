@@ -49,7 +49,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doGet(String host, String path, String method,
+	public static   HttpResponse doGet(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys)
             throws Exception {    	
@@ -75,7 +75,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method,
+	public static   HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			Map<String, String> bodys)
@@ -113,7 +113,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method,
+	public static   HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			String body)
@@ -144,7 +144,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPost(String host, String path, String method,
+	public static   HttpResponse doPost(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			byte[] body)
@@ -174,7 +174,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPut(String host, String path, String method,
+	public static   HttpResponse doPut(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			String body)
@@ -204,7 +204,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doPut(String host, String path, String method,
+	public static   HttpResponse doPut(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys, 
 			byte[] body)
@@ -234,7 +234,7 @@ public class HttpUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HttpResponse doDelete(String host, String path, String method,
+	public static   HttpResponse doDelete(String host, String path, String method,
 			Map<String, String> headers, 
 			Map<String, String> querys)
             throws Exception {    	
@@ -248,7 +248,7 @@ public class HttpUtils {
         return httpClient.execute(request);
     }
 	
-	private static String buildUrl(String host, String path, Map<String, String> querys) throws UnsupportedEncodingException {
+	private static   String buildUrl(String host, String path, Map<String, String> querys) throws UnsupportedEncodingException {
     	StringBuilder sbUrl = new StringBuilder();
     	sbUrl.append(host);
     	if (!StringUtils.isBlank(path)) {
@@ -279,7 +279,7 @@ public class HttpUtils {
     	return sbUrl.toString();
     }
 	
-	private static HttpClient wrapClient(String host) {
+	private static   HttpClient wrapClient(String host) {
 		HttpClient httpClient = new DefaultHttpClient();
 		if (host.startsWith("https://")) {
 			sslClient(httpClient);
@@ -288,7 +288,7 @@ public class HttpUtils {
 		return httpClient;
 	}
 	
-	private static void sslClient(HttpClient httpClient) {
+	private static   void sslClient(HttpClient httpClient) {
         try {
             SSLContext ctx = SSLContext.getInstance("TLS");
             X509TrustManager tm = new X509TrustManager() {
@@ -315,7 +315,7 @@ public class HttpUtils {
         }
     }
 
-	public static String doGetStr(String url){
+	public static   String doGetStr(String url){
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpGet httpGet = new HttpGet(url);
 		String result = "";

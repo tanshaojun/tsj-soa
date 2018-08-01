@@ -1,7 +1,7 @@
 package com.demo;
 
 public class plusOne {
-    public static int[] plusOne(int[] digits) {
+    public static   int[] plusOne(int[] digits) {
         String s = "";
         int count = 1;
         for (int i = digits.length - 1; i >= 0; i--) {
@@ -24,7 +24,7 @@ public class plusOne {
         return ints;
     }
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(plusOne(new int[]{9, 9, 9, 9, 9, 9}));
     }
 }

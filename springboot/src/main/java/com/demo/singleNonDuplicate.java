@@ -1,7 +1,7 @@
 package com.demo;
 
 public class singleNonDuplicate {
-    public static int singleNonDuplicate(int[] nums) {
+    public static   int singleNonDuplicate(int[] nums) {
         if (nums.length <= 1) return nums[0];
         int count = 0;
         for (int i = 0; i < nums.length; i++)
@@ -9,7 +9,7 @@ public class singleNonDuplicate {
         return count;
     }
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(singleNonDuplicate(new int[]{1, 2, 1,1,2}));
     }
 }

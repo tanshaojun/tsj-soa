@@ -55,19 +55,19 @@ public class IndexController {
      * @return
      */
     @RequestMapping(value = "/")
-    public ModelAndView index(@RequestParam(value = "pageNum", defaultValue = "1") Integer
-                                      pageNum, @RequestParam(value = "pageSize",
-            defaultValue = "5") Integer pageSize) {
+//    public ModelAndView index(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam
+// (value = "pageSize", defaultValue = "5") Integer pageSize) {
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView("index");
-        PageHelper.startPage(pageNum, pageSize);
-        List<LogVO> list = logService.selectAll(null);
-        PageInfo<LogVO> pageInfo = new PageInfo<LogVO>(list);
-        mv.addObject("logs", pageInfo);
-        List<AdvertManage> advs = advertManageService.findAll();
-        mv.addObject("advs", advs);
-        List<Dir> dirs = dirService.getAll();
-        mv.addObject("dirs", dirs);
-        mv.addObject("identification", 0);
+//        PageHelper.startPage(pageNum, pageSize);
+//        List<LogVO> list = logService.selectAll(null);
+//        PageInfo<LogVO> pageInfo = new PageInfo<LogVO>(list);
+//        mv.addObject("logs", pageInfo);
+//        List<AdvertManage> advs = advertManageService.findAll();
+//        mv.addObject("advs", advs);
+//        List<Dir> dirs = dirService.getAll();
+//        mv.addObject("dirs", dirs);
+//        mv.addObject("identification", 0);
         return mv;
     }
 

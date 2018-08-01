@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class numJewelsInStones {
-    public static int numJewelsInStones(String J, String S) {
+    public static   int numJewelsInStones(String J, String S) {
         if ("".equals(J) || "".equals(S)) return 0;
         int count = 0;
         Map<String, Integer> map = new HashMap<>(16);
@@ -21,7 +21,7 @@ public class numJewelsInStones {
         return count;
     }
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(numJewelsInStones("aA", "aAAbbbb"));
     }
 }

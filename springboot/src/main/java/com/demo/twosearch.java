@@ -1,11 +1,11 @@
 package com.demo;
 
 public class twosearch {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(search(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 4));
     }
 
-    private static int search(int[] ints, int k) {
+    private static   int search(int[] ints, int k) {
         int low = 0;
         int high = ints.length - 1;
         while (low <= high) {

@@ -1,11 +1,11 @@
 package com.demo;
 
 public class SubarraySum {
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         System.out.println(subarraySum(new int[]{1, 2, 3}, 3));
     }
 
-    public static int subarraySum(int[] nums, int k) {
+    public static   int subarraySum(int[] nums, int k) {
         int count = 0;
         int sum = 0;
         int index = 0;

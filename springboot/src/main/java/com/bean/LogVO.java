@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Data
 public class LogVO implements Serializable {
-    private static final long serialVersionUID = 1845128451L;
+    private static   final long serialVersionUID = 1845128451L;
 
     private Integer id;
     /**

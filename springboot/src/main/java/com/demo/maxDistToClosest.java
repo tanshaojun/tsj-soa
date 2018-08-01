@@ -12,7 +12,7 @@ public class maxDistToClosest {
      * @param seats
      * @return
      */
-    public static int maxDistToClosest(int[] seats) {
+    public static   int maxDistToClosest(int[] seats) {
         int max = 0;
         int index = -1;
         for (int i = 0; i < seats.length; i++) {
@@ -31,7 +31,7 @@ public class maxDistToClosest {
         return i > max ? i : max;
     }
 
-    public static void main(String[] args) {
+    public static   void main(String[] args) {
         int[] ints = new int[]{1, 1, 1, 1, 1, 0, 1, 1};
         System.out.println(maxDistToClosest(ints));
     }
