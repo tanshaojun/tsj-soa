@@ -19,6 +19,7 @@ if __name__ == '__main__':
     url = 'http://www.hlxns.com'
     html = requests.get(url, headers=headers)
     html.encoding = 'utf-8'
+    print(html)
     page = etree.HTML(html.text).xpath('//a[@class="item"]/text()')[-1]
     for i in range(int(line / 100) + 1, int(page) + 1):
         k = 1
