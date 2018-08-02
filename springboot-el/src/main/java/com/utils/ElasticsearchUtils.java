@@ -24,6 +24,7 @@ import org.elasticsearch.search.sort.SortOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -37,12 +38,12 @@ import java.util.UUID;
  * Date: 2018/8/1
  * Time: 下午9:35
  */
+@Component
 public class ElasticsearchUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(ElasticsearchUtils.class);
 
     @Autowired
     private TransportClient transportClient;
-
     private static TransportClient client;
 
     @PostConstruct
