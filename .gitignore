@@ -1,6 +1,7 @@
 # idea ignore
 .idea/
 springboot/.idea/
+springboot-el/.idea/
 
 *.iml
 *.ipr
@@ -9,8 +10,10 @@ springboot/.idea/
 # out/
 
 springboot/springboot.iml
+springboot-el/springboot.iml
 
 # target
 springboot/target/
+springboot-el/target/
 
 

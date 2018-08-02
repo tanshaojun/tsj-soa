@@ -1,7 +1,5 @@
 server:
-  port: 80
-  
-  
+  port: 8001
 eureka:
   client:
     register-with-eureka: false
