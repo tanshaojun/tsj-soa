@@ -2,6 +2,8 @@ package com.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsRequest;
@@ -40,7 +42,7 @@ import java.util.UUID;
  */
 @Component
 public class ElasticsearchUtils {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ElasticsearchUtils.class);
+    private static final Log logger = LogFactory.getLog(ElasticsearchUtils.class);
 
     @Autowired
     private TransportClient transportClient;
@@ -59,10 +61,10 @@ public class ElasticsearchUtils {
      */
     public static boolean createIndex(String index) {
         if (!isIndexExist(index)) {
-            LOGGER.info("Index is not exits!");
+            logger.info("Index is not exits!");
         }
         CreateIndexResponse indexresponse = client.admin().indices().prepareCreate(index).execute().actionGet();
-        LOGGER.info("执行建立成功？" + indexresponse.isAcknowledged());
+        logger.info("执行建立成功？" + indexresponse.isAcknowledged());
 
         return indexresponse.isAcknowledged();
     }
@@ -75,13 +77,13 @@ public class ElasticsearchUtils {
      */
     public static boolean deleteIndex(String index) {
         if (!isIndexExist(index)) {
-            LOGGER.info("Index is not exits!");
+            logger.info("Index is not exits!");
         }
         DeleteIndexResponse dResponse = client.admin().indices().prepareDelete(index).execute().actionGet();
         if (dResponse.isAcknowledged()) {
-            LOGGER.info("delete index " + index + "  successfully!");
+            logger.info("delete index " + index + "  successfully!");
         } else {
-            LOGGER.info("Fail to delete index " + index);
+            logger.info("Fail to delete index " + index);
         }
         return dResponse.isAcknowledged();
     }
@@ -93,11 +95,12 @@ public class ElasticsearchUtils {
      * @return
      */
     public static boolean isIndexExist(String index) {
-        IndicesExistsResponse inExistsResponse = client.admin().indices().exists(new IndicesExistsRequest(index)).actionGet();
+        IndicesExistsResponse inExistsResponse = client.admin().indices().exists(new IndicesExistsRequest(index))
+                .actionGet();
         if (inExistsResponse.isExists()) {
-            LOGGER.info("Index [" + index + "] is exist!");
+            logger.info("Index [" + index + "] is exist!");
         } else {
-            LOGGER.info("Index [" + index + "] is not exist!");
+            logger.info("Index [" + index + "] is not exist!");
         }
         return inExistsResponse.isExists();
     }
@@ -115,7 +118,7 @@ public class ElasticsearchUtils {
 
         IndexResponse response = client.prepareIndex(index, type, id).setSource(jsonObject).get();
 
-        LOGGER.info("addData response status:{},id:{}", response.status().getStatus(), response.getId());
+        logger.info("addData response status:{},id:{}" + response.status().getStatus() + response.getId());
 
         return response.getId();
     }
@@ -143,7 +146,7 @@ public class ElasticsearchUtils {
 
         DeleteResponse response = client.prepareDelete(index, type, id).execute().actionGet();
 
-        LOGGER.info("deleteDataById response status:{},id:{}", response.status().getStatus(), response.getId());
+        logger.info("deleteDataById response status:{},id:{}" + response.status().getStatus() + response.getId());
     }
 
     /**
@@ -198,7 +201,8 @@ public class ElasticsearchUtils {
      * @param matchStr  过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static List<Map<String, Object>> searchListData(String index, String type, long startTime, long endTime, Integer size, String matchStr) {
+    public static List<Map<String, Object>> searchListData(String index, String type, long startTime, long endTime,
+                                                           Integer size, String matchStr) {
         return searchListData(index, type, startTime, endTime, size, null, null, false, null, matchStr);
     }
 
@@ -212,7 +216,8 @@ public class ElasticsearchUtils {
      * @param matchStr 过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields, String matchStr) {
+    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields,
+                                                           String matchStr) {
         return searchListData(index, type, 0, 0, size, fields, null, false, null, matchStr);
     }
 
@@ -228,7 +233,8 @@ public class ElasticsearchUtils {
      * @param matchStr    过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields, String sortField, boolean matchPhrase, String matchStr) {
+    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields,
+                                                           String sortField, boolean matchPhrase, String matchStr) {
         return searchListData(index, type, 0, 0, size, fields, sortField, matchPhrase, null, matchStr);
     }
 
@@ -246,7 +252,9 @@ public class ElasticsearchUtils {
      * @param matchStr       过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields, String sortField, boolean matchPhrase, String highlightField, String matchStr) {
+    public static List<Map<String, Object>> searchListData(String index, String type, Integer size, String fields,
+                                                           String sortField, boolean matchPhrase, String
+                                                                   highlightField, String matchStr) {
         return searchListData(index, type, 0, 0, size, fields, sortField, matchPhrase, highlightField, matchStr);
     }
 
@@ -266,7 +274,10 @@ public class ElasticsearchUtils {
      * @param matchStr       过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static List<Map<String, Object>> searchListData(String index, String type, long startTime, long endTime, Integer size, String fields, String sortField, boolean matchPhrase, String highlightField, String matchStr) {
+    public static List<Map<String, Object>> searchListData(String index, String type, long startTime, long endTime,
+                                                           Integer size, String fields, String sortField, boolean
+                                                                   matchPhrase, String highlightField, String
+                                                                   matchStr) {
 
         SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
         if (StringUtils.isNotEmpty(type)) {
@@ -327,14 +338,14 @@ public class ElasticsearchUtils {
         }
 
         //打印的内容 可以在 Elasticsearch head 和 Kibana  上执行查询
-        LOGGER.info("\n{}", searchRequestBuilder);
+        logger.info("\n{}" + searchRequestBuilder);
 
         SearchResponse searchResponse = searchRequestBuilder.execute().actionGet();
 
         long totalHits = searchResponse.getHits().totalHits;
         long length = searchResponse.getHits().getHits().length;
 
-        LOGGER.info("共查询到[{}]条数据,处理数据条数[{}]", totalHits, length);
+        logger.info("共查询到[{}]条数据,处理数据条数[{}]" + totalHits + length);
 
         if (searchResponse.status().getStatus() == 200) {
             // 解析对象
@@ -361,7 +372,9 @@ public class ElasticsearchUtils {
      * @param matchStr       过滤条件（xxx=111,ElasticsearchUtils=222）
      * @return
      */
-    public static EsPage searchDataPage(String index, String type, int currentPage, int pageSize, long startTime, long endTime, String fields, String sortField, boolean matchPhrase, String highlightField, String matchStr) {
+    public static EsPage searchDataPage(String index, String type, int currentPage, int pageSize, long startTime,
+                                        long endTime, String fields, String sortField, boolean matchPhrase, String
+                                                highlightField, String matchStr) {
         SearchRequestBuilder searchRequestBuilder = client.prepareSearch(index);
         if (StringUtils.isNotEmpty(type)) {
             searchRequestBuilder.setTypes(type.split(","));
@@ -423,7 +436,7 @@ public class ElasticsearchUtils {
         searchRequestBuilder.setExplain(true);
 
         //打印的内容 可以在 Elasticsearch head 和 Kibana  上执行查询
-        LOGGER.info("\n{}", searchRequestBuilder);
+        logger.info("\n{}" + searchRequestBuilder);
 
         // 执行搜索,返回搜索响应信息
         SearchResponse searchResponse = searchRequestBuilder.execute().actionGet();
@@ -431,7 +444,7 @@ public class ElasticsearchUtils {
         long totalHits = searchResponse.getHits().totalHits;
         long length = searchResponse.getHits().getHits().length;
 
-        LOGGER.debug("共查询到[{}]条数据,处理数据条数[{}]", totalHits, length);
+        logger.debug("共查询到[{}]条数据,处理数据条数[{}]" + totalHits + length);
 
         if (searchResponse.status().getStatus() == 200) {
             // 解析对象
@@ -451,15 +464,14 @@ public class ElasticsearchUtils {
      * @param highlightField
      */
     private static List<Map<String, Object>> setSearchResponse(SearchResponse searchResponse, String highlightField) {
-        List<Map<String, Object>> sourceList = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> sourceList = new ArrayList<Map<String, Object>>(16);
         StringBuffer stringBuffer = new StringBuffer();
 
         for (SearchHit searchHit : searchResponse.getHits().getHits()) {
-            searchHit.getSource().put("id", searchHit.getId());
-
+            searchHit.getSourceAsMap().put("id", searchHit.getId());
             if (StringUtils.isNotEmpty(highlightField)) {
 
-                System.out.println("遍历 高亮结果集，覆盖 正常结果集" + searchHit.getSource());
+                logger.info("遍历 高亮结果集，覆盖 正常结果集" + searchHit.getSourceAsMap());
                 Text[] text = searchHit.getHighlightFields().get(highlightField).getFragments();
 
                 if (text != null) {
@@ -467,10 +479,10 @@ public class ElasticsearchUtils {
                         stringBuffer.append(str.string());
                     }
                     //遍历 高亮结果集，覆盖 正常结果集
-                    searchHit.getSource().put(highlightField, stringBuffer.toString());
+                    searchHit.getSourceAsMap().put(highlightField, stringBuffer.toString());
                 }
             }
-            sourceList.add(searchHit.getSource());
+            sourceList.add(searchHit.getSourceAsMap());
         }
 
         return sourceList;
