@@ -2,12 +2,16 @@ package com.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.utils.ElasticsearchUtils;
+import org.elasticsearch.action.search.SearchRequestBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,20 +27,20 @@ public class ElCcontroller {
     public String testel() {
         Map<String, Object> map = new HashMap<String, Object>(16);
 
-        map.put("name", "name");
-        map.put("age", 1);
-        map.put("interests", new String[]{"阅读", "学习"});
-        map.put("about", "世界上没有优秀的理念，只有脚踏实地的结果");
-        map.put("processTime", new Date());
+        map.put("year", 1885);
+        map.put("name", "tan shaojun ");
+        map.put("lyrics", "Fa la la la la");
 
 
-//        String s = ElasticsearchUtils.addData(JSONObject.parseObject(JSONObject.toJSONString(map)), "tan", "tan1",
-// "id=" + 2);
-        boolean tan = ElasticsearchUtils.isIndexExist("test");
-        System.out.println(tan);
-        Map<String, Object> stringObjectMap = ElasticsearchUtils.searchDataById("test", "tst", "1", null);
-
-        return JSONObject.toJSONString(stringObjectMap);
+//        String s = ElasticsearchUtils.addData(JSONObject.parseObject(JSONObject.toJSONString(map)), "test", "tst",
+//                "id=" + 3);
+//        System.out.println(s);
+//        boolean tan = ElasticsearchUtils.isIndexExist("test");
+//        System.out.println(tan);
+        //{"year":1885,"name":"Deck the Halls","lyrics":"Fa la la la la"}
+//        List<Map<String, Object>> list = ElasticsearchUtils.searchListData("test", "tst", 1024, "", "name=你好");
+        List<Map<String, Object>> dataByillegible = ElasticsearchUtils.getDataByillegible();
+        return JSONObject.toJSONString(dataByillegible);
     }
 
     @RequestMapping("/index")

@@ -19,8 +19,11 @@ import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.WildcardQueryBuilder;
 import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.slf4j.Logger;
@@ -302,7 +305,8 @@ public class ElasticsearchUtils {
                     if (matchPhrase == Boolean.TRUE) {
                         boolQuery.must(QueryBuilders.matchPhraseQuery(s.split("=")[0], s.split("=")[1]));
                     } else {
-                        boolQuery.must(QueryBuilders.matchQuery(s.split("=")[0], s.split("=")[1]));
+//                        boolQuery.must(QueryBuilders.matchQuery(s.split("=")[0], s.split("=")[1]));
+                        boolQuery.must(QueryBuilders.wildcardQuery("name", "*你好"));
                     }
                 }
 
@@ -345,7 +349,7 @@ public class ElasticsearchUtils {
         long totalHits = searchResponse.getHits().totalHits;
         long length = searchResponse.getHits().getHits().length;
 
-        logger.info("共查询到[{}]条数据,处理数据条数[{}]" + totalHits + length);
+        logger.info("共查询到[{" + totalHits + "}]条数据,处理数据条数[{" + length + "}]");
 
         if (searchResponse.status().getStatus() == 200) {
             // 解析对象
@@ -487,4 +491,33 @@ public class ElasticsearchUtils {
 
         return sourceList;
     }
+
+    /**
+     * 单条件 模糊查询
+     *
+     * @param type  文档名，相当于oracle中的表名，例如：ql_xz
+     * @param key   字段名，例如：bdcqzh
+     * @param value 字段名模糊值：如 *123* ;?123*;?123?;*123?;
+     * @return List
+     * @author Lixin
+     */
+//    public static List<Map<String, Object>> getDataByillegible(String type, String key, String value) {
+    public static List<Map<String, Object>> getDataByillegible() {
+        WildcardQueryBuilder wBuilder = QueryBuilders.wildcardQuery("name", "*你好*");
+        SearchResponse response = client.prepareSearch("test").setTypes("tst")
+                .setQuery(wBuilder)
+                .setFrom(0).setSize(10000).setExplain(true)
+                .execute()
+                .actionGet();
+
+        List<Map<String, Object>> sourceList = new ArrayList<Map<String, Object>>(16);
+        for (SearchHit searchHit : response.getHits().getHits()) {
+            searchHit.getSourceAsMap().put("id", searchHit.getId());
+            sourceList.add(searchHit.getSourceAsMap());
+        }
+
+        return sourceList;
+    }
+
+
 }
