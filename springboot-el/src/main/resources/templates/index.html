@@ -13,21 +13,69 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
+                    优惠卷搜索：
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="btn">Go!</button>
+                       <button class="btn btn-default" type="button" id="btn">Go!</button>
                     </span>
                 </div>
             </div>
         </div>
     </form>
 </div>
+<table class="table">
+    <thead>
+    <tr>
+        <th>产品</th>
+        <th>券后价</th>
+        <th>在售价</th>
+        <th>优惠券</th>
+        <th>类别</th>
+        <th>链接</th>
+    </tr>
+    </thead>
+    <tbody id="tb">
+
+    </tbody>
+</table>
 </body>
 <script type="text/javascript">
     $(function () {
         $("#btn").click(function () {
             var name = $(".form-control").val();
-            alert(name)
+            $.ajax({
+                type: "post",
+                url: "/test",
+                cache: false,
+                data: {
+                    key: name
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data != undefined) {
+                        console.log(data)
+                        var json = "";
+                        data.forEach(function (v) {
+                            json += "<tr>\n" +
+                                "        <th>" + v.title + "</th>\n" +
+                                "        <th>" + v.now_price + "</th>\n" +
+                                "        <th>" + v.old_price + "</th>\n" +
+                                "        <th>" + v.coupon + "</th>\n" +
+                                "        <th>" + v.summary + "</th>\n" +
+                                "        <th><a href='" + v.sp_url + "'>链接</a></th>\n" +
+                                "    </tr>"
+                        })
+
+                        $("#tb").html("")
+                        $("#tb").append(json)
+                    } else {
+                        console.log("错误")
+                    }
+                },
+                error: function (e) {
+                    console.log("调用异常")
+                }
+            });
         })
 
     })

@@ -14,6 +14,8 @@ filename = "1.txt"
 head = ['序号', '商品类型', '商品名称', '优惠券', '券后价', '在售价', '销量', '推荐理由', '商品链接']
 for i in range(9):
     ws.write(0, i, head[i])
+pro = ['111.155.116.234', '106.75.71.122', '119.188.162.165', '106.8.17.80', '121.31.150.169', '180.101.205.253',
+       '124.235.208.252', '121.31.158.251', '114.113.126.83', '112.117.49.219', '221.7.255.168']
 
 
 def logToFile(content, filename):
@@ -29,18 +31,22 @@ def logToFile(content, filename):
 
 def getData(i):
     global line
+    time.sleep(5 + random.random())
     k = 1
     lis = []
     print('【开始下载】第%d页数据' % i)
-    htm = requests.get(url + '/index.php?r=l&page={}'.format(str(i)), headers=headers)
+    htm = requests.get(url + '/index.php?r=l&page={}'.format(str(i)),
+                       proxies={"https": "http://" + random.sample(pro, 1)[0]},
+                       headers=headers)
     htm.encoding = 'utf-8'
     data = etree.HTML(htm.text)
     url_sps = data.xpath('//div[@class="title"]/a/@href')
     for url_sp in url_sps:  # 一页100条
-        # time.sleep(random.random() * 2)
+        time.sleep(5 + random.random())
         print('      【正在下载】第%03d页第%03d条商品数据' % (i, k), end='')
         k += 1
-        html_sp = requests.get(url + url_sp, headers=headers)
+        html_sp = requests.get(url + url_sp, proxies={"https": "http://" + random.sample(pro, 1)[0]},
+                               headers=headers)
         html_sp.encoding = 'utf-8'
         info = etree.HTML(html_sp.text)
         title = info.xpath('//span[@class="title"]/text()')  # 产品
@@ -53,7 +59,7 @@ def getData(i):
         sp_url = info.xpath('//a[@class="theme-bg-color-8"]/@href')  # 链接
         # lis.append(category + title + coupon + now_price + old_price + nums + summary + sp_url)
         data = {
-            'category': category[0],
+            'category': category,
             'title': title[0],
             'coupon': coupon[0],
             'now_price': now_price[0],
@@ -63,17 +69,6 @@ def getData(i):
             'sp_url': sp_url[0],
         }
         logToFile(str(data), str(filename))
-        # print('................................【下载完成】')
-        # if k == 2:
-        #     break
-    # print('######第%d页数据   【下载完成】' % i)
-    # for ii in range(len(lis)):
-    #     lis[ii].insert(0, line)  # 添加序号
-    #     for j in range(9):  # 列
-    #         ws.write(line, j, lis[ii][j])
-    #     line += 1
-    # print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>【写入本页数据完成】<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
-    # wb.save(path)
 
 
 class threadDownload(Thread):
@@ -93,12 +88,15 @@ if __name__ == '__main__':
     my_queue = queue.Queue()
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'}
     url = 'http://www.hlxns.com'
-    html = requests.get(url, headers=headers)
+    print(random.sample(pro, 1)[0])
+    # html = requests.get(url, proxies={"https": http}, headers=headers)
+    html = requests.get(url, proxies={"https": "http://" + random.sample(pro, 1)[0]},
+                        headers=headers)
     html.encoding = 'utf-8'
     page = etree.HTML(html.text).xpath('//a[@class="item"]/text()')[-1]
     for i in range(int(line / 100) + 1, int(page) + 1):
         my_queue.put_nowait(i)
-    for a in range(0, 88):
+    for a in range(0, 20):
         threadD = threadDownload(my_queue)
         threadD.start()
     while my_queue.empty():

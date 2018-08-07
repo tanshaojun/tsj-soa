@@ -4,10 +4,14 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest;
+import org.elasticsearch.action.admin.indices.analyze.AnalyzeResponse;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsRequest;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import org.elasticsearch.action.admin.indices.mapping.put.PutMappingRequest;
+import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetRequestBuilder;
 import org.elasticsearch.action.get.GetResponse;
@@ -16,8 +20,11 @@ import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.client.Requests;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.text.Text;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -32,6 +39,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +64,24 @@ public class ElasticsearchUtils {
         client = this.transportClient;
     }
 
+    public static void test(String index) {
+        //standard 标准分词
+        //ik_max_word ik分词
+        //ik_smart ik分词
+        AnalyzeRequest analyzeRequest = new AnalyzeRequest(index)
+                .text("中华人民共和国国歌")
+                .analyzer("ik_smart");
+
+        List<AnalyzeResponse.AnalyzeToken> tokens = client.admin().indices()
+                .analyze(analyzeRequest)
+                .actionGet()
+                .getTokens();
+
+        for (AnalyzeResponse.AnalyzeToken token : tokens) {
+            System.out.println(token.getTerm());
+        }
+    }
+
     /**
      * 创建索引
      *
@@ -66,10 +92,22 @@ public class ElasticsearchUtils {
         if (!isIndexExist(index)) {
             logger.info("Index is not exits!");
         }
-        CreateIndexResponse indexresponse = client.admin().indices().prepareCreate(index).execute().actionGet();
+        CreateIndexResponse indexresponse = client.admin().indices().prepareCreate(index).addMapping().execute().actionGet();
         logger.info("执行建立成功？" + indexresponse.isAcknowledged());
-
         return indexresponse.isAcknowledged();
+    }
+
+    public static boolean addMapper(String index, String type) throws IOException {
+        XContentBuilder mapping = XContentFactory.jsonBuilder().startObject()
+                .startObject(index).startObject("properties")
+                .startObject("title").field("type", "string")
+                .field("searchAnalyzer", "ik_smart").endObject().endObject()
+                .endObject()
+                .endObject();
+        PutMappingRequest mapping1 = Requests.putMappingRequest(index).type(type).source(mapping);
+        PutMappingResponse putMappingResponse = client.admin().indices().putMapping(mapping1).actionGet();
+        logger.info("添加分词成功？" + putMappingResponse.isAcknowledged());
+        return putMappingResponse.isAcknowledged();
     }
 
     /**
@@ -305,8 +343,8 @@ public class ElasticsearchUtils {
                     if (matchPhrase == Boolean.TRUE) {
                         boolQuery.must(QueryBuilders.matchPhraseQuery(s.split("=")[0], s.split("=")[1]));
                     } else {
-//                        boolQuery.must(QueryBuilders.matchQuery(s.split("=")[0], s.split("=")[1]));
-                        boolQuery.must(QueryBuilders.wildcardQuery("name", "*你好"));
+                        boolQuery.must(QueryBuilders.matchQuery(s.split("=")[0], s.split("=")[1]));
+//                        boolQuery.must(QueryBuilders.wildcardQuery("name", "*你好"));
                     }
                 }
 
