@@ -88,22 +88,26 @@ public class ElasticsearchUtils {
      * @param index
      * @return
      */
-    public static boolean createIndex(String index) {
+    public static boolean createIndex(String index, String type) throws IOException {
         if (!isIndexExist(index)) {
             logger.info("Index is not exits!");
         }
-        CreateIndexResponse indexresponse = client.admin().indices().prepareCreate(index).addMapping().execute().actionGet();
+        CreateIndexResponse indexresponse = client.admin().indices().prepareCreate(index).execute().actionGet();
         logger.info("执行建立成功？" + indexresponse.isAcknowledged());
+        boolean b = addMapper(index, type);
+        logger.info("执行添加分词成功？" + b);
         return indexresponse.isAcknowledged();
     }
 
     public static boolean addMapper(String index, String type) throws IOException {
-        XContentBuilder mapping = XContentFactory.jsonBuilder().startObject()
-                .startObject(index).startObject("properties")
-                .startObject("title").field("type", "string")
-                .field("searchAnalyzer", "ik_smart").endObject().endObject()
+        logger.info("添加分词执行中.........");
+        XContentBuilder mapping = XContentFactory.jsonBuilder()
+                .startObject()
+                .startObject("properties")
+                .startObject("title").field("type", "text").field("analyzer", "ik_max_word").endObject()
                 .endObject()
                 .endObject();
+
         PutMappingRequest mapping1 = Requests.putMappingRequest(index).type(type).source(mapping);
         PutMappingResponse putMappingResponse = client.admin().indices().putMapping(mapping1).actionGet();
         logger.info("添加分词成功？" + putMappingResponse.isAcknowledged());

@@ -3,6 +3,8 @@ package com.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.utils.ElasticsearchUtils;
 import com.utils.FileUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -17,6 +19,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created with IntelliJ IDEA
@@ -26,6 +29,7 @@ import java.util.Map;
  */
 @Controller
 public class ElCcontroller {
+    private final Log logger = LogFactory.getLog(getClass());
     private final static String index = "test";
     private final static String type = "tst";
 
@@ -39,14 +43,12 @@ public class ElCcontroller {
     @ResponseBody
     public String testel(String key) {
         if (!ElasticsearchUtils.isIndexExist(index)) {
-            ElasticsearchUtils.createIndex(index);
+            try {
+                ElasticsearchUtils.createIndex(index, type);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        try {
-            ElasticsearchUtils.addMapper(index, type);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-//        ElasticsearchUtils.test(index);
         List<Map<String, Object>> list = ElasticsearchUtils.searchListData(index, type, 1024, "", "title=" + key);
         return JSONObject.toJSONString(list);
     }
@@ -82,5 +84,27 @@ public class ElCcontroller {
     public String del() {
         boolean f = ElasticsearchUtils.deleteIndex(index);
         return JSONObject.toJSONString("success");
+    }
+
+    private static AtomicInteger count = new AtomicInteger(0);
+
+    @ResponseBody
+    @RequestMapping("/testinst")
+    public String testinst(String title, String now_price, String old_price, String coupon, String summary, String
+            sp_url) {
+        Map<String, String> map = new HashMap<>(16);
+        map.put("title", title);
+        map.put("now_price", now_price);
+        map.put("old_price", old_price);
+        map.put("coupon", coupon);
+        map.put("summary", summary);
+        map.put("sp_url", sp_url);
+        int i = count.addAndGet(1);
+        logger.info("第 " + i + "条，数据为: " + map);
+        String s = ElasticsearchUtils.addData(JSONObject.parseObject(JSONObject.toJSONString(map)), index,
+                type,
+                String.valueOf(i));
+        logger.info("是否添加成功：" + s);
+        return "success";
     }
 }

@@ -5,6 +5,7 @@ import requests
 from lxml import etree
 import xlwt
 from threading import Thread
+import json
 
 line = 1
 wb = xlwt.Workbook(encoding='utf-8')
@@ -14,8 +15,9 @@ filename = "1.txt"
 head = ['序号', '商品类型', '商品名称', '优惠券', '券后价', '在售价', '销量', '推荐理由', '商品链接']
 for i in range(9):
     ws.write(0, i, head[i])
-pro = ['111.155.116.234', '106.75.71.122', '119.188.162.165', '106.8.17.80', '121.31.150.169', '180.101.205.253',
-       '124.235.208.252', '121.31.158.251', '114.113.126.83', '112.117.49.219', '221.7.255.168']
+pro = ['124.235.208.252', '218.60.8.99', '218.60.8.83', '101.231.188.78', '113.200.56.13', '221.228.17.172',
+       '119.188.162.165', '114.113.126.83', '119.27.177.169', '123.139.56.238', '221.7.255.168', '222.170.0.102',
+       '218.60.8.98']
 
 
 def logToFile(content, filename):
@@ -68,7 +70,10 @@ def getData(i):
             'summary': summary[0],
             'sp_url': sp_url[0],
         }
-        logToFile(str(data), str(filename))
+        url1 = "http://localhost:8011/testinst?title=" + title[0] + "&now_price=" + now_price[0] + "&old_price=" + \
+               old_price[0] + "&coupon=" + coupon[0] + "&summary=" + summary[0] + "&sp_url=" + sp_url[0]
+        header = {}
+        requests.get(url1, headers=header)
 
 
 class threadDownload(Thread):
