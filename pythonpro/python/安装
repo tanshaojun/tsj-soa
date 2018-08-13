@@ -16,5 +16,11 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 
 pip install pymysql
 
+安装scrapy
+pip install Twisted-18.7.0-cp37-cp37m-win_amd64
+pip install scrapy
+
+判断是否使用代理
+http://ip.filefab.com/index.php
 
 python -m pip install --upgrade pip 升级pip

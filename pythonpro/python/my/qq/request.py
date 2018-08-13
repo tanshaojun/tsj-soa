@@ -40,8 +40,8 @@ def web_login_cookie():
     :return: 浏览器的缓存
     """
     driver = webdriver.Chrome(r"C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
-    qq_account = '877513390'
-    qq_password = '12346'
+    qq_account = '1572214237'
+    qq_password = 'chao2018'
     login(driver, qq_account, qq_password)
     time.sleep(10)
     driver.get('https://user.qzone.qq.com/{}'.format(qq_account))

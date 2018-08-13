@@ -88,9 +88,20 @@ public class ElCcontroller {
 
     private static AtomicInteger count = new AtomicInteger(0);
 
+    /**
+     * 插入数据
+     *
+     * @param title
+     * @param now_price
+     * @param old_price
+     * @param coupon
+     * @param summary
+     * @param sp_url
+     * @return
+     */
     @ResponseBody
-    @RequestMapping("/testinst")
-    public String testinst(String title, String now_price, String old_price, String coupon, String summary, String
+    @RequestMapping("/insert")
+    public String insert(String title, String now_price, String old_price, String coupon, String summary, String
             sp_url) {
         Map<String, String> map = new HashMap<>(16);
         map.put("title", title);

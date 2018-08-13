@@ -1,33 +1,28 @@
 import requests
 from bs4 import BeautifulSoup
 import random
+from lxml import etree
 
 
 def logToFile(content, filename):
     f = open(filename, 'a', encoding='utf8')
     try:
-        # print(content)
         f.write(content + '\n')
     except:
         print('写入失败')
     finally:
         f.close()
 
+pro = ['183.179.199.225:8080']
 
-pro = ['122.152.196.126', '114.215.174.227', '119.185.30.75']
-# 头信息
-head = {
-    'user-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
-}
+
 count = 0
 for num in range(0, 13):
     sum = num * 20
+    ip = random.sample(pro, 1)[0]
     url = "https://movie.douban.com/subject/26602244/discussion/?start=" + str(sum) + "&sort_by=time"
-    # 使用代理ip
-    wbdata = requests.get(url, proxies={"https": "http://139.224.80.139:3128"}).text
-    # 对获取到的文本进行解析
+    wbdata = requests.get(url, proxies={"https": "https://" + ip}).text
     soup = BeautifulSoup(wbdata, 'lxml')
-
     news_titles = soup.select("div.discussion-posts > table.olt")
     for table in news_titles:
         tr = table.findAll('tr')
