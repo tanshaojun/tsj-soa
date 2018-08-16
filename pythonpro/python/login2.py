@@ -3,12 +3,12 @@ from lxml import etree
 from PIL import Image
 import pytesseract
 
-html=requests.get("http://47.93.54.20/login").text
-info=etree.HTML(html)
-src=info.xpath('//img/@src')[1]
+html = requests.get("http://47.93.54.20/login").text
+info = etree.HTML(html)
+src = info.xpath('//img/@src')[1]
 print(src)
-# im = Image.open("C:\\Users\\lenovo\\Desktop\\5.png")
-# ss=pytesseract.image_to_string(im)
+im = Image.open("C:\\Users\\lenovo\\Desktop\\1.png")
+ss = pytesseract.image_to_string(im)
 data = {'username': 'admin',
         'password': 'yuseen',
         'validatecode': 'l12c'

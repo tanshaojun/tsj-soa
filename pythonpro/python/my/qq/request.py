@@ -139,10 +139,6 @@ def get_each_str(req, uin, headers):
 #     conn.close()
 
 def main():
-    """主要操作
-
-    :return: void
-    """
     req = requests.session()
     headers = {'host': 'h5.qzone.qq.com',
                'accept-encoding': 'gzip, deflate, br',

@@ -3,13 +3,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 
-
-# #使用Selenium的webdriver实例化一个浏览器对象，在这里使用Phantomjs
-# driver = webdriver.PhantomJS(executable_path=r"D:\phantomjs-2.1.1-windows\bin\phantomjs.exe")
-# #设置Phantomjs窗口最大化
-# driver.maximize_window()
-
-
 # 登录QQ空间
 def get_shuoshuo(qq):
     chromedriver = r"C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe"
@@ -73,4 +66,4 @@ def get_shuoshuo(qq):
 
 
 if __name__ == '__main__':
-    get_shuoshuo('1810815286')
+    get_shuoshuo('1041589452')

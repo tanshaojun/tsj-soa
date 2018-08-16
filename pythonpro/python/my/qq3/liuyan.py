@@ -39,9 +39,9 @@ def get_shuoshuo(qq):
         driver.switch_to.frame('login_frame')
         driver.find_element_by_id('switcher_plogin').click()
         driver.find_element_by_id('u').clear()  # 选择用户名框
-        driver.find_element_by_id('u').send_keys('877513390')
+        driver.find_element_by_id('u').send_keys('56554')
         driver.find_element_by_id('p').clear()
-        driver.find_element_by_id('p').send_keys('123456')
+        driver.find_element_by_id('p').send_keys('123465')
         driver.find_element_by_id('login_button').click()
         time.sleep(10)
     driver.implicitly_wait(10)
