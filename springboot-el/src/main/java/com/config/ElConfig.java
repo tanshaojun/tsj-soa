@@ -56,7 +56,7 @@ public class ElConfig {
                     .put("cluster.name", clusterName)
                     //增加嗅探机制，找到ES集群
                     .put("client.transport.sniff", true)
-                    //增加线程池个数，暂时设为5
+                    //增加线程池个数为1
                     .put("thread_pool.search.size", Integer.parseInt(poolSize))
                     .build();
 
