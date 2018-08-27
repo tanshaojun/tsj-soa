@@ -90,5 +90,6 @@ ITEM_PIPELINES = {
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-IP = ['https://218.60.8.99:3129', 'https://218.60.8.83:3129', 'https://14.20.235.74:9797', 'https://14.20.235.137:9797',
-      'https://218.60.8.98:3129','https://14.20.235.74:9797']
+IP = ['https://221.7.255.168:8080', 'https://14.149.68.120:1080', 'https://221.7.255.168:8080',
+      'https://202.107.195.217:80', 'https://113.200.214.164:9999']
+# IP = ['https://113.200.214.164:9999']

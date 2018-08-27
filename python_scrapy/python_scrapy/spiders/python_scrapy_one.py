@@ -8,16 +8,21 @@ class PythonScrapyOneSpider(scrapy.Spider):
     name = 'python_scrapy_one'
     # 爬虫范围
     allowed_domains = ['movie.douban.com']
-
-    start_urls = ['https://movie.douban.com/chart']
+    url = "https://movie.douban.com/top250?start=%d&filter="
+    count = 0
+    start_urls = [url % (count)]
 
     aa = 0
 
     def parse(self, response):
-        for each in response.xpath("//tr[@class='item']"):
+        for each in response.xpath("//div[@class='hd']"):
             # 初始化对象
             ps = PythonScrapyItem()
-            print(each.xpath("./td[2]/div/a/text()").extract()[0].strip())
-            ps['name'] = each.xpath("./td[2]/div/a/text()").extract()[0].strip()
+            print(each.xpath("./a/span[1]/text()").extract()[0].strip())
+            ps['name'] = each.xpath("./a/span[1]/text()").extract()[0].strip()
             yield ps
-        # yield scrapy.Request('http://hr.tencent.com/position.php?&start=10', callback=self.parse, dont_filter=True)
+
+        if self.count < 225:
+            self.count += 25
+            # 处理完请求下一页
+            yield scrapy.Request(self.url % (self.count), callback=self.parse, dont_filter=True)
