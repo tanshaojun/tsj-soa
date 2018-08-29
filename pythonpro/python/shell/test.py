@@ -1,9 +1,9 @@
-from python.shell.ssh import SSHConnection
+from python.shell.sshutils import SSHConnectionUtils
 import requests
 import time
 
-ssh = SSHConnection("47.95.10.20", "22", "root", "tan123456.")
-ssh.SSHClient()
+ssh = SSHConnectionUtils("47.95.10.20", "22", "root", "tan123456.")
+ssh.connect()
 # 远程关闭tomcat
 print("关闭tomcat")
 ssh.exec_command("/usr/local/tomcat8/bin/shutdown.sh")
@@ -11,7 +11,7 @@ time.sleep(1)
 
 # 杀死进程
 print('杀死进程')
-ssh.exec_command('ps -ef | grep /usr/local/tomcat8 | grep -v grep | awk \'{print $2}\' | xargs kill -15')
+ssh.exec_command('ps -ef | grep /usr/local/tomcat8 | awk \'{print $2}\' | xargs kill -15')
 time.sleep(1)
 
 # 清空日志
@@ -50,6 +50,9 @@ if response.status_code == 200:
 else:
     print('Fail !!!')
 time.sleep(1)
+
+# 下载
+ssh.download("/root/aa.txt", "C:\\Users\\lenovo\\Desktop\\aa.txt")
 
 # # 文件上传
 # ssh.upload("C:\\Users\\lenovo\\Desktop\\test.war", "/root/test.war")
