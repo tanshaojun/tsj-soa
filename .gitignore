@@ -2,6 +2,9 @@
 .idea/
 springboot/.idea/
 springboot-el/.idea/
+javaproject/.idea/
+springcloud/.idea/
+dubbo-parent/.idea/
 
 *.iml
 *.ipr
@@ -11,9 +14,15 @@ springboot-el/.idea/
 
 springboot/springboot.iml
 springboot-el/springboot.iml
+javaproject/javaproject.iml
+springcloud/javaproject.iml
+dubbo-parent/dubbo-parent.iml
 
 # target
 springboot/target/
 springboot-el/target/
+javaproject/target/
+springcloud/target/
+dubbo-parent/target/
 
 

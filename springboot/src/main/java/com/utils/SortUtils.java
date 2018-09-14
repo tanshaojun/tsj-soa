@@ -5,7 +5,7 @@ import com.bean.Log;
 import java.util.*;
 
 public class SortUtils {
-    public static   Map<String, Map<String, List<Log>>> sortMapByKey(Map<String, Map<String, List<Log>>> map) {
+    public static Map<String, Map<String, List<Log>>> sortMapByKey(Map<String, Map<String, List<Log>>> map) {
         if (map == null || map.isEmpty()) return null;
         Map<String, Map<String, List<Log>>> newMap = new HashMap<>(16);
         Iterator<Map.Entry<String, Map<String, List<Log>>>> iterator = map.entrySet().iterator();
