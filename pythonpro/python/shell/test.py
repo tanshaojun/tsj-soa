@@ -2,7 +2,7 @@ from python.shell.sshutils import SSHConnectionUtils
 import requests
 import time
 
-ssh = SSHConnectionUtils("47.95.10.20", "22", "root", "tan123456.")
+ssh = SSHConnectionUtils("************", "22", "root", "************")
 ssh.connect()
 # 远程关闭tomcat
 print("关闭tomcat")
@@ -42,9 +42,9 @@ ssh.close()
 time.sleep(1)
 
 # 检测是否成功
-print("测试http://47.95.10.20:8080")
-response = requests.get("http://47.95.10.20:8080")
-print("http://47.95.10.20:8080", ' http code:', response.status_code)
+print("测试http://************:8080")
+response = requests.get("http://************:8080")
+print("http://************:8080", ' http code:', response.status_code)
 if response.status_code == 200:
     print('Success!')
 else:
@@ -54,11 +54,3 @@ time.sleep(1)
 # 下载
 ssh.download("/root/aa.txt", "C:\\Users\\lenovo\\Desktop\\aa.txt")
 
-# # 文件上传
-# ssh.upload("C:\\Users\\lenovo\\Desktop\\test.war", "/root/test.war")
-# time.sleep(1)
-# # 下载
-# ssh.exec_command("wget https://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz ")
-# # 解压
-# ssh.exec_command("tar -axvf apache-tomcat-8.0.53.tar.gz")
-# ssh.close()
