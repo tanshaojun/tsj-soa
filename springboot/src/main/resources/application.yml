@@ -1,0 +1,39 @@
+server:
+  port: 2020
+  servlet-path: /
+spring:
+    devtools:
+        restart:
+            #热部署生效
+          enabled: true
+            #设置重启的目录
+            #additional-paths: src/main/java
+            #classpath目录下的WEB-INF文件夹内容修改不重启
+          exclude: WEB-INF/**
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+      driverClassName: com.mysql.jdbc.Driver
+    freemarker:
+      suffix: .html
+      allow-request-override: false
+      allow-session-override: false
+      cache: false
+      charset: UTF-8
+      check-template-location: false
+      content-type: text/html;charset=UTF-8
+      enabled: true
+      expose-request-attributes: false
+      expose-session-attributes: false
+      expose-spring-macro-helpers: true
+      prefer-file-system-access: true
+      template-loader-path: classpath:/templates
+      settings.template_update_delay: 0
+      settings.default_encoding: UTF-8
+      settings.classic_compatible: true
+      order: 1
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: com.mapper

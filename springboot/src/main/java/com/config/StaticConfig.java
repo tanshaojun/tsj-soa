@@ -13,7 +13,7 @@ public class StaticConfig extends WebMvcConfigurationSupport {
 //        registry.addResourceHandler("/static/assets/i/**").addResourceLocations("classpath:/static-bat/assets/i/");
 //        registry.addResourceHandler("/static/assets/js/**").addResourceLocations("classpath:/static-bat/assets/js/");
 //        registry.addResourceHandler("/static/assets/fonts/**").addResourceLocations("classpath:/static-bat/assets/fonts/");
-        registry.addResourceHandler("/static/img/**").addResourceLocations("classpath:/static/img/");
+        registry.addResourceHandler("/static/image/**").addResourceLocations("classpath:/static/image/");
         super.addResourceHandlers(registry);
     }
 }
