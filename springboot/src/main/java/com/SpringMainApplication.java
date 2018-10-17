@@ -13,7 +13,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan("com.mapper")
 @Import(DynamicDataSourceRegister.class)
 public class SpringMainApplication {
-    public static   void main(String[] args) {
+    public static void main(String[] args) {
         SpringApplication run = new SpringApplication(SpringMainApplication.class);
         run.addListeners(new StartupListener());
         run.run(args);

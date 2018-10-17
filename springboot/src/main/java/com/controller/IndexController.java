@@ -14,8 +14,7 @@ public class IndexController {
      */
     @RequestMapping(value = "/")
     public ModelAndView index() {
-        ModelAndView mv = new ModelAndView("index");
-        System.out.println(123456);
+        ModelAndView mv = new ModelAndView("ceshi");
         return mv;
     }
 }
