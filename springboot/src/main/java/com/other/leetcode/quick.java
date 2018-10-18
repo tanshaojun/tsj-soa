@@ -3,12 +3,12 @@ package com.other.leetcode;
 import java.util.Random;
 
 public class quick {
-    public static   void main(String[] args) {
+    public static void main(String[] args) {
         int[] ints = new int[]{1, 4, 7, 2, 2, 3, 6, 5, 8};
         quickSort(ints, 0, ints.length - 1);
     }
 
-    public static   void quickSort(int[] a, int low, int high) {
+    public static void quickSort(int[] a, int low, int high) {
         int p;
         while (low < high) {
             int r = new Random().nextInt(high - low) + low;
@@ -19,10 +19,11 @@ public class quick {
         }
     }
 
-    private static   int partition(int[] a, int left, int right) {
+    private static int partition(int[] a, int left, int right) {
         int x = a[right];
         int p = left - 1;
         for (int i = left; i < right; i++) {
+            //大于等于降序，小于等于升序
             if (a[i] <= x) {
                 p++;
                 swap(a, p, i);
@@ -32,7 +33,7 @@ public class quick {
         return p + 1;
     }
 
-    private static   void swap(int[] a, int i, int j) {
+    private static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
