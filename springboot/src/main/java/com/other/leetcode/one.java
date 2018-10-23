@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class one {
     public static void main(String[] args) {
         int n = 217;
-        System.out.println(binary1num(n));
+        System.out.println(binary1num(4));
     }
 
     static int binary0num(int x) {
