@@ -1,46 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Content-Language" content="zh-CN"/>
-    <meta name="keywords" content="你我,圈圈说,汉中,汉中圈圈,你我,如是观,心理,感情,youmew"/>
-    <meta name="description" content="你我，缘自圈圈说，记载着圈圈的生活过往，只为留住那份曾经的感动；圈圈，又名小尤，前半生执著于感情，命途多舛，故孑然一身。"/>
-    <title>你我</title>
-    <link rel="stylesheet" rev="stylesheet" href="static/style/style.css" type="text/css" media="screen"/>
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <script src="static/style/common.js" type="text/javascript"></script>
-    <script src="static/style/c_html_js_add.js" type="text/javascript"></script>
-    <script src="static/style/custom.js" type="text/javascript"></script>
-    <link rel="alternate" type="application/rss+xml" href="static/style/feed.css" title="你我"/>
-</head>
+
+<#include  "header.html" />
+
 <body class="multi default">
 <div id="divAll">
     <div id="divPage">
         <div id="divMiddle">
-            <div id="divTop">
-                <h1 id="BlogTitle"><a href="#"><img src="static/images/LOGO.gif" alt="你我" onMouseover="shake(this,'onmouseout')"/></a></h1>
-            </div>
-            <div id="divNavBar">
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="article.html" title="感悟生活点滴">技术</a></li>
-                    <li><a href="list.html" title="光与影的艺术">观影</a></li>
-                    <li><a href="search.html" title="一切有为法，如梦幻泡影，如露亦如电，应作如是观。">感悟</a></li>
-                    <li><a href="tags.html" target="_blank" title="还是以前的圈圈微博！">读书</a></li>
-                    <li><a href="#" title="沟通从这里开始">留言本</a></li>
-                </ul>
-            </div>
+
+            <#include  "nav.html" />
+
             <div id="divMain">
                 <#list articles as a>
                     <div class="post multi-post cate2 auth1">
                         <h4 class="post-date">${a.created ? string('yyyy:MM:dd HH:mm:ss')}</h4>
-                        <h2 class="post-title"><a href="#post/76.html">${a.title}</a></h2>
+                        <h2 class="post-title"><a href="/article/toArticleInfo?id=${a.id}">${a.title}</a></h2>
                         <div class="post-body">
                             <p>${a.smallcontent}<br/></p>
-                            <!-- 图片 start-->
+                            <!-- 图片 start -->
                             <!--<p style="text-indent: 0em;">-->
-                                <!--<a title="2016年就一个字：戒！" target="_self" href="#post/75.html">-->
-                                    <!--<img src="images/2016021074509417.jpg" title="你我" alt="你我"/>-->
+                                <!--<a title="" target="_self" href="#post/75.html">-->
+                                    <!--<img src="images/2016021074509417.jpg" title="" alt=""/>-->
                                 <!--</a>-->
                             <!--</p>-->
                             <!-- 图片 end-->
@@ -103,34 +81,34 @@
                     <dd class="function_c">
                         <ul>
                             <li style="text-overflow:ellipsis;"><a href="#post/76.html#cmt1492"
-                                                                   title="2016-7-14 20:22:16 post by 卢松松博客">说的很不错呢！</a>
+                                                                   title="2018-10-25 20:22:16 游客1">说的很不错呢！</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/68.html#cmt1491"
-                                                                   title="2016-7-12 16:21:06 post by 52微商网">一个很好的微商货源平台，非常适合做微商推</a>
+                                                                   title="2018-10-25 20:22:16 游客1">一个很好的平台</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/77.html#cmt1490"
-                                                                   title="2016-7-10 9:48:23 post by 巴力迅猛龙">谢谢博主分享 支持</a>
+                                                                   title="2018-10-25 20:22:16 游客1">谢谢博主分享 支持</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#guestbook.html#cmt1488"
-                                                                   title="2016-7-8 17:20:43 post by 个人博客">第一次过来看看</a>
+                                                                   title="2018-10-25 20:22:16 游客1">第一次过来看看</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/76.html#cmt1487"
-                                                                   title="2016-7-6 17:08:25 post by 免费小说在线阅读">懂得取舍吧，最好留有后路、</a>
+                                                                   title="2018-10-25 20:22:16 游客1">懂得取舍吧，最好留有后路、</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/77.html#cmt1486"
-                                                                   title="2016-7-5 13:12:38 post by 免费小说在线阅读">靠自己丰衣足食！</a>
+                                                                   title="2018-10-25 20:22:16 游客1">靠自己丰衣足食！</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/77.html#cmt1485"
-                                                                   title="2016-7-3 10:53:55 post by 贝蒂斯橄榄油总代理">第一次来，写的不错，关注下</a>
+                                                                   title="2018-10-25 20:22:16 游客1">第一次来，写的不错，关注下</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/77.html#cmt1484"
-                                                                   title="2016-7-2 16:18:16 post by 卢松松博客">当初看这个并没有觉得什么，现在看来里面和</a>
+                                                                   title="2018-10-25 20:22:16 游客1">当初看这个并没有觉得什么，现在看来里面和</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/76.html#cmt1483"
-                                                                   title="2016-7-2 12:04:12 post by 青岛礼品公司">人生确实就是个赌局，就看赌注和勇气大小了</a>
+                                                                   title="2018-10-25 20:22:16 游客1">人生确实就是个赌局，就看赌注和勇气大小了</a>
                             </li>
                             <li style="text-overflow:ellipsis;"><a href="#post/74.html#cmt1482"
-                                                                   title="2016-6-29 15:50:16 post by 青岛小礼品">长大了，烦恼也就多了</a>
+                                                                   title="2018-10-25 20:22:16 游客1">长大了，烦恼也就多了</a>
                             </li>
                         </ul>
                     </dd>
@@ -138,29 +116,8 @@
                 <!-- 最新留言  end-->
 
                 <!-- 友情链接 start-->
-                <dl class="function" id="divLinkage">
-                    <dt class="function_t">友情链接</dt>
-                    <dd class="function_c">
-                        <ul>
-                            <li>
-                                <a href="https://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a>　
-                                <a href="https://blog.csdn.net/ityouknow/" target="_blank">纯洁的微笑博客</a>　
-                                <a href="https://blog.csdn.net/qq_37162911" target="_blank">大神博客</a>　
-                            </li>
-                            <li>
-                                <a href="http://www.jq22.com/" target="_blank">jQuery插件库</a>　
-                                <a href="https://v3.bootcss.com/" target="_blank">Bootstrap中文文档</a>　
-                            </li>
-                            </li>
-                            <li>
-                                <a href="http://www.atguigu.com/" rel="external nofollow" target="_blank">下载视频</a>　
-                            </li>
-                            <li>
-                                <a href="#t/post-18.html" target="_blank" title="申请链接"><span style="color:#006000;">交换友情链接</span></a>
-                            </li>
-                        </ul>
-                    </dd>
-                </dl>
+
+                <#include  "link.html" />
                 <!-- 友情链接 end-->
 
                 <!-- 关注 start -->
@@ -195,13 +152,10 @@
                     </dd>
                 </dl>
                 <!-- 关注 end -->
+            </div>
 
-            </div>
-            <div id="divBottom">
-                <br>本网站运行在<a target="_blank" href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=cz36baxa">阿里云</a>上并使用<a target="_blank" href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=cz36baxa">阿里云CDN</a>加速
-                <a href="#">谭少军的个人网站</a>
-                京ICP备18039367号
-            </div>
+             <#include  "footer.html" />
+
             <div class="clear"></div>
         </div>
         <div class="clear"></div>

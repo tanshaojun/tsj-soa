@@ -12,4 +12,12 @@ public interface ArticleService {
      * @return
      */
     List<Article> findArticleByShow(int show);
+
+    /**
+     * 根据主键查询
+     *
+     * @param id
+     * @return
+     */
+    Article findById(Integer id);
 }

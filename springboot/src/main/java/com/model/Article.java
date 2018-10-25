@@ -25,7 +25,7 @@ public class Article {
     /**
      * 较少的内容
      */
-    @Column(name = "titsmallcontentle", unique = true, nullable = false)
+    @Column(name = "smallcontent", unique = true, nullable = false)
     private String smallcontent;
     /**
      * 内容

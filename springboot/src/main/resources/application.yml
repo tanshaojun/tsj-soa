@@ -30,7 +30,7 @@ spring:
       expose-session-attributes: false
       expose-spring-macro-helpers: true
       prefer-file-system-access: true
-      template-loader-path: classpath:/templates
+      template-loader-path: classpath:/templates/
       settings.template_update_delay: 0
       settings.default_encoding: UTF-8
       settings.classic_compatible: true

@@ -18,4 +18,9 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> findArticleByShow(int show) {
         return articleMapper.findArticleByShow(show);
     }
+
+    @Override
+    public Article findById(Integer id) {
+        return articleMapper.selectByPrimaryKey(id);
+    }
 }
