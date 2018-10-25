@@ -33,9 +33,9 @@ $(function(){
   }
   return false;
  });
- $('p.images img').click(function(){
+ $('p.images-bat img').click(function(){
   var newbg=$(this).attr('src').split('bg/bg')[1].split('-thumb')[0];
-  $(document.body).css('backgroundImage','url(\'../images/bg/bg'+newbg+'.jpg)');
+  $(document.body).css('backgroundImage','url(\'../images-bat/bg/bg'+newbg+'.jpg)');
  
   $(this).parent().find('img').removeClass('on');
   $(this).addClass('on');

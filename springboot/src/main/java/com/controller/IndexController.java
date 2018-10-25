@@ -1,11 +1,24 @@
 package com.controller;
 
+import com.model.Article;
+import com.model.Tag;
+import com.service.ArticleService;
+import com.service.TagService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class IndexController {
+
+    @Autowired
+    private ArticleService articleService;
+
+    @Autowired
+    private TagService tagService;
 
     /**
      * 首页
@@ -14,7 +27,14 @@ public class IndexController {
      */
     @RequestMapping(value = "/")
     public ModelAndView index() {
-        ModelAndView mv = new ModelAndView("ceshi");
+        ModelAndView mv = new ModelAndView("index");
+        //文章列表
+        List<Article> articleList = articleService.findArticleByShow(1);
+        mv.addObject("articles", articleList);
+        //标签
+        List<Tag> tagList = tagService.findAll();
+        mv.addObject("tags", tagList);
+
         return mv;
     }
 }
