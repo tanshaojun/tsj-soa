@@ -12,3 +12,8 @@ class PythonScrapyItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
     pass
+
+class FangTianXia(scrapy.Item):
+    # define the fields for your item here like:
+    price = scrapy.Field()
+    pass

@@ -20,6 +20,7 @@ NEWSPIDER_MODULE = 'python_scrapy.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
@@ -54,7 +55,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # 设置代理
 DOWNLOADER_MIDDLEWARES = {
-    'python_scrapy.middlewares.ProxyMiddleware': 543
+    # 'python_scrapy.middlewares.ProxyMiddleware': 543
 }
 
 # Enable or disable extensions
