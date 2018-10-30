@@ -12,8 +12,6 @@ class PythonScrapyOneSpider(scrapy.Spider):
     count = 0
     start_urls = [url % (count)]
 
-    aa = 0
-
     def parse(self, response):
         for each in response.xpath("//div[@class='hd']"):
             # 初始化对象
