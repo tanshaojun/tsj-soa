@@ -1,40 +1,128 @@
-{"price": "2600"}
-{"price": "2500"}
-{"price": "7600"}
-{"price": "6500"}
-{"price": "5500"}
-{"price": "8500"}
-{"price": "6500"}
-{"price": "4900"}
-{"price": "7300"}
-{"price": "5800"}
-{"price": "4600"}
-{"price": "6000"}
-{"price": "2600"}
-{"price": "7500"}
-{"price": "3500"}
-{"price": "5400"}
-{"price": "4500"}
-{"price": "23000"}
-{"price": "8500"}
-{"price": "2300"}
-{"price": "13500"}
-{"price": "3500"}
-{"price": "5300"}
-{"price": "6800"}
-{"price": "5000"}
-{"price": "13000"}
-{"price": "3900"}
-{"price": "6500"}
-{"price": "125000"}
-{"price": "6400"}
-{"price": "1800"}
-{"price": "7700"}
-{"price": "2800"}
-{"price": "18000"}
-{"price": "4000"}
-{"price": "7200"}
-{"price": "4000"}
-{"price": "1700"}
-{"price": "5300"}
-{"price": "11000"}
+{"price": "6000", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "61平米", "renovation": "简装修", "address": "东小口镇立汤路188号院", "phone": "17301299910", "name": "孙豆豆"}
+{"price": "12000", "mode": "整租", "direction": "南北", "huxing": "3室1厅2卫", "floor": "低层", "area": "151平米", "renovation": "精装修", "address": "北京市朝阳区北苑路,航空医院对面", "phone": "15301325250", "name": "罗林智"}
+{"price": "5500", "mode": "整租", "direction": "东", "huxing": "1室1厅1卫", "floor": "低层", "area": "48平米", "renovation": "精装修", "address": "天坛路87号", "phone": "18500397100", "name": "杨昭昭"}
+{"price": "6500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "60平米", "renovation": "精装修", "address": "亚运村小营路惠新东桥西北角(北京联合大学对面)", "phone": "17710701506", "name": "郭晓娜"}
+{"price": "6000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "98平米", "renovation": "精装修", "address": "中滩村大街6号院", "phone": "18511396694", "name": "刘世欢"}
+{"price": "4600", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "36平米", "renovation": "豪华装修", "address": "东辰小区物业办公楼东50米", "phone": "17316035010", "name": "李松"}
+{"price": "9200", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "87平米", "renovation": "精装修", "address": "慧中北路与北苑路交汇处西南角", "phone": "13311332883", "name": "潘俊喜"}
+{"price": "4600", "mode": "整租", "direction": "南北", "huxing": "1室0厅1卫", "floor": "高层", "area": "45平米", "renovation": "豪华装修", "address": "东辰小区物业办公楼东50米", "phone": "17316035010", "name": "李松"}
+{"price": "8000", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "高层", "area": "90平米", "renovation": "简装修", "address": "慧忠路与北苑路交汇处西行250米", "phone": "18811173747", "name": "陈艳东"}
+{"price": "10000", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "低层", "area": "110平米", "renovation": "精装修", "address": "立水桥北苑路（立水桥）东南岸 地铁5号线立水桥南站", "phone": "18701236520", "name": "王刚"}
+{"price": "7500", "mode": "整租", "direction": "西南", "huxing": "1室1厅1卫", "floor": "高层", "area": "65平米", "renovation": "精装修", "address": "亚运村大屯路220号(阳光广场东500米)", "phone": "17710701506", "name": "郭晓娜"}
+{"price": "5800", "mode": "整租", "direction": "南北", "huxing": "1室1厅1卫", "floor": "高层", "area": "55平米", "renovation": "精装修", "address": "朝阳区亚运村华堂附近", "phone": "17710701506", "name": "郭晓娜"}
+{"price": "42000", "mode": "整租", "direction": "南", "huxing": "2室2厅2卫", "floor": "低层", "area": "200平米", "renovation": "精装修", "address": "建国门内大街甲11号", "phone": "17801476823", "name": "王佳伟"}
+{"price": "7300", "mode": "整租", "direction": "东", "huxing": "1室1厅1卫", "floor": "高层", "area": "85平米", "renovation": "精装修", "address": "北四环东路小营路10号", "phone": "17710701506", "name": "郭晓娜"}
+{"price": "4900", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "61平米", "renovation": "精装修", "address": "东小口镇立汤路188号院", "phone": "18511396694", "name": "刘世欢"}
+{"price": "12500", "mode": "整租", "direction": "西南", "huxing": "2室1厅1卫", "floor": "低层", "area": "116平米", "renovation": "精装修", "address": "北苑路与大屯北路交叉点向西300米路南", "phone": "18612291934", "name": "樊艳梅"}
+{"price": "1500", "mode": "主卧(合租)", "direction": "南", "huxing": "3室1厅1卫", "floor": "中层", "area": "25平米", "renovation": "精装修", "address": "宋庄路71号院、73号院（宋家庄地铁5号线终点）", "phone": "17710531024", "name": "田瑞雪"}
+{"price": "5000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "75平米", "renovation": "豪华装修", "address": "群星路与蒲黄榆路交汇处东行110米路两侧", "phone": "13699179495", "name": "王志达"}
+{"price": "5800", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "50平米", "renovation": "精装修", "address": "王府井灯市口大街，北京景山学校东侧", "phone": "18001053863", "name": "左丹洋"}
+{"price": "5500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "70平米", "renovation": "精装修", "address": "中滩村大街6号院", "phone": "18910791619", "name": "白高雅"}
+{"price": "6500", "mode": "整租", "direction": "西", "huxing": "2室2厅1卫", "floor": "中层", "area": "96平米", "renovation": "精装修", "address": "东铁匠营顺四条", "phone": "15801278520", "name": "谢成志"}
+{"price": "7600", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "55平米", "renovation": "精装修", "address": "和平里东街与和平里北街交叉路口东北角(国家民委新闻出", "phone": "17701140880", "name": "苗昂"}
+{"price": "6200", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "77平米", "renovation": "精装修", "address": "双营路11号院", "phone": "13718206869", "name": "周华"}
+{"price": "3700", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "52平米", "renovation": "精装修", "address": "南三环赵公桥往南1000米", "phone": "18610470234", "name": "赵青"}
+{"price": "3100", "mode": "主卧(合租)", "direction": "南", "huxing": "1室1厅1卫", "floor": "低层", "area": "35平米", "renovation": "精装修", "address": "北京市朝阳区北苑路亚运村往北6公里", "phone": "13718206869", "name": "周华"}
+{"price": "7500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "低层", "area": "83平米", "renovation": "简装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "15321038321", "name": "张超"}
+{"price": "7000", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "62平米", "renovation": "中装修", "address": "青年沟路路北和平家园院内", "phone": "18500837461", "name": "胡连华"}
+{"price": "13000", "mode": "整租", "direction": "南", "huxing": "3室2厅2卫", "floor": "高层", "area": "148平米", "renovation": "豪华装修", "address": "亚运村安立路58号", "phone": "13911014788", "name": "余宝才"}
+{"price": "8000", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "80平米", "renovation": "简装修", "address": "惠新西街5号院", "phone": "13691138784", "name": "霍俊华"}
+{"price": "4100", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "55平米", "renovation": "简装修", "address": "地铁5号线蒲黄榆站西南口50米", "phone": "13436919414", "name": "王鑫"}
+{"price": "7500", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "中层", "area": "102平米", "renovation": "精装修", "address": "宋家庄地铁5号线起点站（宋家庄顺八条8号）", "phone": "13311071871", "name": "王东"}
+{"price": "7500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "65平米", "renovation": "精装修", "address": "北京朝阳区安苑路,惠新西街路口西300米路南", "phone": "13261397086", "name": "洪素斌"}
+{"price": "7000", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "105平米", "renovation": "豪华装修", "address": "立水桥东一路与中滩村北三街交叉口交叉口东南", "phone": "17326937527", "name": "李宝德"}
+{"price": "8200", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "60平米", "renovation": "豪华装修", "address": "灯市口西侧甘雨胡同南侧", "phone": "16619804454", "name": "杨洪涛"}
+{"price": "16000", "mode": "整租", "direction": "南", "huxing": "2室2厅1卫", "floor": "中层", "area": "152平米", "renovation": "简装修", "address": "崇文门外大街5号（地铁崇文门站南，崇文门外大街西侧）", "phone": "15611440069", "name": "韩英"}
+{"price": "5600", "mode": "整租", "direction": "东西", "huxing": "1室1厅1卫", "floor": "高层", "area": "50平米", "renovation": "中装修", "address": "北苑路，地铁惠新西街北口站向北250米", "phone": "13691158343", "name": "李春江"}
+{"price": "7500", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "75平米", "renovation": "精装修", "address": "东皇城根南街东侧", "phone": "18911196611", "name": "姜亚慧"}
+{"price": "9000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "82平米", "renovation": "精装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "13520807420", "name": "陈斌斌"}
+{"price": "3700", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "48平米", "renovation": "精装修", "address": "永外宋家庄顺八条4号", "phone": "13381155545", "name": "崔鹏涛"}
+{"price": "1500", "mode": "主卧(合租)", "direction": "南", "huxing": "4室1厅2卫", "floor": "中层", "area": "16平米", "renovation": "豪华装修", "address": "太平庄中二街与立汤路交汇处西北角", "phone": "18911105889", "name": "刘凯强"}
+{"price": "2000", "mode": "主卧(合租)", "direction": "南", "huxing": "3室2厅2卫", "floor": "高层", "area": "27平米", "renovation": "精装修", "address": "芳群路与蒲方路交汇处北行100米路西", "phone": "15711157369", "name": "代理明"}
+{"price": "7000", "mode": "整租", "direction": "西", "huxing": "1室1厅1卫", "floor": "低层", "area": "60平米", "renovation": "简装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "15611440069", "name": "韩英"}
+{"price": "1800", "mode": "主卧(合租)", "direction": "西北", "huxing": "3室2厅2卫", "floor": "高层", "area": "28平米", "renovation": "精装修", "address": "芳群路与蒲方路交汇处北行100米路西", "phone": "15711157369", "name": "代理明"}
+{"price": "5500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "70平米", "renovation": "豪华装修", "address": "于家坟路南侧横一条甲18号", "phone": "18610779956", "name": "沙亚雄"}
+{"price": "8000", "mode": "整租", "direction": "西", "huxing": "2室1厅1卫", "floor": "低层", "area": "60平米", "renovation": "精装修", "address": "东起惠新东街,西至惠新西街,北起安苑路,南至北土城东", "phone": "13051586527", "name": "姜维"}
+{"price": "5400", "mode": "整租", "direction": "东", "huxing": "1室1厅1卫", "floor": "低层", "area": "47平米", "renovation": "精装修", "address": "方庄蒲芳路9号院", "phone": "18618355101", "name": "李春庆"}
+{"price": "7900", "mode": "整租", "direction": "东西", "huxing": "1室1厅1卫", "floor": "中层", "area": "67平米", "renovation": "豪华装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "15611428584", "name": "张利强"}
+{"price": "2700", "mode": "次卧(合租)", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "100平米", "renovation": "精装修", "address": "永外宋家庄顺八条4号", "phone": "18813177449", "name": "初殿忱"}
+{"price": "30000", "mode": "整租", "direction": "东南", "huxing": "3室2厅2卫", "floor": "中层", "area": "210平米", "renovation": "精装修", "address": "安定门外大街86号", "phone": "13161557404", "name": "陈玉"}
+{"price": "2500", "mode": "主卧(合租)", "direction": "南", "huxing": "1室0厅1卫", "floor": "中层", "area": "30平米", "renovation": "精装修", "address": "中滩村大街6号院", "phone": "15810608879", "name": "徐刘波"}
+{"price": "3000", "mode": "主卧(合租)", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "85平米", "renovation": "精装修", "address": "安苑路与安定路交叉口北侧（亚运村安定路奥体东门附近）", "phone": "13691138784", "name": "霍俊华"}
+{"price": "7500", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "高层", "area": "90平米", "renovation": "豪华装修", "address": "芳群路与蒲方路交汇处北行100米路西", "phone": "18301630312", "name": "马鹏鹏"}
+{"price": "2300", "mode": "次卧(合租)", "direction": "东", "huxing": "1室1厅1卫", "floor": "高层", "area": "25平米", "renovation": "精装修", "address": "中滩村8号院", "phone": "18910381293", "name": "方建伟"}
+{"price": "6300", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "50平米", "renovation": "精装修", "address": "北京朝阳区安苑路,惠新西街路口西300米路南", "phone": "13691138784", "name": "霍俊华"}
+{"price": "7300", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "62平米", "renovation": "精装修", "address": "中日友好医院西侧", "phone": "15801170896", "name": "洪柏林"}
+{"price": "8500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "75平米", "renovation": "精装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "13716697125", "name": "李国鹏"}
+{"price": "5800", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "高层", "area": "70平米", "renovation": "精装修", "address": "立水桥东小口镇肿瘤医院宿舍", "phone": "13611106769", "name": "王铁"}
+{"price": "1800", "mode": "次卧(合租)", "direction": "北", "huxing": "3室1厅1卫", "floor": "高层", "area": "14平米", "renovation": "精装修", "address": "东小口镇(立水桥北1.5公里)", "phone": "13260461555", "name": "刘恩"}
+{"price": "6000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "低层", "area": "97平米", "renovation": "精装修", "address": "横七条30号院", "phone": "13683367141", "name": "张良"}
+{"price": "1750", "mode": "次卧(合租)", "direction": "南", "huxing": "2室1厅1卫", "floor": "低层", "area": "25平米", "renovation": "精装修", "address": "刘家窑桥西700米南三环中路19号", "phone": "13601150754", "name": "冯云龙"}
+{"price": "2500", "mode": "主卧(合租)", "direction": "南", "huxing": "3室1厅1卫", "floor": "高层", "area": "25平米", "renovation": "简装修", "address": "地铁5号线刘家窑站向西500赵公口桥北", "phone": "13716479195", "name": "徐文"}
+{"price": "17000", "mode": "整租", "direction": "东", "huxing": "2室1厅1卫", "floor": "中层", "area": "145平米", "renovation": "精装修", "address": "东花市街道花市西大街", "phone": "15110279832", "name": "刘祥"}
+{"price": "2800", "mode": "主卧(合租)", "direction": "南", "huxing": "3室1厅2卫", "floor": "中层", "area": "25平米", "renovation": "豪华装修", "address": "丰台区光彩北路8号", "phone": "18611747817", "name": "路好"}
+{"price": "8800", "mode": "整租", "direction": "西南", "huxing": "3室1厅1卫", "floor": "高层", "area": "98平米", "renovation": "精装修", "address": "地铁惠新西街北口站C口南侧", "phone": "13263286751", "name": "刘晓雷"}
+{"price": "12000", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "85平米", "renovation": "精装修", "address": "地铁灯市口站A口向南100米", "phone": "13691239192", "name": "唐正宗"}
+{"price": "16000", "mode": "整租", "direction": "东北", "huxing": "3室2厅2卫", "floor": "中层", "area": "152平米", "renovation": "毛坯", "address": "北京市朝阳区北苑路,航空医院对面", "phone": "13716156097", "name": "董军平"}
+{"price": "38000", "mode": "整租", "direction": "西南", "huxing": "4室2厅2卫", "floor": "中层", "area": "300平米", "renovation": "中装修", "address": "朝阳区北四环东路108号(近华堂商场)", "phone": "13671260389", "name": "邢承甫"}
+{"price": "10500", "mode": "整租", "direction": "西北", "huxing": "2室2厅1卫", "floor": "高层", "area": "114平米", "renovation": "简装修", "address": "北苑路与大屯北路交叉点向西300米路南", "phone": "18811109203", "name": "肖玉龙"}
+{"price": "7900", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "低层", "area": "78平米", "renovation": "简装修", "address": "地铁惠新西街北口站C口南侧", "phone": "18811025813", "name": "李洪豹"}
+{"price": "5999", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "90平米", "renovation": "精装修", "address": "宋庄路71号院、73号院（宋家庄地铁5号线终点）", "phone": "15011199718", "name": "黄剑飞"}
+{"price": "13000", "mode": "整租", "direction": "东北", "huxing": "2室2厅1卫", "floor": "中层", "area": "114平米", "renovation": "精装修", "address": "北苑路与大屯北路交叉点向西300米路南", "phone": "18601319846", "name": "李润平"}
+{"price": "16200", "mode": "整租", "direction": "西南", "huxing": "3室1厅2卫", "floor": "高层", "area": "119平米", "renovation": "精装修", "address": "大屯路222号院", "phone": "18601319846", "name": "李润平"}
+{"price": "7500", "mode": "整租", "direction": "东", "huxing": "2室1厅1卫", "floor": "高层", "area": "75平米", "renovation": "简装修", "address": "和平里青年沟路与和平里东街十字路口的西南角", "phone": "13381361742", "name": "贾明涛"}
+{"price": "80000", "mode": "整租", "direction": "南北", "huxing": "4室2厅4卫", "floor": "中层", "area": "280平米", "renovation": "简装修", "address": "紫玉东路1号(亚运村正北1.5公里处)", "phone": "18612294816", "name": "贾春雷"}
+{"price": "6400", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "90平米", "renovation": "精装修", "address": "安外亚北3.5公里北苑，北苑路与红军营南路交汇处西北", "phone": "15010087113", "name": "贾全涛"}
+{"price": "5500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "70平米", "renovation": "精装修", "address": "北苑路18号（地铁立水桥南站C口）", "phone": "18910346697", "name": "常增亮"}
+{"price": "2400", "mode": "主卧(合租)", "direction": "南", "huxing": "3室1厅2卫", "floor": "中层", "area": "25平米", "renovation": "简装修", "address": "北五环立水桥立城苑小区", "phone": "17600157972", "name": "周文涛"}
+{"price": "4800", "mode": "整租", "direction": "南北", "huxing": "1室1厅1卫", "floor": "中层", "area": "50平米", "renovation": "精装修", "address": "群星路与蒲黄榆路交汇处东行110米路两侧", "phone": "18219830662", "name": "刘康康"}
+{"price": "4200", "mode": "整租", "direction": "东", "huxing": "1室1厅1卫", "floor": "高层", "area": "47平米", "renovation": "简装修", "address": "方庄蒲芳路9号院", "phone": "18501944693", "name": "傅宇韬"}
+{"price": "9700", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "82平米", "renovation": "精装修", "address": "慧中北路与北苑路交汇处西南角", "phone": "13691158343", "name": "李春江"}
+{"price": "17000", "mode": "整租", "direction": "南北", "huxing": "2室2厅2卫", "floor": "高层", "area": "140平米", "renovation": "精装修", "address": "新世界商场向西30米路南(崇外大街1号地)", "phone": "18601359004", "name": "任洁莹"}
+{"price": "6800", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "低层", "area": "64平米", "renovation": "精装修", "address": "朝阳区亚运村华堂附近", "phone": "13520570410", "name": "许超"}
+{"price": "5500", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "85平米", "renovation": "精装修", "address": "榴乡桥东北角", "phone": "13381212892", "name": "墨龙蛟"}
+{"price": "22000", "mode": "整租", "direction": "东北", "huxing": "2室1厅1卫", "floor": "高层", "area": "146平米", "renovation": "简装修", "address": "亚运村安立路60号院", "phone": "18600083824", "name": "吴紫菲"}
+{"price": "6200", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "77平米", "renovation": "精装修", "address": "双营路11号院", "phone": "13718206869", "name": "周华"}
+{"price": "14500", "mode": "整租", "direction": "南北", "huxing": "3室2厅2卫", "floor": "中层", "area": "144平米", "renovation": "精装修", "address": "亚运村小营北苑路86号", "phone": "13521565042", "name": "安阔"}
+{"price": "35000", "mode": "整租", "direction": "南北", "huxing": "3室1厅2卫", "floor": "中层", "area": "252平米", "renovation": "豪华装修", "address": "崇文门外大街（新世界百货正东）", "phone": "15611441603", "name": "王云飞"}
+{"price": "10000", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "69平米", "renovation": "精装修", "address": "东花市街道花市西大街", "phone": "13520807420", "name": "陈斌斌"}
+{"price": "6000", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "80平米", "renovation": "精装修", "address": "东铁匠营宋庄路26号", "phone": "15011069201", "name": "关英键"}
+{"price": "9500", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "中层", "area": "85平米", "renovation": "精装修", "address": "东起惠新东街,西至惠新西街,北起安苑路,南至北土城东", "phone": "13691138784", "name": "霍俊华"}
+{"price": "18000", "mode": "整租", "direction": "南", "huxing": "3室1厅1卫", "floor": "低层", "area": "147平米", "renovation": "精装修", "address": "北苑路与大屯北路交叉点向西300米路南", "phone": "18601319846", "name": "李润平"}
+{"price": "7000", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "55平米", "renovation": "精装修", "address": "北三环安外胜古南里", "phone": "15801170896", "name": "洪柏林"}
+{"price": "22000", "mode": "整租", "direction": "东北", "huxing": "2室1厅1卫", "floor": "高层", "area": "146平米", "renovation": "精装修", "address": "亚运村安立路60号院", "phone": "18600059040", "name": "刘浩"}
+{"price": "13000", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "78平米", "renovation": "精装修", "address": "王府井灯市口大街，北京景山学校东侧", "phone": "13520581321", "name": "于洪春"}
+{"price": "8500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "低层", "area": "59平米", "renovation": "精装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "15652481968", "name": "姚丁"}
+{"price": "2100", "mode": "主卧(合租)", "direction": "南", "huxing": "3室2厅2卫", "floor": "高层", "area": "25平米", "renovation": "精装修", "address": "永外宋家庄顺八条4号", "phone": "18613812152", "name": "侯仁雪"}
+{"price": "6500", "mode": "整租", "direction": "东南", "huxing": "1室1厅1卫", "floor": "中层", "area": "89平米", "renovation": "豪华装修", "address": "北京市昌平区中东路5号", "phone": "13121324950", "name": "郝建辉"}
+{"price": "1300", "mode": "次卧(合租)", "direction": "南", "huxing": "3室1厅1卫", "floor": "低层", "area": "12平米", "renovation": "精装修", "address": "石榴庄南里1号院(17路双庙终点站)", "phone": "15711268157", "name": "牛建超"}
+{"price": "7000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "低层", "area": "103平米", "renovation": "精装修", "address": "秋实西街与锦芳北街交叉点西北角", "phone": "13699106379", "name": "鄂立敏"}
+{"price": "50000", "mode": "整租", "direction": "南", "huxing": "7室2厅2卫", "floor": "高层", "area": "200平米", "renovation": "精装修", "address": "交道口南大街与交道口三条交叉口路北", "phone": "13021037817", "name": "杨彤"}
+{"price": "8500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "75平米", "renovation": "精装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "13520807420", "name": "陈斌斌"}
+{"price": "2600", "mode": "主卧(合租)", "direction": "南", "huxing": "4室1厅1卫", "floor": "低层", "area": "30平米", "renovation": "精装修", "address": "太平庄中二街与立水桥东一路交汇处西北角", "phone": "15801211997", "name": "任海元"}
+{"price": "9000", "mode": "整租", "direction": "东北", "huxing": "2室1厅1卫", "floor": "低层", "area": "116平米", "renovation": "豪华装修", "address": "北苑路与大屯北路交叉点向西300米路南", "phone": "17326979193", "name": "刘顺毅"}
+{"price": "7000", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "65平米", "renovation": "精装修", "address": "健安东路和樱花园西街交叉口西南角", "phone": "15801170719", "name": "陈锦华"}
+{"price": "7300", "mode": "整租", "direction": "南", "huxing": "2室1厅1卫", "floor": "高层", "area": "90平米", "renovation": "精装修", "address": "北苑路18号（地铁立水桥南站C口）", "phone": "18701236520", "name": "王刚"}
+{"price": "9500", "mode": "整租", "direction": "东", "huxing": "2室1厅1卫", "floor": "高层", "area": "93平米", "renovation": "精装修", "address": "崇文门西花市大街8号（新世界商场向东150米）", "phone": "15311993626", "name": "李航"}
+{"price": "6700", "mode": "整租", "direction": "南北", "huxing": "1室1厅1卫", "floor": "中层", "area": "62平米", "renovation": "精装修", "address": "东花市街道花市西大街", "phone": "13552855059", "name": "康俊峰"}
+{"price": "2300", "mode": "主卧(合租)", "direction": "南", "huxing": "3室2厅2卫", "floor": "高层", "area": "20平米", "renovation": "精装修", "address": "中滩村8号院", "phone": "13942807470", "name": "田东阳"}
+{"price": "2100", "mode": "主卧(合租)", "direction": "南", "huxing": "3室1厅1卫", "floor": "低层", "area": "19平米", "renovation": "精装修", "address": "丰台区金桥东街6号", "phone": "13311427227", "name": "陈清廉"}
+{"price": "6500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "45平米", "renovation": "精装修", "address": "王府井灯市口大街，北京景山学校东侧", "phone": "18612691668", "name": "康宁"}
+{"price": "10000", "mode": "整租", "direction": "南北", "huxing": "2室2厅2卫", "floor": "中层", "area": "87平米", "renovation": "精装修", "address": "安外亚北3.5公里北苑，北苑路与红军营南路交汇处西北", "phone": "13552307572", "name": "李天雨"}
+{"price": "6500", "mode": "整租", "direction": "南", "huxing": "2室2厅1卫", "floor": "高层", "area": "96平米", "renovation": "精装修", "address": "东铁匠营宋庄路26号", "phone": "13381155545", "name": "崔鹏涛"}
+{"price": "6500", "mode": "整租", "direction": "南北", "huxing": "2室1厅1卫", "floor": "中层", "area": "85平米", "renovation": "精装修", "address": "丰台区金桥东街6号", "phone": "18600293348", "name": "徐建波"}
+{"price": "16000", "mode": "整租", "direction": "南北", "huxing": "3室2厅2卫", "floor": "中层", "area": "155平米", "renovation": "精装修", "address": "北京市朝阳区北苑路,航空医院对面", "phone": "18301120390", "name": "张耿远"}
+{"price": "2500", "mode": "次卧(合租)", "direction": "南", "huxing": "1室1厅1卫", "floor": "中层", "area": "25平米", "renovation": "精装修", "address": "中滩村大街6号院", "phone": "18910381293", "name": "方建伟"}
+{"price": "10500", "mode": "整租", "direction": "东", "huxing": "2室1厅2卫", "floor": "中层", "area": "110平米", "renovation": "简装修", "address": "亚运村安立路56号", "phone": "15311665523", "name": "肖玉龙"}
+{"price": "9500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "78平米", "renovation": "精装修", "address": "朝阳区北三环安贞桥北400米安定路12号", "phone": "15801170896", "name": "洪柏林"}
+{"price": "9200", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "高层", "area": "87平米", "renovation": "精装修", "address": "慧中北路与北苑路交汇处西南角", "phone": "13311332883", "name": "潘俊喜"}
+{"price": "4900", "mode": "整租", "direction": "东", "huxing": "1室1厅1卫", "floor": "高层", "area": "45平米", "renovation": "精装修", "address": "双营路11号院", "phone": "15010087113", "name": "贾全涛"}
+{"price": "6500", "mode": "整租", "direction": "南", "huxing": "1室1厅1卫", "floor": "高层", "area": "78平米", "renovation": "简装修", "address": "崇外大街磁器口向东300米路南", "phone": "15321038321", "name": "张超"}
+{"price": "6900", "mode": "整租", "direction": "东", "huxing": "3室2厅2卫", "floor": "中层", "area": "91平米", "renovation": "精装修", "address": "祈年大街与珠市口东大街交汇处北行80米路东(光明日报", "phone": "18501331000", "name": "丁吉"}
+{"price": "8500", "mode": "整租", "direction": "南北", "huxing": "3室1厅1卫", "floor": "低层", "area": "83平米", "renovation": "豪华装修", "address": "蒲黄榆地铁站西北角", "phone": "18310770352", "name": "程高峥"}
+{"price": "4500", "mode": "整租", "direction": "东南", "huxing": "1室1厅1卫", "floor": "高层", "area": "35平米", "renovation": "豪华装修", "address": "芳群路与蒲方路交汇处北行100米路西", "phone": "18310770352", "name": "程高峥"}
+{"price": "2500", "mode": "主卧(合租)", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "25平米", "renovation": "精装修", "address": "芳群路与蒲方路交汇处北行100米路西", "phone": "13581931793", "name": "刘英乐"}
+{"price": "17500", "mode": "整租", "direction": "西南", "huxing": "2室1厅2卫", "floor": "中层", "area": "138平米", "renovation": "精装修", "address": "崇文门外大街（新世界百货正东）", "phone": "15652481968", "name": "姚丁"}
+{"price": "2200", "mode": "主卧(合租)", "direction": "西", "huxing": "1室1厅1卫", "floor": "中层", "area": "30平米", "renovation": "简装修", "address": "立汤路与太平庄中街交汇处东南角(天通苑南地铁站东侧)", "phone": "15810608879", "name": "徐刘波"}
+{"price": "3600", "mode": "主卧(合租)", "direction": "南", "huxing": "4室1厅1卫", "floor": "高层", "area": "81平米", "renovation": "中装修", "address": "安慧桥向北500米路东", "phone": "18310631611", "name": "王保峰"}
+{"price": "3000", "mode": "主卧(合租)", "direction": "南", "huxing": "2室1厅1卫", "floor": "中层", "area": "20平米", "renovation": "精装修", "address": "北三环外惠新西街33号院", "phone": "18811025813", "name": "李洪豹"}
