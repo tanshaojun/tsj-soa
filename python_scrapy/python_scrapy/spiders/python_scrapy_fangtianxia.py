@@ -29,7 +29,7 @@ class PythonScrapyFangTianXiaSpider(scrapy.Spider):
             newurl = newurl % ("i3", self.count)
             yield scrapy.Request(newurl, callback=self.parse, dont_filter=True)
 
-    sql = "insert into test(price,mode,direction,huxing,floor,area,renovation,address,phone,name) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "insert into house(price,mode,direction,huxing,floor,area,renovation,address,phone,name) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 
     def parseCallback(self, response):
         o = FangTianXia()
@@ -42,7 +42,7 @@ class PythonScrapyFangTianXiaSpider(scrapy.Spider):
         # 出租方式
         mode= modedirection[0].xpath("./div[@class='tt']/text()").extract()[0]
         o['mode'] = mode
-        # # 朝向
+        # 朝向
         direction = modedirection[1].xpath("./div[@class='tt']/text()").extract()[0]
         o['direction'] = direction
         huxingfloor = response.xpath("//div[@class='trl-item1 w182']")
@@ -62,7 +62,7 @@ class PythonScrapyFangTianXiaSpider(scrapy.Spider):
         address = response.xpath("//div[@class='trl-item2 clearfix']")
         # 地址
         address = address[2].xpath("./div[@class='rcont']/a/text()").extract()[0]
-        o['address']
+        o['address'] = address
         # 电话号码
         phone = response.xpath("//div[@class='tjcont-list-cline2 tjcont_gs clearfix']/p[@class='text_phone']/text()").extract()[0]
         o['phone'] = phone

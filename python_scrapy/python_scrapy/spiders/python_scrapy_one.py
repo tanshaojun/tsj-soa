@@ -16,7 +16,6 @@ class PythonScrapyOneSpider(scrapy.Spider):
         for each in response.xpath("//div[@class='hd']"):
             # 初始化对象
             ps = PythonScrapyItem()
-            print(each.xpath("./a/span[1]/text()").extract()[0].strip())
             ps['name'] = each.xpath("./a/span[1]/text()").extract()[0].strip()
             yield ps
 

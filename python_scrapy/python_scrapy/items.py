@@ -13,6 +13,7 @@ class PythonScrapyItem(scrapy.Item):
     name = scrapy.Field()
     pass
 
+
 class FangTianXia(scrapy.Item):
     # define the fields for your item here like:
     price = scrapy.Field()
@@ -25,4 +26,22 @@ class FangTianXia(scrapy.Item):
     address = scrapy.Field()
     phone = scrapy.Field()
     name = scrapy.Field()
+    pass
+
+
+class LianJia(scrapy.Item):
+    # define the fields for your item here like:
+    price = scrapy.Field()
+    renovation = scrapy.Field()
+    area = scrapy.Field()
+    huxing = scrapy.Field()
+    floor = scrapy.Field()
+    direction = scrapy.Field()
+    subway = scrapy.Field()
+    housing = scrapy.Field()
+    address = scrapy.Field()
+    t = scrapy.Field()
+    phone = scrapy.Field()
+    name = scrapy.Field()
+    info = scrapy.Field()
     pass
