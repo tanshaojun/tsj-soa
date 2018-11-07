@@ -11,7 +11,7 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
     name = 'python_scrapy_lianjia'
     # 爬虫范围
     allowed_domains = ['bj.lianjia.com']
-    url = "https://bj.lianjia.com/zufang/changping/pg%s/"
+    url = "https://bj.lianjia.com/zufang/pg%srco10/"
     count = 1
     start_urls = [url % (count)]
 
@@ -28,7 +28,9 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
         else:
             print("不知道为什么失败了")
 
-    sql = "insert into house(price, renovation, area, huxing, floor, direction, subway, housing, address, t, name,phone,info,idkey,created) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    insert_sql = "insert into house(price, renovation, area, huxing, floor, direction, subway, housing, address, t, name,phone,info,idkey,created) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    update_sql = "update house set price=%s, renovation=%s, area=%s, huxing=%s, floor=%s, direction=%s, subway=%s, housing=%s, address=%s, t=%s, name=%s,phone=%s,info=%s WHERE idkey = %s"
+    select_sql = "select * from house WHERE idkey = %s"
 
     def parseInfo(self, response):
         if response.status == 200:
@@ -87,17 +89,27 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
                 lj['phone'] = phone
                 # 详情
                 lj['info'] = info
-
+                # 创建时间
                 created = datetime.datetime.now()
 
                 try:
                     conn = pymysql.connect(host='localhost', user='root', passwd='root', db='blog', port=3306,
                                            charset='utf8')
                     cur = conn.cursor()
-                    cur.execute(self.sql,
-                                [price, renovation, area, huxing, floor, direction, subway, housing, address, t, name,
-                                 phone, info, idkey, created])
-                    conn.commit()
+                    cur.execute(self.select_sql, [idkey])
+                    result = cur.fetchone()
+                    if result is not None:
+                        cur.execute(self.update_sql,
+                                    [price, renovation, area, huxing, floor, direction, subway, housing, address, t,
+                                     name,
+                                     phone, info, idkey])
+                        conn.commit()
+                    else:
+                        cur.execute(self.insert_sql,
+                                    [price, renovation, area, huxing, floor, direction, subway, housing, address, t,
+                                     name,
+                                     phone, info, idkey, created])
+                        conn.commit()
                 except Exception:
                     print("失败")
                 yield lj
