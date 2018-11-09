@@ -11,7 +11,7 @@
 .box {
     height: 40px;
     line-height: 40px;
-    position: fixed; /*absolute 变动 fixed 固定 */
+    position: relative; /*absolute 变动 fixed 固定 */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
