@@ -34,7 +34,7 @@ public class HouseResourcesController {
 
     @ResponseBody
     @RequestMapping(value = "/page", method = RequestMethod.POST)
-    public List<House> page(Integer pageSize) {
+    public List<House> page(Integer pageSize, String val) {
         List<House> houses = houseResourcesService.findHouse((pageSize - 1) * 10, 10);
         return houses;
     }
