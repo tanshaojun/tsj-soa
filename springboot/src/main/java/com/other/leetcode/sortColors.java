@@ -2,26 +2,52 @@ package com.other.leetcode;
 
 public class sortColors {
     public static void main(String[] args) {
-        int[] ints = new int[]{1,2,0};
+        int[] ints = new int[]{1, 2, 0};
         sortColors(ints);
     }
 
     public static void sortColors(int[] nums) {
-        int index = 0;
-        int index1 = nums.length - 1;
-        for (int i = 1; i < nums.length; i++) {
-            if (i > index1 || index >= index1) break;
+        int l = 0;
+        int r = nums.length;
+        for (int i = 0; i < r; ) {
             if (nums[i] == 0) {
-                int tmp = nums[i];
-                nums[i] = nums[index];
-                nums[index] = tmp;
-                index++;
+                int t = nums[i];
+                nums[i] = nums[l];
+                nums[l] = t;
+                l++;
+                i++;
+            } else if (nums[i] == 1) {
+                i++;
+            } else if (nums[i] == 2) {
+                r--;
+                int t = nums[i];
+                nums[i] = nums[r];
+                nums[r] = t;
             }
-            if (nums[i] == 2) {
-                int tmp = nums[i];
-                nums[i] = nums[index1];
-                nums[index1] = tmp;
-                index1--;
+        }
+    }
+
+    public static void sortColors1(int[] nums) {
+        //zero, [0...zero]==0
+        int zero = -1;
+        //two,  [two...n-1]==2
+        int two = nums.length;
+        for (int i = 0; i < two; ) {
+            if (nums[i] == 1) {
+                i++;
+            } else if (nums[i] == 2) {
+                //swap(nums[i],nums[--two])
+                two--;
+                int temp = nums[i];
+                nums[i] = nums[two];
+                nums[two] = temp;
+            } else {
+                //swap(nums[i++],nums[++zero])
+                zero++;
+                int temp = nums[i];
+                nums[i] = nums[zero];
+                nums[zero] = temp;
+                i++;
             }
         }
     }
