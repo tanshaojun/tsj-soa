@@ -1,7 +1,5 @@
 package com.other.leetcode;
 
-import java.util.Stack;
-
 public class invertTree {
 
     public static TreeNode invertTree(TreeNode root) {

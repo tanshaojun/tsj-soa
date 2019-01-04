@@ -1,7 +1,5 @@
 package com.other.leetcode;
 
-import java.util.LinkedList;
-
 public class MyLinkedList {
     private int val;
     private MyLinkedList next;

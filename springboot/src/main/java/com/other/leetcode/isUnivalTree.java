@@ -1,25 +1,22 @@
 package com.other.leetcode;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Queue;
 
-public class levelOrderBottom {
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> lists = new ArrayList<>();
-        if (root == null) {
-            return lists;
-        }
+public class isUnivalTree {
+    public boolean isUnivalTree(TreeNode root) {
+        if (root == null)
+            return true;
+        int val = root.val;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             int size = queue.size();
-            List<Integer> list = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
-                list.add(poll.val);
+                if (poll.val != val) {
+                    return false;
+                }
                 if (poll.left != null) {
                     queue.add(poll.left);
                 }
@@ -27,13 +24,7 @@ public class levelOrderBottom {
                     queue.add(poll.right);
                 }
             }
-            lists.add(list);
         }
-        Collections.reverse(lists);
-        return lists;
-    }
-
-    public static void main(String[] args) {
-
+        return true;
     }
 }

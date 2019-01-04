@@ -2,7 +2,6 @@ package com.other.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 
 public class isSameTree {
     public boolean isSameTree1(TreeNode p, TreeNode q) {
