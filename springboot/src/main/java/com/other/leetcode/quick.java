@@ -8,7 +8,7 @@ public class quick {
         quickSort(ints, 0, ints.length - 1);
     }
 
-    public static void quickSort(int[] a, int low, int high) {
+    private static void quickSort(int[] a, int low, int high) {
         int p;
         while (low < high) {
             int r = new Random().nextInt(high - low) + low;

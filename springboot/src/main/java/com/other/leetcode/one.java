@@ -3,7 +3,7 @@ package com.other.leetcode;
 public class one {
     public static void main(String[] args) {
         int n = 217;
-        System.out.println(binary1num(4));
+        System.out.println(binary1num(22));
     }
 
     static int binary0num(int x) {
