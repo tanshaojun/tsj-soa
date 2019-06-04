@@ -20,7 +20,6 @@ NEWSPIDER_MODULE = 'python_scrapy.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
@@ -34,6 +33,7 @@ ROBOTSTXT_OBEY = False
 
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
@@ -43,7 +43,7 @@ ROBOTSTXT_OBEY = False
 DEFAULT_REQUEST_HEADERS = {
     'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh;q=0.9',
-    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'
 }
 
 # Enable or disable spider middlewares
