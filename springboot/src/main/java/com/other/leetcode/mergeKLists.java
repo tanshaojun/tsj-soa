@@ -35,40 +35,22 @@ public class mergeKLists {
     public static ListNode merge(ListNode start, ListNode end) {
         if (start == null) return end;
         if (end == null) return start;
-        ListNode listNode = null;
+        ListNode root = new ListNode(0);
+        ListNode listNode = root;
         while (start != null && end != null) {
-            int a = start.val;
-            int b = end.val;
-            if (a > b) {
-                listNode = addListNode(listNode, b);
+            if (start.val > end.val) {
+                listNode.next = end;
                 end = end.next;
             } else {
-                listNode = addListNode(listNode, a);
+                listNode.next = start;
                 start = start.next;
             }
+            listNode = listNode.next;
         }
-        while (start != null) {
-            listNode = addListNode(listNode, start.val);
-            start = start.next;
-        }
-        while (end != null) {
-            listNode = addListNode(listNode, end.val);
-            end = end.next;
-        }
-        return listNode;
+        if (start == null) listNode.next = end;
+        else listNode.next = start;
+        return root.next;
     }
 
-    private static ListNode addListNode(ListNode listNode, int b) {
-        if (listNode == null) listNode = new ListNode(b);
-        else {
-            ListNode listNodeb = new ListNode(b);
-            ListNode temp = listNode;
-            while (temp.next != null) {
-                temp = temp.next;
-            }
-            temp.next = listNodeb;
-        }
-        return listNode;
-    }
 
 }
