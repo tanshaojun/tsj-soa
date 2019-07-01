@@ -23,8 +23,38 @@ public class isPalindrome {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(isPalindrome(10));
+    public static boolean isPalindrome(ListNode head) {
+        if (null == head) return true;
+        ListNode slow = head;
+        ListNode fast = head;
+        //快慢指针找到重点
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //从慢指针指向开始，反转
+        fast = null;
+        while (slow != null) {
+            ListNode tmp = slow.next;
+            slow.next = fast;
+            fast = slow;
+            slow = tmp;
+        }
+        //比较
+        while (fast != null) {
+            if (fast.val != head.val) return false;
+            fast = fast.next;
+            head = head.next;
+        }
+        return true;
+    }
 
+    public static void main(String[] args) {
+        ListNode root = new ListNode(1);
+//        root.next = new ListNode(2);
+//        root.next.next = new ListNode(2);
+//        root.next.next.next = new ListNode(1);
+//        root.next.next.next.next = new ListNode(1);
+        System.out.println(isPalindrome(root));
     }
 }
