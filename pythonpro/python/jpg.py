@@ -1,9 +1,9 @@
-
 import urllib.request
 import requests
 import re
 
 targetDir = "C:\图片"  # 文件保存路径
+
 
 def download(url):
     response = requests.get(url)
@@ -11,6 +11,7 @@ def download(url):
     f = open(targetDir + '/' + name + '.jpg', 'wb')
     f.write(response.content)
     f.close()
+
 
 if __name__ == "__main__":  # 程序运行入口
     webheaders = {
