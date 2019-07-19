@@ -11,16 +11,18 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
     name = 'python_scrapy_lianjia'
     # 爬虫范围
     allowed_domains = ['bj.lianjia.com']
-    url = "https://bj.lianjia.com/zufang/pg%srco10/"
+    url = "https://bj.lianjia.com/zufang/changping/pg%d/#contentList"
     count = 1
     start_urls = [url % (count)]
+    print(start_urls)
 
     def parse(self, response):
-        lis = response.xpath("//li[@data-el='zufang']")
+        lis = response.xpath("//p[@class='content__list--item--title twoline']")
         if len(lis) > 0:
             for li in lis:
-                nexturl = li.xpath("./div[@class='pic-panel']/a/@href").extract()[0]
+                nexturl = li.xpath("./a/@href").extract()[0]
                 if nexturl != "":
+                    nexturl = "https://bj.lianjia.com" + nexturl
                     yield scrapy.Request(nexturl, meta={'info': nexturl}, callback=self.parseInfo, dont_filter=True)
             if self.count <= 100:
                 self.count += 1
@@ -36,48 +38,40 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
         if response.status == 200:
             lj = LianJia()
             # 时间
-            t = response.xpath("//div[@class='zf-room']/p[8]/text()").extract()[0]
-            t = re.sub("[天前发布]", "", t)
-            if int(t) <= 30:
-                lj['t'] = t
+            t = response.xpath("//li[@class='fl oneline']")
+            day = t[1].xpath("./text()").extract()[0]
+            day = re.sub("[天前：发布]", "", day)
+            if int(day) <= 30:
+                lj['t'] = day
                 # 价格
-                price = response.xpath("//span[@class='total']/text()").extract()[0]
-                # 装修方式
-                renovation = response.xpath("//span[@class='tips decoration']/text()").extract()
-                if len(renovation) == 0:
-                    renovation = "无"
-                else:
-                    renovation = renovation[0]
+                price = response.xpath("//p[@class='content__aside--title']/span/text()").extract()[0]
+                areas = response.xpath("//p[@class='content__article__table']")
                 # 面积
-                area = response.xpath("//div[@class='zf-room']/p[1]/text()").extract()[0]
+                area = areas[0].xpath("./span[3]/text()").extract()[0]
                 # 户型
-                huxing = response.xpath("//div[@class='zf-room']/p[2]/text()").extract()[0]
+                huxing = areas[0].xpath("./span[2]/text()").extract()[0]
                 # 楼层
-                floor = response.xpath("//div[@class='zf-room']/p[3]/text()").extract()[0]
+                floor = t[7].xpath("./text()").extract()[0]
                 # 朝向
-                direction = response.xpath("//div[@class='zf-room']/p[4]/text()").extract()[0]
+                direction = areas[0].xpath("./span[4]/text()").extract()[0]
                 # 地铁
-                subway = response.xpath("//div[@class='zf-room']/p[6]/text()").extract()[0].strip()
+                subway = ""
                 # 小区
-                housing = response.xpath("//div[@class='zf-room']/p[6]/a/text()").extract()
-                housing = "-".join(housing)
+                housing = ""
                 # 位置
-                address = response.xpath("//div[@class='zf-room']/p[7]/a/text()").extract()
-                address = "-".join(address)
+                address = ""
                 # 姓名
-                name = response.xpath("//div[@class='brokerName']/a[1]/text()").extract()[0]
+                name = ""
                 # 电话
-                phone = response.xpath("//div[@class='phone']/text()").extract()
-                phone0 = phone[0].strip()
-                phone1 = phone[1].strip()
-                phone = phone0 + "  转  " + phone1
+                phone = ""
+                renovation = ""
                 # 详情
                 info = response.meta['info']
                 # key
                 idkey = re.findall("\d+", info)[0]
 
                 lj['price'] = price
-                lj['renovation'] = renovation
+                lj['renovation'] = ""
                 lj['area'] = area
                 lj['huxing'] = huxing
                 lj['floor'] = floor
@@ -101,16 +95,15 @@ class PythonScrapyLianJiaSpider(scrapy.Spider):
                     if result is not None:
                         cur.execute(self.update_sql,
                                     [price, renovation, area, huxing, floor, direction, subway, housing, address, t,
-                                     name,
-                                     phone, info, idkey])
+                                     name, phone, info, idkey])
                         conn.commit()
                     else:
                         cur.execute(self.insert_sql,
                                     [price, renovation, area, huxing, floor, direction, subway, housing, address, t,
-                                     name,
-                                     phone, info, idkey, created])
+                                     name, phone, info, idkey, created])
                         conn.commit()
                 except Exception:
+                    print(Exception)
                     print("失败")
                 yield lj
             else:

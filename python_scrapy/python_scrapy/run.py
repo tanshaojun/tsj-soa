@@ -1,7 +1,7 @@
 from scrapy.cmdline import execute
 
 spiders = [
-    'scrapy crawl zhongdengwang'
+    'scrapy crawl python_scrapy_fangtianxia'
 ]
 
 if __name__ == '__main__':
