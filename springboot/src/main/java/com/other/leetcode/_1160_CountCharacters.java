@@ -46,6 +46,6 @@ public class _1160_CountCharacters {
     }
 
     public static void main(String[] args) {
-        System.out.println(countCharacters(new String[]{"cat", "bt", "hat", "tree"}, "atach"));
+        System.out.println(countCharacters(new String[]{"hello", "world", "leetcode"}, "welldonehoneyr"));
     }
 }
