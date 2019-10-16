@@ -10,15 +10,15 @@ public class CountDownLatchDemo {
     private volatile static Integer count = 0;
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        A a = new A();
-        FutureTask<Integer> futrueTask = new FutureTask<Integer>(a);
-        Thread t = new Thread(futrueTask);
         for (int i = 0; i < countDownLatch.getCount(); i++) {
             new Thread(new B()).start();
         }
         System.out.println("正在等待计算结果");
         countDownLatch.await();
-        t.start();
+
+        A a = new A();
+        FutureTask<Integer> futrueTask = new FutureTask<Integer>(a);
+        new Thread(futrueTask).start();
         Integer integer = futrueTask.get();
         System.out.println(integer);
     }
