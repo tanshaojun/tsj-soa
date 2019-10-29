@@ -1,11 +1,11 @@
 package com.other.leetcode;
 
 public class search {
-    public static   void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println(search(new int[]{-1, 0, 3, 5, 10, 12}, 9));
     }
 
-    public static   int search(int[] nums, int target) {
+    public static int search(int[] nums, int target) {
         int s = 0;
         int e = nums.length - 1;
         while (s <= e) {

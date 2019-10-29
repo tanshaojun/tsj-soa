@@ -3,6 +3,8 @@ package com.other.JUC;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UnsafeDemo {
     public static void main(String[] args) {
@@ -16,5 +18,8 @@ public class UnsafeDemo {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+        Map<String,String> map =new HashMap<>();
+        map.put(null,null);
+        System.out.println(map.size());
     }
 }
