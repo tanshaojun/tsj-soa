@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class TwoPointsSearch {
     public static void main(String[] args) {
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//        System.out.println(search(array, 5));
+        System.out.println(search(array, 5));
         ListNode listNode = ListNode.getListNode(5);
         reverse(listNode);
     }
