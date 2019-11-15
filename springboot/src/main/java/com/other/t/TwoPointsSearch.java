@@ -19,6 +19,7 @@ public class TwoPointsSearch {
         reverse(listNode);
     }
 
+
     /**
      * 反转链表
      *
