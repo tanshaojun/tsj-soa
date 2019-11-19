@@ -133,6 +133,12 @@
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.36.Final</version>
+        </dependency>
+
     </dependencies>
 
 
