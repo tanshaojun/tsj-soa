@@ -68,7 +68,7 @@ public class SortTest {
         int size = ints.length;
         swap(ints, 0, --size);
         while (size > 0) {
-            headify(ints, 0, size);
+            heapify(ints, 0, size);
             swap(ints, 0, --size);
         }
     }
@@ -94,7 +94,7 @@ public class SortTest {
      * @param index
      * @param size
      */
-    private static void headify(int[] ints, int index, int size) {
+    private static void heapify(int[] ints, int index, int size) {
         //左孩子的下标
         int leftIndex = 2 * index + 1;
         while (leftIndex < size) {

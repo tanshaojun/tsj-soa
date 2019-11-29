@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+
 /**
  * 160. 相交链表
  *

@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 1019 链表中的下一个更大节点
  *
@@ -42,7 +45,7 @@ public class _1019_NextLargerNodes {
     }
 
     public static void main(String[] args) {
-        int[] ints = nextLargerNodes(ListNode.getListNode(3));
+        int[] ints = nextLargerNodes(NodeUtil.getListNode(3,10));
         System.out.println();
         for (int i = 0; i < ints.length; i++) {
             System.out.print(ints[i]);

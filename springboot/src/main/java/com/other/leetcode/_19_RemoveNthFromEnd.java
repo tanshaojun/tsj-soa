@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 19. 删除链表的倒数第N个节点
  *
@@ -63,7 +66,7 @@ public class _19_RemoveNthFromEnd {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(10);
+        ListNode listNode = NodeUtil.getListNode(10,10);
         ListNode listNode1 = removeNthFromEnd(listNode, 10);
         System.out.println();
         while (listNode1 != null) {

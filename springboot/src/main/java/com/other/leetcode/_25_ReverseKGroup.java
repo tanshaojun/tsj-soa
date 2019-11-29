@@ -1,6 +1,7 @@
 package com.other.leetcode;
 
-import java.util.List;
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
 
 /**
  * 25. K 个一组翻转链表
@@ -46,7 +47,7 @@ public class _25_ReverseKGroup {
     }
 
     public static void main(String[] args) {
-        ListNode result = reverseKGroup(ListNode.getListNode(10), 3);
+        ListNode result = reverseKGroup(NodeUtil.getListNode(10,10), 3);
         System.out.println();
         while (result != null) {
             System.out.print(result.val);

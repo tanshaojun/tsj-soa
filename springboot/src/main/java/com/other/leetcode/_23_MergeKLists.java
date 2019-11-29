@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+
 /**
  * 23. 合并K个排序链表
  */

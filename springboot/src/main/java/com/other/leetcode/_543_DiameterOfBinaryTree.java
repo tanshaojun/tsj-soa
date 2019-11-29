@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 543. 二叉树的直径
  *

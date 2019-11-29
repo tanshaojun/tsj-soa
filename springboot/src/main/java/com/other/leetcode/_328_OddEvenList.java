@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 328. 奇偶链表
  *
@@ -37,7 +40,7 @@ public class _328_OddEvenList {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(3);
+        ListNode listNode = NodeUtil.getListNode(3,10);
         ListNode root = listNode;
         while (root != null) {
             System.out.print(root.val);

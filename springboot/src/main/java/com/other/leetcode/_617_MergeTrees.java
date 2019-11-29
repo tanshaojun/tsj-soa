@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 617. 合并二叉树
  */

@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+
 /**
  * 234. 回文链表
  */

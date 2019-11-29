@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 112. 路径总和
  */

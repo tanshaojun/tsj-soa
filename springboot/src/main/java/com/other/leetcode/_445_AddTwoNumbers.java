@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 import java.util.Stack;
 
 /**
@@ -60,7 +63,7 @@ public class _445_AddTwoNumbers {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(10, 10);
+        ListNode listNode = NodeUtil.getListNode(10, 10);
         ListNode root = listNode;
         while (root != null) {
             System.out.print(root.val);

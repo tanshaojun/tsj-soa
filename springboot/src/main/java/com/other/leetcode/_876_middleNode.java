@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+
 /**
  * 876. 链表的中间结点
  */

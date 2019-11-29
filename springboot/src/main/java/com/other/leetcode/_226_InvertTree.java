@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 226. 翻转二叉树
  */

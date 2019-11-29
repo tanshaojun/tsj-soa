@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 61. 旋转链表
  *
@@ -36,7 +39,7 @@ public class _61_RotateRight {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(2);
+        ListNode listNode = NodeUtil.getListNode(2,10);
         ListNode root = listNode;
         while (root != null) {
             System.out.print(root.val);

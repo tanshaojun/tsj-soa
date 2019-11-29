@@ -1,4 +1,4 @@
-package com.other.leetcode;
+package com.other.model;
 
 import java.util.List;
 

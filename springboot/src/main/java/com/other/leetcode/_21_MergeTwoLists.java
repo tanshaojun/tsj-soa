@@ -1,6 +1,8 @@
 package com.other.leetcode;
 
 
+import com.other.model.ListNode;
+
 /**
  * 21. 合并两个有序链表
  */

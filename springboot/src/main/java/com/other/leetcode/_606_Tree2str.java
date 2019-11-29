@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 606. 根据二叉树创建字符串
  *

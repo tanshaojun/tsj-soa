@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.TreeNode;
+
 /**
  * 538. 把二叉搜索树转换为累加树
  * @author tanshaojun

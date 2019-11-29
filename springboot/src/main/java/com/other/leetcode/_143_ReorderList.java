@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 143. 重排链表
  *
@@ -41,7 +44,7 @@ public class _143_ReorderList {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(4);
+        ListNode listNode = NodeUtil.getListNode(4,10);
         reorderList(listNode);
     }
 

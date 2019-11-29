@@ -1,5 +1,7 @@
 package com.other.leetcode;
 
+import com.other.model.Node;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;

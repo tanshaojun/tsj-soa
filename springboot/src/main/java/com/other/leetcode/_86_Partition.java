@@ -1,5 +1,8 @@
 package com.other.leetcode;
 
+import com.other.model.ListNode;
+import com.utils.NodeUtil;
+
 /**
  * 86. 分隔链表
  *
@@ -32,7 +35,7 @@ public class _86_Partition {
     }
 
     public static void main(String[] args) {
-        ListNode listNode = ListNode.getListNode(5);
+        ListNode listNode = NodeUtil.getListNode(5,10);
         ListNode root = listNode;
         while (root != null) {
             System.out.print(root.val);
