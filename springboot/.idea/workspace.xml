@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdf635a3-80dc-4b82-b870-e11cfa81d64d" name="Default" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1431_kidsWithCandies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1437_kLengthApart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_42_trap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m16_17_maxSubArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_19_missingTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_21_trap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1399_countLargestGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_34_searchRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_392_isSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_714_maxProfit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m08_01_waysToStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_16_massage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m42_maxSubArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m63_maxProfit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_53_MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_53_MaxSubArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_69_MySqrt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_69_MySqrt.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,42 +41,45 @@
     <session id="-1967562049">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="5" />
-          <entry key="java" value="85" />
+          <entry key="java" value="102" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="85" />
+          <entry key="JAVA" value="102" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14382" />
+          <entry key="java" value="17904" />
           <entry key="txt" value="6" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14382" />
+          <entry key="JAVA" value="17904" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="XML" value="6" />
         </counts>
@@ -82,19 +89,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_19_missingTwo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m42_maxSubArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_392_isSubsequence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-357">
+              <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m08_01_waysToStep.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_16_massage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m63_maxProfit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_42_trap.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_714_maxProfit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="396">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -175,17 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_153_findMin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_611_triangleNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_380_RandomizedSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_795_numSubarrayBoundedMax.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1052_maxSatisfied.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1248_numberOfSubarrays.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1313_decompressRLElist.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1389_createTargetArray.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1365_smallerNumbersThanCurrent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1409_processQueries.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1385_findTheDistanceValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1351_countNegatives.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1413_minStartValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m51_reversePairs.java" />
@@ -226,6 +258,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m56_singleNumbers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_19_missingTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_42_trap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1399_countLargestGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m01_07_rotate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_34_searchRange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_69_MySqrt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m42_maxSubArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_53_MaxSubArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_392_isSubsequence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m08_01_waysToStep.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_16_massage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m63_maxProfit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_714_maxProfit.java" />
       </list>
     </option>
   </component>
@@ -267,6 +310,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,7 +367,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,7 +380,7 @@
     <property name="SearchEverywhereHistoryKey" value="saasArticle.ftl&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588763420624" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589020750265" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="CSS" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6" />
@@ -382,15 +425,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._42_trap">
+  <component name="RunManager" selected="Application.m08_01_waysToStep">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_1437_kLengthApart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._1437_kLengthApart" />
+    <configuration name="_34_searchRange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._34_searchRange" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -403,8 +446,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_42_trap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._42_trap" />
+    <configuration name="_392_isSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._392_isSubsequence" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -423,8 +466,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="m16_17_maxSubArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m16_17_maxSubArray" />
+    <configuration name="m01_07_rotate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m01_07_rotate" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -437,22 +480,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="m17_19_missingTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m17_19_missingTwo" />
-      <module name="springboot" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.other.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="m56_singleNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m56_singleNumbers" />
+    <configuration name="m08_01_waysToStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m08_01_waysToStep" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -570,19 +599,17 @@
     <list>
       <item itemvalue="Remote.测试线上" />
       <item itemvalue="Spring Boot.SpringMainApplication" />
-      <item itemvalue="Application._1437_kLengthApart" />
-      <item itemvalue="Application.m16_17_maxSubArray" />
-      <item itemvalue="Application.m17_19_missingTwo" />
-      <item itemvalue="Application.m56_singleNumbers" />
-      <item itemvalue="Application._42_trap" />
+      <item itemvalue="Application.m01_07_rotate" />
+      <item itemvalue="Application._34_searchRange" />
+      <item itemvalue="Application._392_isSubsequence" />
+      <item itemvalue="Application.m08_01_waysToStep" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._42_trap" />
-        <item itemvalue="Application.m56_singleNumbers" />
-        <item itemvalue="Application.m17_19_missingTwo" />
-        <item itemvalue="Application.m16_17_maxSubArray" />
-        <item itemvalue="Application._1437_kLengthApart" />
+        <item itemvalue="Application.m08_01_waysToStep" />
+        <item itemvalue="Application._392_isSubsequence" />
+        <item itemvalue="Application._34_searchRange" />
+        <item itemvalue="Application.m01_07_rotate" />
       </list>
     </recent_temporary>
   </component>
@@ -890,7 +917,12 @@
       <workItem from="1588150733770" duration="4479000" />
       <workItem from="1588228894085" duration="247000" />
       <workItem from="1588229707563" duration="7753000" />
-      <workItem from="1588749480702" duration="13214000" />
+      <workItem from="1588749480702" duration="13216000" />
+      <workItem from="1588839471770" duration="5406000" />
+      <workItem from="1588900661073" duration="1255000" />
+      <workItem from="1588918934515" duration="7039000" />
+      <workItem from="1588986727412" duration="589000" />
+      <workItem from="1589005193981" duration="12762000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1587719035281</created>
@@ -903,7 +935,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1654803000" />
+    <option name="totallyTimeSpent" value="1681856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,9 +957,9 @@
       <window_info id="JRebel" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.27479893" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.28485253" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.36350778" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.36312056" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" sideWeight="0.49785408" weight="0.3281471" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.3281471" />
@@ -939,10 +971,10 @@
       <window_info anchor="bottom" id="JRebel Executor" order="9" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.3281471" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.35744682" />
-      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.34751773" />
+      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.39858156" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="15" weight="0.3281471" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.32765958" />
       <window_info anchor="bottom" id="Run with VisualVM" order="16" weight="0.3295325" />
       <window_info anchor="bottom" id="Problems" order="17" weight="0.3281471" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="18" weight="0.3295325" />
@@ -1037,6 +1069,11 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>i / 10</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>a ^ tmp</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1076,114 +1113,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>A[i]</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_121_MaxProfit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_23_MergeKLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1402_maxSatisfaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m47_maxValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_712_minimumDeleteSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_945_minIncrementForUnique.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_33_search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1395_numTeams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_91/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6358">
-          <caret line="337" column="25" selection-start-line="337" selection-start-column="25" selection-end-line="337" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/t/SQLTest.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.9/druid-1.1.9.jar!/com/alibaba/druid/sql/SQLUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/t/QueryResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-836">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.9/druid-1.1.9.jar!/com/alibaba/druid/sql/ast/SQLStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.9/druid-1.1.9.jar!/com/alibaba/druid/sql/ast/expr/SQLBinaryOpExpr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/t/QuerySchema.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -1276,13 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1400_canConstruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m10_01_merge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1336,9 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1401,15 +1323,121 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_19_missingTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="660">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_42_trap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="396">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1304_sumZero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1400_canConstruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/addStrings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1399_countLargestGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m01_07_rotate.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_34_searchRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_69_MySqrt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_53_MaxSubArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m42_maxSubArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_392_isSubsequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m08_01_waysToStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_198_Rob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_509_Fib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_16_massage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m63_maxProfit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_714_maxProfit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
         </state>
       </provider>
     </entry>
