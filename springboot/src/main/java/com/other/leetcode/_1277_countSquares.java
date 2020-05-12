@@ -8,17 +8,8 @@ package com.other.leetcode;
  * @date 2020/1/6 15:32
  */
 public class _1277_countSquares {
-    public static void main(String[] args) {
-        System.out.println(countSquares(new int[][]
-                {
-                        {0, 1, 1, 1},
-                        {1, 1, 1, 1},
-                        {0, 1, 1, 1}
-                }
-        ));
-    }
 
-    public static int countSquares(int[][] matrix) {
+    public int countSquares(int[][] matrix) {
         int a = matrix.length;
         int b = matrix[0].length;
         int res = 0;
@@ -37,6 +28,5 @@ public class _1277_countSquares {
             }
         }
         return res;
-
     }
 }
