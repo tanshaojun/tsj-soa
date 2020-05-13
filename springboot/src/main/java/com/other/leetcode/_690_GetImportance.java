@@ -36,42 +36,16 @@ public class _690_GetImportance {
         });
     }
 
-    public static void main(String[] args) {
-        Employee employee = new Employee();
-        employee.id = 1;
-        employee.importance = 5;
-        List<Integer> objects = new ArrayList<>();
-        objects.add(2);
-        objects.add(3);
-        employee.subordinates = objects;
-
-
-        Employee employee1 = new Employee();
-        employee1.id = 2;
-        employee1.importance = 3;
-        List<Integer> objects1 = new ArrayList<>();
-        employee1.subordinates = objects1;
-
-        Employee employee2 = new Employee();
-        employee2.id = 3;
-        employee2.importance = 3;
-        List<Integer> objects2 = new ArrayList<>();
-        employee2.subordinates = objects2;
-
-        List<Employee> list = new ArrayList<>();
-        list.add(employee);
-        list.add(employee1);
-        list.add(employee2);
-        System.out.println(getImportance(list, 1));
+    class Employee {
+        // It's the unique id of each node;
+        // unique id of this employee
+        public int id;
+        // the importance value of this employee
+        public int importance;
+        // the id of direct subordinates
+        public List<Integer> subordinates;
     }
+
 }
 
-class Employee {
-    // It's the unique id of each node;
-    // unique id of this employee
-    public int id;
-    // the importance value of this employee
-    public int importance;
-    // the id of direct subordinates
-    public List<Integer> subordinates;
-}
+

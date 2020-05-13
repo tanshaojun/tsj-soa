@@ -87,15 +87,17 @@ class _707_MyLinkedList {
         current.next = current.next.next;
         length--;
     }
-}
 
-class N {
-    int value;
-    N next;
+    class N {
+        int value;
+        N next;
 
-    public N(int value) {
-        this.value = value;
+        public N(int value) {
+            this.value = value;
+        }
     }
 }
+
+
 
 

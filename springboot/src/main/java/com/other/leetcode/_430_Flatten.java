@@ -34,21 +34,23 @@ public class _430_Flatten {
         }
         return head;
     }
+
+    class Node1 {
+        public int val;
+        public Node1 prev;
+        public Node1 next;
+        public Node1 child;
+
+        public Node1() {
+        }
+
+        public Node1(int _val, Node1 _prev, Node1 _next, Node1 _child) {
+            val = _val;
+            prev = _prev;
+            next = _next;
+            child = _child;
+        }
+    }
 }
 
-class Node1 {
-    public int val;
-    public Node1 prev;
-    public Node1 next;
-    public Node1 child;
 
-    public Node1() {
-    }
-
-    public Node1(int _val, Node1 _prev, Node1 _next, Node1 _child) {
-        val = _val;
-        prev = _prev;
-        next = _next;
-        child = _child;
-    }
-};
