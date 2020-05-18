@@ -19,4 +19,15 @@ public class _53_MaxSubArray {
         }
         return result;
     }
+
+    public int maxSubArray1(int[] nums) {
+        int result = Integer.MIN_VALUE;
+        int max = 0;
+        for (int i = 1; i <= nums.length; i++) {
+            max = Math.max(nums[i - 1], max + nums[i - 1]);
+            result = Math.max(result, max);
+        }
+        return result;
+    }
+
 }
