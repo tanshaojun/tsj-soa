@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdf635a3-80dc-4b82-b870-e11cfa81d64d" name="Default" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1103_distributeCandies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1343_numOfSubarrays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1375_numTimesAllBlue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1414_findMinFibonacciNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1460_canBeEqual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_17_letterCombinations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_22_generateParenthesis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_401_readBinaryWatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_41_firstMissingPositive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_54_spiralOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_670_maximumSwap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_718_findLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_719_smallestDistancePair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_837_new21Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_907_sumSubarrayMins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m16_15_masterMind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m29_spiralOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m64_sumNums.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_14_LongestCommonPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_14_LongestCommonPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_162_findPeakElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_05_findLongestSubarray.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +33,7 @@
     <session id="-1967562049">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="2" />
@@ -60,44 +43,46 @@
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="6" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.5" value="9" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="50" />
+          <entry key="project.opened" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="8" />
-          <entry key="java" value="327" />
+          <entry key="java" value="329" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="JAVA" value="327" />
+          <entry key="JAVA" value="329" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="68776" />
+          <entry key="java" value="70160" />
           <entry key="txt" value="6" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="68776" />
+          <entry key="JAVA" value="70160" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="XML" value="6" />
         </counts>
@@ -136,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_719_smallestDistancePair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="858">
+              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,11 +130,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_907_sumSubarrayMins.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="946">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_162_findPeakElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_05_findLongestSubarray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,10 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>switch</find>
-      <find>min</find>
-      <find>LDREOEIIECIHNTSG</find>
-      <find>LCIRETOESIIGEDHN</find>
       <find>前序</find>
       <find>dfs</find>
       <find>setZeroes</find>
@@ -210,6 +212,10 @@
       <find>findM</find>
       <find>最长公共</find>
       <find>right</find>
+      <find>52</find>
+      <find>-6</find>
+      <find>-7</find>
+      <find>M</find>
     </findStrings>
     <replaceStrings>
       <replace>../img/</replace>
@@ -243,8 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_95_generateTrees.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m10_05_findString.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m53_1_search.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m53_2_missingNumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1201_nthUglyNumber.java" />
@@ -294,6 +298,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_670_maximumSwap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_209_minSubArrayLen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_907_sumSubarrayMins.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/_162_findPeakElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_05_findLongestSubarray.java" />
       </list>
     </option>
   </component>
@@ -490,7 +496,7 @@
     <property name="SearchEverywhereHistoryKey" value="saasArticle.ftl&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591269568570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591351400354" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="CSS" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6" />
@@ -535,9 +541,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._907_sumSubarrayMins">
+  <component name="RunManager" selected="Application.m17_05_findLongestSubarray">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_162_findPeakElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._162_findPeakElement" />
+      <module name="springboot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.other.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -556,36 +576,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_41_firstMissingPositive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._41_firstMissingPositive" />
-      <module name="springboot" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.other.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_670_maximumSwap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.other.leetcode._670_maximumSwap" />
-      <module name="springboot" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.other.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_719_smallestDistancePair" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.other.leetcode._719_smallestDistancePair" />
       <module name="springboot" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -614,6 +606,20 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="m17_05_findLongestSubarray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.other.leetcode.m17_05_findLongestSubarray" />
+      <module name="springboot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.other.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -723,19 +729,19 @@
     <list>
       <item itemvalue="Remote.测试线上" />
       <item itemvalue="Spring Boot.SpringMainApplication" />
-      <item itemvalue="Application._41_firstMissingPositive" />
-      <item itemvalue="Application._719_smallestDistancePair" />
       <item itemvalue="Application._670_maximumSwap" />
       <item itemvalue="Application._209_minSubArrayLen" />
       <item itemvalue="Application._907_sumSubarrayMins" />
+      <item itemvalue="Application._162_findPeakElement" />
+      <item itemvalue="Application.m17_05_findLongestSubarray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.m17_05_findLongestSubarray" />
+        <item itemvalue="Application._162_findPeakElement" />
         <item itemvalue="Application._907_sumSubarrayMins" />
         <item itemvalue="Application._209_minSubArrayLen" />
         <item itemvalue="Application._670_maximumSwap" />
-        <item itemvalue="Application._719_smallestDistancePair" />
-        <item itemvalue="Application._41_firstMissingPositive" />
       </list>
     </recent_temporary>
   </component>
@@ -1081,7 +1087,10 @@
       <workItem from="1591146630265" duration="18000" />
       <workItem from="1591150193856" duration="23420000" />
       <workItem from="1591232940682" duration="16359000" />
-      <workItem from="1591265480856" duration="3910000" />
+      <workItem from="1591265480856" duration="4205000" />
+      <workItem from="1591319421994" duration="591000" />
+      <workItem from="1591340627662" duration="2351000" />
+      <workItem from="1591343748617" duration="7608000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1587719035281</created>
@@ -1094,7 +1103,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2016809000" />
+    <option name="totallyTimeSpent" value="2027654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1116,7 +1125,7 @@
       <window_info id="JRebel" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.32372653" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.32841823" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3602837" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" sideWeight="0.49785408" weight="0.32765958" />
@@ -1130,7 +1139,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="9" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.3281471" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.35744682" />
-      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.35744682" />
+      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.6496454" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32765958" />
@@ -1159,7 +1168,7 @@
       <window_info id="JRebel" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.31903484" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.32841823" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3602837" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" sideWeight="0.49785408" weight="0.32765958" />
@@ -1173,7 +1182,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="9" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.3281471" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.35744682" />
-      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.5177305" />
+      <window_info anchor="bottom" id="Debug" order="12" sideWeight="0.4914163" weight="0.6070922" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32765958" />
@@ -1275,20 +1284,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_79_exist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="42" column="65" lean-forward="true" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m12_exist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_304_NumMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -1565,6 +1560,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_209_minSubArrayLen.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_670_maximumSwap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_718_findLength.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1586,24 +1588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1343_numOfSubarrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_670_maximumSwap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_719_smallestDistancePair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="858">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1612,8 +1600,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_907_sumSubarrayMins.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="946">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1343_numOfSubarrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_162_findPeakElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/m17_05_findLongestSubarray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
