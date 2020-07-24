@@ -54,7 +54,10 @@ def write(a, b, c, d, e, f):
     ws.save(filename)  # 保存的有旧数据和新数据
 
 
-def test():
+filters = ["征信", "二代征信", "担保", "融资", "信贷", "贷", "溯源", "溯源电商", "农产品溯源", "保理", "应收", "账款", "供应链金融"]
+
+
+def cebpubservice():
     driver_chrome = ChromeDriverBrowser()
     driver_chrome.get("http://bulletin.cebpubservice.com/")
     iframe = driver_chrome.find_element_by_id("iframe")
@@ -67,17 +70,19 @@ def test():
             size = 0
             while size < len(tds):
                 name = tds[0 + size].text
-                if "征信" in name or " 二代征信 " in name or "担保 " in name or "融资" in name or "信贷" in name or "贷" in name or "溯源" in name or "溯源电商" in name or "农产品溯源" in name:
-                    print(name)
-                    write(tds[0 + size].text, tds[1 + size].text, tds[2 + size].text,
-                          tds[3 + size].text,tds[4 + size].text,tds[5 + size].text)
+                for f in filters:
+                    if f in name:
+                        print(name)
+                        write(tds[0 + size].text, tds[1 + size].text, tds[2 + size].text,
+                              tds[3 + size].text, tds[4 + size].text, tds[5 + size].text)
+                        break
                 size += 6
             driver_chrome.find_element_by_link_text("下一页").click()
-            time.sleep(5)
         except Exception as e:
             print(str(count) + '报错: ', e)
+        time.sleep(5)
         count += 1
 
 
 if __name__ == '__main__':
-    test()
+    cebpubservice()
