@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdf635a3-80dc-4b82-b870-e11cfa81d64d" name="Default" comment="commit">
-      <change afterPath="$PROJECT_DIR$/../pythonpro/python/my/ceshi/caigou2003.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pythonpro/python/my/ceshi/chinabidding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pythonpro/python/my/ceshi/dealggzygov.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1491_average.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1493_longestSubarray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1502_canMakeArithmeticProgression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1508_rangeSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_1512_numIdenticalPairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m09_CQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/m11_minArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pythonpro/python/my/ceshi/cebpubservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonpro/python/my/ceshi/cebpubservice.py" afterDir="false" />
-    </list>
+    <list default="true" id="fdf635a3-80dc-4b82-b870-e11cfa81d64d" name="Default" comment="commit" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +30,7 @@
     <session id="-1967562049">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="63" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -173,10 +161,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1493_longestSubarray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="264">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#longestSubarray#0;class#_1493_longestSubarray#0" />
               </folding>
             </state>
           </provider>
@@ -519,7 +507,7 @@
     <property name="SearchEverywhereHistoryKey" value="saasArticle.ftl&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595585736371" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595585761447" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="CSS" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6" />
@@ -1161,7 +1149,7 @@
       <workItem from="1593481770294" duration="1738000" />
       <workItem from="1595210717240" duration="3469000" />
       <workItem from="1595384372433" duration="4536000" />
-      <workItem from="1595583207419" duration="2505000" />
+      <workItem from="1595583207419" duration="2621000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1587719035281</created>
@@ -1174,7 +1162,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2219564000" />
+    <option name="totallyTimeSpent" value="2219680000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1705,10 +1693,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/other/leetcode/_1493_longestSubarray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="264">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#longestSubarray#0;class#_1493_longestSubarray#0" />
           </folding>
         </state>
       </provider>
