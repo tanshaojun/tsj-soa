@@ -12,7 +12,8 @@ def ChromeDriverBrowser():
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的报错
     chrome_options.add_argument('window-size=1920x1080')  # 指定浏览器分辨率
-    driverChrome = webdriver.Chrome(executable_path=chromedriver, options=chrome_options)
+    # driverChrome = webdriver.Chrome(executable_path=chromedriver, options=chrome_options)
+    driverChrome = webdriver.Chrome(options=chrome_options)
     return driverChrome
 
 
