@@ -1,7 +1,5 @@
 import time
 
-import xlrd
-import xlutils.copy
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -30,153 +28,49 @@ def ChromeDriverNOBrowser():
     return driverChrome
 
 
-filename = "C:/Users/lenovo/Desktop/data/data.xls"
-
-
-def readline():
-    wb = xlrd.open_workbook(filename, formatting_info=True)  # 打开excel，保留文件格式
-    sheet1 = wb.sheet_by_index(0)  # 获取第一张表
-    nrows = sheet1.nrows  # 获取总行数
-    ncols = sheet1.ncols
-    return nrows
-
-
-def write(a, b, c):
-    data = xlrd.open_workbook(filename)
-    ws = xlutils.copy.copy(data)  # 复制之前表里存在的数据
-    table = ws.get_sheet(0)
-    nownrows = readline()
-    table.write(nownrows, 0, label=a)  # 最后一行追加数据
-    table.write(nownrows, 1, label=b)
-    table.write(nownrows, 2, label=c)
-    ws.save(filename)  # 保存的有旧数据和新数据
-
-
-# def chinabidding():
-#     try:
-#         driver_chrome = ChromeDriverBrowser()
-#         driver_chrome.get("https://www.chinabidding.cn/cblcn/member.login/login")
-#         driver_chrome.find_element_by_id('name').clear()
-#         driver_chrome.find_element_by_id("name").send_keys("hurongyun")
-#         time.sleep(2)
-#         driver_chrome.find_element_by_id('pwd11').clear()
-#         js = "document.getElementById(\"pwd11\").style.display='block';"
-#         # 调用js脚本
-#         driver_chrome.execute_script(js)
-#         time.sleep(2)
-#         driver_chrome.find_element_by_id("pwd11").send_keys("test")
-#         time.sleep(2)
-#         driver_chrome.find_element_by_id("password").send_keys("hurongyun888")
-#         time.sleep(2)
-#         print("请输入控制台验证码：")
-#         code = input()
-#         print("控制台输入验证码为：" + code)
-#         driver_chrome.find_element_by_id('yzm').clear()
-#         driver_chrome.find_element_by_id('yzm').send_keys(code)
-#         driver_chrome.find_element_by_class_name('deng').click()
-#         time.sleep(2)
-#         driver_chrome.find_element_by_xpath("//ul[@class='nav_t']/li/a[2]").click()
-#         time.sleep(2)
-#         driver_chrome.switch_to.window(driver_chrome.window_handles[1])
-#         driver_chrome.maximize_window()
-#         time.sleep(2)
-#         size = 2
-#         while size < 2:
-#             trs = driver_chrome.find_elements_by_xpath("//tr[@class='yj_nei']")
-#             for tr in trs:
-#                 tds = tr.find_elements_by_xpath("./td")
-#                 name = tds[0].find_element_by_xpath("./a").text
-#                 date = tds[3].text
-#                 type = tds[1].text
-#                 for f in filters:
-#                     if f in name:
-#                         print(name)
-#                         write(name, type, date)
-#             driver_chrome.execute_script("javascript:pageJump(" + str(size) + ")")
-#             time.sleep(2)
-#             print("当前第" + str(size) + "页")
-#             size += 1
-#     except Exception as e:
-#         print(e)
-#         print('报错: ', e)
-#     print("完成...........")
-
-
-filters = ["征信", "二代征信", "担保", "融资", "信贷", "贷", "溯源", "溯源电商", "农产品溯源", "保理", "应收", "账款", "供应链金融", "区块链", "碳排放", "大宗商品", "电商小程序", "分期", "电商金融", "金融", "社交", "防伪", "追溯", "一物一码", "防窜货", "融资租赁", "贷款", "保理", "典当", "风控", "催收"]
-
-
-def chinabidding():
-    try:
-        driver_chrome = ChromeDriverBrowser()
-        driver_chrome.get("https://www.chinabidding.cn/cblcn/member.login/login")
-        driver_chrome.find_element_by_id('name').clear()
-        driver_chrome.find_element_by_id("name").send_keys("hurongyun")
-        time.sleep(2)
-        driver_chrome.find_element_by_id('pwd11').clear()
-        js = "document.getElementById(\"pwd11\").style.display='block';"
-        # 调用js脚本
-        driver_chrome.execute_script(js)
-        time.sleep(2)
-        driver_chrome.find_element_by_id("pwd11").send_keys("test")
-        time.sleep(2)
-        driver_chrome.find_element_by_id("password").send_keys("hurongyun888")
-        time.sleep(2)
-        print("请输入控制台验证码：")
-        code = input()
-        print("控制台输入验证码为：" + code)
-        driver_chrome.find_element_by_id('yzm').clear()
-        driver_chrome.find_element_by_id('yzm').send_keys(code)
-        driver_chrome.find_element_by_class_name('deng').click()
-        time.sleep(2)
-        driver_chrome.find_element_by_xpath("//ul[@class='nav_t']/li/a[2]").click()
-        time.sleep(2)
-        driver_chrome.maximize_window()
-        for filter in filters:
-            driver_chrome.switch_to.window(driver_chrome.window_handles[1])
-            time.sleep(2)
-            driver_chrome.find_element_by_class_name("wenben").clear()
-            driver_chrome.find_element_by_class_name("wenben").send_keys(filter)
-            time.sleep(2)
-            driver_chrome.find_elements_by_xpath("//input[@class='sous fl']")[0].click()
-            save_data(driver_chrome, filter)
-            driver_chrome.close()
-    except Exception as e:
-        print('报错: ', e)
-    print("完成...........")
-
-
-def save_data(driver_chrome, keyword):
-    driver_chrome.switch_to.window(driver_chrome.window_handles[2])
-    size = 1
+def qixin():
+    verification = ["无", "无", "无", "无", "无", "无", "无", "无", "无", "无"]
+    driver_chrome = ChromeDriverBrowser()
+    driver_chrome.get(
+        "https://www.qixin.com/auth/login?return_url=%2Fsearch%3Fkey%3D%25E8%25B4%25B7%25E6%25AC%25BE%26page%3D3")
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input-lg input-flat number-input']").clear()
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input-lg input-flat number-input']").send_keys(
+        "13263308067")
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input-lg input-flat']").clear()
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input-lg input-flat']").send_keys("hurongyun0421")
+    driver_chrome.find_element_by_xpath("//div[@class='btn btn-primary btn-block btn-lg']").click()
+    print("等待手动验证中.........")
+    time.sleep(20)
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input tt-input']").clear()
+    driver_chrome.find_element_by_xpath("//input[@class='form-control input tt-input']").send_keys("征信")
+    driver_chrome.find_element_by_xpath("//span[@class='inline-content font-16']").click()
+    page = 1
     flag = True
     while flag:
-        print("关键字为：" + keyword + ",当前第" + str(size) + "页")
-        trs = driver_chrome.find_elements_by_xpath("//tr[@class='listrow1']")
-        for tr in trs:
-            tds = tr.find_elements_by_xpath("./td")
-            type = tds[3].text
-            if "招标公告" in type:
-                td1 = tds[1].find_element_by_xpath("./a")
-                name = td1.text
-                url = td1.get_attribute("href")
-                date = tds[6].text
-                write(name, date, url)
-        trs2 = driver_chrome.find_elements_by_xpath("//tr[@class='listrow2']")
-        for tr in trs2:
-            tds = tr.find_elements_by_xpath("./td")
-            type = tds[3].text
-            if "招标公告" in type:
-                td1 = tds[1].find_element_by_xpath("./a")
-                name = td1.text
-                url = td1.get_attribute("href")
-                date = tds[6].text
-                write(name, date, url)
-        if len(trs) == 0 and len(trs2) == 0:
-            flag = False
-        else:
-            size += 1
-            driver_chrome.execute_script("javascript:pageJump(" + str(size) + ")")
+        try:
+            divs = driver_chrome.find_elements_by_xpath(
+                "//div[@class='col-xs-24 padding-v-25px margin-0-0x border-b-b4 company-item']")
+            idx = 0
+            for div in divs:
+                a = div.find_element_by_xpath("./div[@class='col-2 clearfix']/div[@class='col-2-1']/div[1]/a")
+                company = a.text
+                print(company)
+                if verification[idx] == company:
+                    flag = False
+                verification[idx] = company
+                idx += 1
+            page += 1
+            driver_chrome.find_element_by_xpath("//input[@class='form-control input-sm']").clear()
+            driver_chrome.find_element_by_xpath("//input[@class='form-control input-sm']").send_keys(page)
+            driver_chrome.find_element_by_xpath("//button[@class='btn btn-primary btn-sm']").click()
+            time.sleep(2)
+        except Exception as e:
+            print("页面手动验证之后请输入：")
+            code = input()
+            flag = True
+            print(code)
 
+    print("完成...........")
 
 if __name__ == '__main__':
-    chinabidding()
+    qixin()

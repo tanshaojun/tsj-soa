@@ -101,15 +101,21 @@ public class ElasticsearchUtils {
 
     public static boolean addMapper(String index, String type) throws IOException {
         logger.info("添加分词执行中.........");
+        //创建mappering
         XContentBuilder mapping = XContentFactory.jsonBuilder()
                 .startObject()
-                .startObject("properties")
-                .startObject("title").field("type", "text").field("analyzer", "ik_max_word").endObject()
-                .endObject()
+                    .startObject("properties")
+                        .startObject("title")
+                            // 指定类型
+                            .field("type", "text")
+                            //添加分词
+                            .field("analyzer", "ik_max_word")
+                        .endObject()
+                    .endObject()
                 .endObject();
 
-        PutMappingRequest mapping1 = Requests.putMappingRequest(index).type(type).source(mapping);
-        PutMappingResponse putMappingResponse = client.admin().indices().putMapping(mapping1).actionGet();
+        PutMappingRequest putMappingRequest = Requests.putMappingRequest(index).type(type).source(mapping);
+        PutMappingResponse putMappingResponse = client.admin().indices().putMapping(putMappingRequest).actionGet();
         logger.info("添加分词成功？" + putMappingResponse.isAcknowledged());
         return putMappingResponse.isAcknowledged();
     }

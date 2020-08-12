@@ -45,3 +45,8 @@ class LianJia(scrapy.Item):
     name = scrapy.Field()
     info = scrapy.Field()
     pass
+
+class Url(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    pass
