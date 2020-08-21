@@ -5,12 +5,8 @@ package com.other.leetcode;
  * 1 两数之和
  */
 public class _1_TwoSum {
-    public static   void main(String[] args) {
-        System.out.println(twoSum(new int[]{0,0,25,75}, 100));
 
-    }
-
-    public static   int[] twoSum(int[] numbers, int target) {
+    public int[] twoSum(int[] numbers, int target) {
         int[] ints = new int[2];
         for (int i = 0; i < numbers.length - 1; i++) {
             int c = target - numbers[i];
