@@ -13,8 +13,35 @@ import static org.apache.commons.lang3.ArrayUtils.swap;
 public class TwoPointsSearch {
 
     public static void main(String[] args) {
-        ListNode listNode = NodeUtil.getListNode(10, 10);
-        ifRing(listNode);
+//        ListNode listNode = NodeUtil.getListNode(10, 10);
+//        ifRing(listNode);
+        System.out.println(letterReverse("adcbe"));
+    }
+
+    private static String letterReverse(String str) {
+        if (null == str) return str;
+        char[] strChars = str.toCharArray();
+        int leftIndex = 0;
+        int rightIndex = strChars.length - 1;
+
+        while (leftIndex < rightIndex) {
+            while (!Character.isLetter(strChars[leftIndex])) {
+                leftIndex++;
+            }
+            while (!Character.isLetter(strChars[rightIndex])) {
+                rightIndex--;
+            }
+            if (leftIndex >= rightIndex) {
+                break;
+            }
+            char tmp = strChars[leftIndex];
+            strChars[leftIndex] = strChars[rightIndex];
+            strChars[rightIndex] = tmp;
+            leftIndex++;
+            rightIndex--;
+        }
+        return new String(strChars);
+
     }
 
     private static ListNode ring(ListNode head, ListNode head1) {
@@ -218,6 +245,7 @@ public class TwoPointsSearch {
         return res;
 
     }
+
 
     private static void heapify(int[] array, int index, int size) {
         int leftIndex = index * 2 + 1;
