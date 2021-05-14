@@ -6,7 +6,7 @@ package com.other.cls.asm;
  * @Version 1.0
  */
 public class ASMObj {
-    public static void say(String str) {
+    public void say(String str) {
         System.out.println(str);
     }
 }

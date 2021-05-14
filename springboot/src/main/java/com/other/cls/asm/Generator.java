@@ -6,6 +6,7 @@ import org.objectweb.asm.ClassWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.lang.reflect.Method;
 
 /**
  * @Author tansj
@@ -27,10 +28,9 @@ public class Generator {
         fout.write(data);
         fout.close();
         System.out.println("now generator cc success!!!!!");
-//        Class<?> clazz = Class.forName("com.other.asm.HelloWorld");
-//        Method[] methods = clazz.getMethods();
-//        Method method = clazz.getMethod("say", String.class);
-//        method.invoke(clazz.newInstance(), "wo shi  say");
+        Class<?> clazz = Class.forName("com.other.cls.asm.ASMObj");
+        Method method = clazz.getMethod("say",String.class);
+        method.invoke(clazz.newInstance(),"123");
 //        Method method2 = clazz.getMethod("say22", String.class);
 //        method2.invoke(clazz.newInstance(), "wo shi  say2");
     }
