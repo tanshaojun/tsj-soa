@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
-public class GlobalDefultExceptionHandler {
+public class GlobalDefaultExceptionHandler {
 
-    private final static Logger logger = LoggerFactory.getLogger(GlobalDefultExceptionHandler.class);
+    private final static Logger logger = LoggerFactory.getLogger(GlobalDefaultExceptionHandler.class);
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public String defultExcepitonHandler(HttpServletRequest request, Exception e) {
+    public String defaultExcepitonHandler(HttpServletRequest request, Exception e) {
         logger.error("异常信息为：" + e.getMessage());
         return "error";
     }

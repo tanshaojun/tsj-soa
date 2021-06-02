@@ -1,0 +1,8 @@
+server:
+  port: 7011
+elasticsearch:
+  cluster:
+    name: docker-cluster
+  ip: 127.0.0.1
+  port: 9300
+  pool: 1

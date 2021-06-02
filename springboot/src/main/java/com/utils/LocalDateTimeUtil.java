@@ -41,7 +41,7 @@ public class LocalDateTimeUtil {
      * @param localDate
      * @return
      */
-    public static Date LocalDateToUdate(LocalDate localDate) {
+    public static Date LocalDateToDate(LocalDate localDate) {
         Objects.requireNonNull(localDate, "localDate");
         ZoneId zone = ZoneId.systemDefault();
         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();
