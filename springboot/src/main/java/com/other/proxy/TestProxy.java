@@ -22,7 +22,7 @@ public class TestProxy implements InvocationHandler {
         if (Object.class.equals(method.getDeclaringClass())) {
             return method.invoke(this, args);
         }
-        return new User(1, "zhangsan");
+        return new User(1, "z   hangsan");
     }
 
     public static void main(String[] args) {
