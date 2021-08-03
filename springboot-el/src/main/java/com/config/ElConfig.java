@@ -1,7 +1,6 @@
 package com.config;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
@@ -20,9 +19,9 @@ import java.net.UnknownHostException;
  * Time: 下午9:32
  */
 @Configuration
+@Slf4j
 public class ElConfig {
 
-    private static final Log logger = LogFactory.getLog(ElConfig.class);
 
     /**
      * elk集群地址
@@ -33,7 +32,7 @@ public class ElConfig {
      * 端口
      */
     @Value("${elasticsearch.port}")
-    private String port;
+    private Integer port;
     /**
      * 集群名称
      */
@@ -44,32 +43,28 @@ public class ElConfig {
      * 连接池
      */
     @Value("${elasticsearch.pool}")
-    private String poolSize;
+    private Integer poolSize;
 
     @Bean
     public TransportClient init() {
-
         TransportClient transportClient = null;
         try {
             // 配置信息
             Settings esSetting = Settings.builder()
                     .put("cluster.name", clusterName)
                     //增加嗅探机制，找到ES集群
-                    .put("client.transport.sniff", true)
+                    .put("client.transport.sniff", false)
                     //增加线程池个数为1
-                    .put("thread_pool.search.size", Integer.parseInt(poolSize))
+                    .put("thread_pool.search.size", poolSize)
                     .build();
 
             transportClient = new PreBuiltTransportClient(esSetting);
             TransportAddress inetSocketTransportAddress = new TransportAddress(InetAddress.getByName(hostName),
-                    Integer.valueOf(port));
+                    port);
             transportClient.addTransportAddresses(inetSocketTransportAddress);
         } catch (UnknownHostException e) {
-            e.printStackTrace();
-            logger.info("初始化bean失败");
+            log.error("es初始化bean失败", e);
         }
-
-
         return transportClient;
     }
 

@@ -1,5 +1,7 @@
 package com.utils;
 
+import lombok.Data;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +11,7 @@ import java.util.Map;
  * Date: 2018/8/1
  * Time: 下午9:37
  */
+@Data
 public class EsPage {
     // 指定的或是页面参数
     private int currentPage; // 当前页
@@ -62,63 +65,6 @@ public class EsPage {
                 beginPageIndex = pageCount - 10 + 1;
             }
         }
-    }
-
-
-    public int getCurrentPage() {
-        return currentPage;
-    }
-
-    public void setCurrentPage(int currentPage) {
-        this.currentPage = currentPage;
-    }
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public int getRecordCount() {
-        return recordCount;
-    }
-
-    public void setRecordCount(int recordCount) {
-        this.recordCount = recordCount;
-    }
-
-    public List<Map<String, Object>> getRecordList() {
-        return recordList;
-    }
-
-    public void setRecordList(List<Map<String, Object>> recordList) {
-        this.recordList = recordList;
-    }
-
-    public int getPageCount() {
-        return pageCount;
-    }
-
-    public void setPageCount(int pageCount) {
-        this.pageCount = pageCount;
-    }
-
-    public int getBeginPageIndex() {
-        return beginPageIndex;
-    }
-
-    public void setBeginPageIndex(int beginPageIndex) {
-        this.beginPageIndex = beginPageIndex;
-    }
-
-    public int getEndPageIndex() {
-        return endPageIndex;
-    }
-
-    public void setEndPageIndex(int endPageIndex) {
-        this.endPageIndex = endPageIndex;
     }
 
 }

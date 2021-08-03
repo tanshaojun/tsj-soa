@@ -1,0 +1,81 @@
+#spring.main.allow-bean-definition-overriding=true
+#配置数据源的详细信息，多个逗号分开
+sharding:
+  jdbc:
+    datasource:
+      #      names: db1,db2
+      names: db1
+      # 数据库连接池
+      db1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        #数据库驱动类名
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库 URL 连接
+        url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+        # 数据库用户名
+        username: root
+        # 数据库密码
+        password: root
+    #      db2:
+    #        type: com.alibaba.druid.pool.DruidDataSource
+    #        #数据库驱动类名
+    #        driver-class-name: com.mysql.cj.jdbc.Driver
+    #        # 数据库 URL 连接
+    #        url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    #        # 数据库用户名
+    #        username: root
+    #        # 数据库密码
+    #        password: root
+    config:
+      sharding:
+        tables:
+          t_user:
+            #不分库分表
+            actual-data-nodes: db1.t_user_$->{1..2}
+            #分库不分表
+            #            actual-data-nodes: db$->{1..2}.t_user_1
+            #分库分表
+            #            actual-data-nodes: db$->{1..2}.t_user_$->{1..2}
+            #指定t_user表中主键的生成策略  SNOWFLAKE:雪花算法，随机生成主键Id
+            key-generator-column-name: id
+            key-generator-type: SNOWFLAKE
+            # 指定分片的策略 约定id值 ： 偶数--》t_user_1  奇数-->t_user_2
+            table-strategy:
+              #              inline¬:
+              #                sharding-column: id
+              #                algorithm-expression: t_user_$->{id%2 +1}
+              # 自定义分表算法
+              standard:
+                sharding-column: id
+                precise-algorithm-class-name: com.shardjdbc.config.MyPreciseShardingAlgorithm
+            #分库
+        #            database-strategy:
+        #              inline:
+        #                sharding-column: id
+        #                algorithm-expression: db$->{id%2 +1}
+        #打开sql的输出日志
+        props:
+          sql:
+            show: true
+
+mybatis:
+  type-aliases-package: com.shardjdbc.entity
+  configuration:
+    mapUnderscoreToCamelCase: true
+  mapperLocations: classpath:mapper/*.xml
+#处理日期
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+  time-zone: GMT+8
+
+###  动态创建表的表名称 创建时间开始年 #########
+db:
+  table:
+    names: t_user
+    startYear: 3
+  ### 处理连接池冲突 #####
+  main:
+    allow-bean-definition-overriding: true
+
+

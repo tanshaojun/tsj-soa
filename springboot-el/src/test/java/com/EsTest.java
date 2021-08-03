@@ -12,22 +12,29 @@ import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Requests;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.TransportAddress;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
-import org.junit.Before;
+import org.elasticsearch.search.aggregations.AggregationBuilder;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
+import org.elasticsearch.search.sort.SortOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -36,26 +43,15 @@ import java.util.Random;
  * @Version 1.0
  */
 @RunWith(SpringRunner.class)
-//@SpringBootTest(classes = SpringBootELApplication.class)
+@SpringBootTest(classes = SpringBootELApplication.class)
 @Slf4j
 public class EsTest {
 
+    @Autowired
     private TransportClient transportClient;
 
     String index = "test_index";
     String type = "test_type";
-
-    @Before
-    public void init() throws UnknownHostException {
-        Settings settings = Settings.builder()
-                .put("cluster.name", "docker-cluster")
-                .build();
-        transportClient = new PreBuiltTransportClient(settings);
-        TransportAddress inetSocketTransportAddress = new TransportAddress(InetAddress.getByName("127.0.0.1"),
-                Integer.valueOf(9300));
-        transportClient.addTransportAddresses(inetSocketTransportAddress);
-        log.info("init success");
-    }
 
     @Test
     public void addIndex() {
@@ -98,11 +94,12 @@ public class EsTest {
     @Test
     public void addData() throws IOException {
         IndexRequestBuilder indexRequestBuilder = transportClient.prepareIndex(index, type);
+
         for (int i = 1; i <= 10; i++) {
             XContentBuilder xContentBuilder = XContentFactory.jsonBuilder()
                     .startObject()
                     .field("id", String.valueOf(i))
-                    .field("name", "张")
+                    .field("name", i)
                     .field("age", new Random().nextInt(100))
                     .endObject();
             IndexResponse indexResponse = indexRequestBuilder.setId(String.valueOf(i)).setSource(xContentBuilder).get();
@@ -112,7 +109,9 @@ public class EsTest {
 
     @Test
     public void removeData() {
-        DeleteResponse deleteResponse = transportClient.prepareDelete(index, type, "1").execute().actionGet();
+        for (int i = 1; i <= 10; i++) {
+            DeleteResponse deleteResponse = transportClient.prepareDelete(index, type, String.valueOf(i)).execute().actionGet();
+        }
     }
 
 
@@ -122,6 +121,8 @@ public class EsTest {
         SearchResponse searchResponse = transportClient.prepareSearch(index).setTypes(type).setQuery(queryBuilder).get();
         for (SearchHit hit : searchResponse.getHits()) {
             System.out.println(hit.getSourceAsMap());
+//            System.out.println(hit.getId());
+//            DeleteResponse deleteResponse = transportClient.prepareDelete(index, type, hit.getId()).execute().actionGet();
         }
     }
 
@@ -135,11 +136,82 @@ public class EsTest {
         //QueryBuilder queryBuilder = QueryBuilders.rangeQuery("age").gt(50).lt(100);
         QueryBuilder queryBuilder = QueryBuilders.matchAllQuery();
         SearchRequestBuilder searchRequestBuilder = transportClient.prepareSearch(index);
-        searchRequestBuilder.setFetchSource("name",null);
-        SearchResponse searchResponse = searchRequestBuilder.setQuery(queryBuilder).get();
+        searchRequestBuilder.setFetchSource("name", null);
+        SearchResponse searchResponse = searchRequestBuilder.setQuery(queryBuilder).execute().actionGet();
         for (SearchHit hit : searchResponse.getHits()) {
             System.out.println(hit.getSourceAsMap());
         }
     }
+
+    @Test
+    public void getDataByHighlightFiled() {
+        SearchRequestBuilder searchRequestBuilder = transportClient.prepareSearch(index);
+
+        //设置查询
+        QueryBuilder queryBuilder = QueryBuilders.matchAllQuery();
+        searchRequestBuilder.setQuery(queryBuilder);
+
+        //需要显示的字段
+        searchRequestBuilder.setFetchSource("name,age".split(","), null);
+
+        //设置高亮
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        highlightBuilder.field("name");
+        highlightBuilder.preTags("<span style='color:red' >");
+        highlightBuilder.postTags("</span>");
+        highlightBuilder.requireFieldMatch(false);
+        searchRequestBuilder.highlighter(highlightBuilder);
+
+        //分页
+        searchRequestBuilder.setFrom(0).setSize(10);
+        //排序
+        searchRequestBuilder.addSort("age", SortOrder.DESC);
+
+        SearchResponse searchResponse = searchRequestBuilder.get();
+
+        long totalHits = searchResponse.getHits().totalHits;
+        long length = searchResponse.getHits().getHits().length;
+        log.debug("共查询到[{}]条数据,处理数据条数[{}]", totalHits, length);
+        SearchHit[] hits = searchResponse.getHits().getHits();
+        List<Map<String, Object>> sourceList = new ArrayList<>();
+        for (SearchHit searchHit : hits) {
+            Map<String, HighlightField> highlightFields = searchHit.getHighlightFields();
+            HighlightField content = highlightFields.get("name");
+            Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
+            if (content != null) {
+                Text[] fragments = content.fragments();
+                StringBuffer sb = new StringBuffer();
+                for (Text text : fragments) {
+                    sb.append(text);
+                }
+                //替换掉原来的内容
+                sourceAsMap.put("name", sb.toString());
+            }
+            sourceList.add(sourceAsMap);
+        }
+        System.out.println(sourceList);
+    }
+
+
+    @Test
+    public void avgAggregationBuilder() {
+        SearchRequestBuilder searchRequestBuilder = transportClient.prepareSearch(index);
+        AggregationBuilder aggregationBuilder = AggregationBuilders.cardinality("ageCardinality").field("age");
+//        AggregationBuilder aggregationBuilder2 = AggregationBuilders.sum("ageSum").field("age");
+//        AggregationBuilder aggregationBuilder3 = AggregationBuilders.min("ageMin").field("age");
+//        AggregationBuilder aggregationBuilder4 = AggregationBuilders.max("ageMax").field("age");
+//        AggregationBuilder aggregationBuilder5 = AggregationBuilders.avg("ageAvg").field("age");
+        SearchResponse searchResponse = searchRequestBuilder.addAggregation(aggregationBuilder
+//                .subAggregation(aggregationBuilder2)
+//                .subAggregation(aggregationBuilder3)
+//                .subAggregation(aggregationBuilder4)
+//                .subAggregation(aggregationBuilder5)
+        )
+                .get();
+        Aggregations aggregations = searchResponse.getAggregations();
+        Cardinality cardinality = aggregations.get("ageCardinality");
+        System.out.println(cardinality.getValue());
+    }
+
 
 }

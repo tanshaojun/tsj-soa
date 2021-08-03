@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdf635a3-80dc-4b82-b870-e11cfa81d64d" name="Default" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/leetcode/_116_connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/t/TwoPointsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/t/TwoPointsSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_pro/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/other/JUC/ReentrantTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_scrapy/python_scrapy/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python_scrapy/python_scrapy/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-el/src/main/java/com/config/ElConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-el/src/main/java/com/config/ElConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-el/src/main/java/com/utils/EsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-el/src/main/java/com/utils/EsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-el/src/test/java/com/EsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-el/src/test/java/com/EsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/fink/BatchWC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/fink/BatchWC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/jvm/GCDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/jvm/GCDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/other/jvm/StaticTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/other/jvm/StaticTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
@@ -112,6 +122,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1qW43rFGCNrn58dVmAk5hGRHNum" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -716,6 +729,7 @@
       <workItem from="1617181818098" duration="5000" />
       <workItem from="1617934899477" duration="7000" />
       <workItem from="1618365057796" duration="3000" />
+      <workItem from="1627008242362" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1587719035281</created>
