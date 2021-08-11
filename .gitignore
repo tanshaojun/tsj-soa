@@ -2,6 +2,11 @@
 .idea/
 springboot/.idea/
 springboot-el/.idea/
+netty-rpc-client/.idea/
+netty-rpc-server/.idea/
+netty-rpc/.idea/
+rocketmq-test/.idea/
+sharding-test/.idea/
 javaproject/.idea/
 springcloud/.idea/
 dubbo-parent/.idea/
@@ -17,6 +22,11 @@ springboot-el/springboot.iml
 javaproject/javaproject.iml
 springcloud/javaproject.iml
 dubbo-parent/dubbo-parent.iml
+netty-rpc-client/netty-rpc-client.iml
+netty-rpc-server/netty-rpc-server.iml
+netty-rpc/netty-rpc.iml
+rocketmq-test/rocketmq-test.iml
+sharding-test/sharding-test.iml
 
 # target
 springboot/target/
@@ -24,5 +34,10 @@ springboot-el/target/
 javaproject/target/
 springcloud/target/
 dubbo-parent/target/
+sharding-test/target/
+rocketmq-test/target/
+netty-rpc/target/
+netty-rpc-server/target/
+netty-rpc-client/target/
 
 
