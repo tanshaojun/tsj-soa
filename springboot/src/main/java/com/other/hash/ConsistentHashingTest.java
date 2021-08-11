@@ -14,7 +14,7 @@ public class ConsistentHashingTest {
     /**
      * 真实缓存地址
      */
-    private final String[] cacheServers = {"192.168.56.101:11211", "192.168.56.102:11211", "192.168.56.103:11211"};
+    private final String[] cacheServers = {"192.168.56.104:11211","192.168.56.101:11211", "192.168.56.102:11211", "192.168.56.103:11211"};
 
     /**
      * 保存虚拟节点
