@@ -1,6 +1,0 @@
-server:
-  port: 1001
-netty:
-  rpc:
-    server:
-      port: 1003

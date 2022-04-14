@@ -23,49 +23,49 @@ import java.net.UnknownHostException;
 public class ElConfig {
 
 
-    /**
-     * elk集群地址
-     */
-    @Value("${elasticsearch.ip}")
-    private String hostName;
-    /**
-     * 端口
-     */
-    @Value("${elasticsearch.port}")
-    private Integer port;
-    /**
-     * 集群名称
-     */
-    @Value("${elasticsearch.cluster.name}")
-    private String clusterName;
-
-    /**
-     * 连接池
-     */
-    @Value("${elasticsearch.pool}")
-    private Integer poolSize;
-
-    @Bean
-    public TransportClient init() {
-        TransportClient transportClient = null;
-        try {
-            // 配置信息
-            Settings esSetting = Settings.builder()
-                    .put("cluster.name", clusterName)
-                    //增加嗅探机制，找到ES集群
-                    .put("client.transport.sniff", false)
-                    //增加线程池个数为1
-                    .put("thread_pool.search.size", poolSize)
-                    .build();
-
-            transportClient = new PreBuiltTransportClient(esSetting);
-            TransportAddress inetSocketTransportAddress = new TransportAddress(InetAddress.getByName(hostName),
-                    port);
-            transportClient.addTransportAddresses(inetSocketTransportAddress);
-        } catch (UnknownHostException e) {
-            log.error("es初始化bean失败", e);
-        }
-        return transportClient;
-    }
+//    /**
+//     * elk集群地址
+//     */
+//    @Value("${elasticsearch.ip}")
+//    private String hostName;
+//    /**
+//     * 端口
+//     */
+//    @Value("${elasticsearch.port}")
+//    private Integer port;
+//    /**
+//     * 集群名称
+//     */
+//    @Value("${elasticsearch.cluster.name}")
+//    private String clusterName;
+//
+//    /**
+//     * 连接池
+//     */
+//    @Value("${elasticsearch.pool}")
+//    private Integer poolSize;
+//
+//    @Bean
+//    public TransportClient init() {
+//        TransportClient transportClient = null;
+//        try {
+//            // 配置信息
+//            Settings esSetting = Settings.builder()
+//                    .put("cluster.name", clusterName)
+//                    //增加嗅探机制，找到ES集群
+//                    .put("client.transport.sniff", false)
+//                    //增加线程池个数为1
+//                    .put("thread_pool.search.size", poolSize)
+//                    .build();
+//
+//            transportClient = new PreBuiltTransportClient(esSetting);
+//            TransportAddress inetSocketTransportAddress = new TransportAddress(InetAddress.getByName(hostName),
+//                    port);
+//            transportClient.addTransportAddresses(inetSocketTransportAddress);
+//        } catch (UnknownHostException e) {
+//            log.error("es初始化bean失败", e);
+//        }
+//        return transportClient;
+//    }
 
 }
